@@ -2,11 +2,12 @@
     margin-top: 3rem;
     ul {
         list-style-type: none;
-        margin: 1rem;
         padding: 0;
+        position: relative;
+        left: 1px;
     }
-    a {
-        border-radius: 1000px;
+    a:link, a:visited {
+        // border-radius: 1000px;
         color: #fff;
         display: block;
         font-weight: bold;
@@ -16,12 +17,16 @@
         text-decoration: none;
         transition: all 0.2s;
         &.current {
-            background-color: var(--color-grellow);
-            color: var(--color-grey);
-        }
-        &:hover, &:active, &:focus {
             background-color: #fff;
             color: var(--color-grey);
+            &:hover, &:active, &:focus {
+                background-color: var(--color-grellow);
+                color: var(--color-grey);
+            }
         }
+    }
+    a:hover, a:active, a:focus {
+        background-color: rgba(255,255,255,0.05);
+        color: #fff;
     }
 }
