@@ -1,0 +1,27 @@
+.nav {
+    margin-top: 3rem;
+    ul {
+        list-style-type: none;
+        margin: 1rem;
+        padding: 0;
+    }
+    a {
+        border-radius: 1000px;
+        color: #fff;
+        display: block;
+        font-weight: bold;
+        margin-bottom: .5rem;
+        padding: .5em 1em;
+        text-align: center;
+        text-decoration: none;
+        transition: all 0.2s;
+        &.current {
+            background-color: var(--color-grellow);
+            color: var(--color-grey);
+        }
+        &:hover, &:active, &:focus {
+            background-color: #fff;
+            color: var(--color-grey);
+        }
+    }
+}
