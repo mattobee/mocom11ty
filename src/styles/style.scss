@@ -6,6 +6,11 @@
 @import "nav";
 @import "utilities";
 
+:root {
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+
 body {
     background-color: var(--color-grey);
     color: #fff;
@@ -49,14 +54,14 @@ header {
     background-image: url(https://images.unsplash.com/photo-1496171367470-9ed9a91ea931?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80);
     background-size: cover;
     .blurb {
-        background-color: var(--color-red);
+        background-color: var(--color-pink);
         color: #fff;
         font-size: 2rem;
         font-family: roboto-slab, serif;
         line-height: 1.25;
         margin: 6rem;
         opacity: .9;
-        padding: 2rem 2.5rem;
+        padding: 3rem 3.5rem;
         position: relative;
         &::before {
             content: '';
@@ -71,7 +76,7 @@ header {
 
 .layout {
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 1fr 5fr;
     grid-template-areas: "sidebar content";
     max-width: 1200px;
     margin: 0 auto;
@@ -85,6 +90,7 @@ header {
     border-bottom-width: 0;
     border-left-width: 1px;
     border-right-width: 1px;
+    margin-bottom: 6rem;
 }
 
 footer {
@@ -93,6 +99,7 @@ footer {
 }
 
 .section {
+    scroll-snap-align: start;
     &::before {
         content: '';
         background-color: var(--color-grellow);
@@ -111,6 +118,7 @@ footer {
     position: relative;
     &__heading {
         font-size: 4rem;
+        line-height: 1;
         margin-top: 0;
         margin-bottom: 2rem;
     }
@@ -123,6 +131,21 @@ footer {
     &--nokeyline {
         &::before {
             content: none;
+        }
+    }
+    &--contact {
+        background-color: #fff;
+        color: var(--color-grey);
+        &::before {
+            content: '';
+            background-color: var(--color-pink);
+            height: .6rem;
+            width: 6rem;
+            position: absolute;
+            top: 0;
+        }
+        a:hover, a:active, a:focus {
+            color: var(--color-pink) !important;
         }
     }
 }
@@ -180,7 +203,7 @@ footer {
     font-size: 2rem;
     a {
         margin-right: 1rem;
-        color: #fff;
+        // color: #fff;
         &:hover, &:active, &:focus {
             color: var(--color-grellow);
         }

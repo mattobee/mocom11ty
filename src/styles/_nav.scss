@@ -11,13 +11,13 @@
         color: #fff;
         display: block;
         font-weight: bold;
-        margin-bottom: .5rem;
+        // margin-bottom: .5rem;
         padding: .5em 1em;
         text-align: center;
         text-decoration: none;
         transition: all 0.2s;
         &.current {
-            background-color: #fff;
+            background-color: var(--color-grellow);
             color: var(--color-grey);
             &:hover, &:active, &:focus {
                 background-color: var(--color-grellow);

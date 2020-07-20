@@ -11,17 +11,17 @@
     <link rel="stylesheet" href="/styles/style.css">
     <script src="https://kit.fontawesome.com/33cbca6a48.js" crossorigin="anonymous"></script>
   </head>
-  <body id="top" itemscope itemtype="http://schema.org/WebPage">
+  <body id="top" itemscope itemtype="http://schema.org/Person">
     <div class="layout">
       {% include "../header.njk" %}
       <div class="content">
-        <main>
+        <main id="main">
           {{ content | safe }}
         </main>
         <footer class="section section--nokeyline">
-          <p class="m-0"><small>&copy; Copyright 2020 Matt Obee</small></p>
+          <p class="m-0"><small>&copy; Copyright 2017-2020 Matt Obee</small></p>
           <p class="m-0"><small>This page conforms to <abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2.1 at Level <abbr title="Double-A">AA</abbr>, because accessibility is important.</small></p>
-          <p class="m-0"><small>Built with <a href="">Eleventy</a> and hosted on <a href="">Netlify</a>.
+          <p class="m-0"><small>Built with <a href="https://www.11ty.dev/">Eleventy</a> and hosted on <a href="https://www.netlify.com/">Netlify</a>.
         </footer>
       </div>
     </div>
