@@ -1,3 +1,62 @@
 .m-0 {
     margin: 0;
 }
+
+.border-0 {
+    border-width: 0;
+}
+
+.d-inline {
+    display: inlne;
+}
+
+.marker {
+    position: relative;
+    display: inline;
+    z-index: 1;
+  }
+  
+  .marker::before {
+    background-color: $green-marker;
+    content: "";
+    position: absolute;
+    width: calc(100% + 4px);
+    height: 70%;
+    left: -2px;
+    bottom: 0;
+    z-index: -1;
+    transform: rotate(-2deg);
+  }
+
+  .marker--green::before {
+    background-color: $green-marker;
+  }
+
+  .marker--pink::before {
+      background-color: $pink-marker;
+  }
+
+.sr-only {
+    position: absolute !important;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+    border: 0;
+}
+
+.readable {
+    max-width: 52rem;
+}
+
+.mt-0 {
+    margin-top: 0 !important;
+}
+
+.mb-0 {
+    margin-bottom: 0 !important;
+}

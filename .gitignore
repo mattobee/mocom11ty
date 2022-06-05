@@ -62,3 +62,8 @@ typings/
 
 # eleventy.js build output
 dist
+.DS_Store
+.DS_Store
+.DS_Store
+.DS_Store
+src/.DS_Store

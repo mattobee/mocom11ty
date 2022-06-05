@@ -1,0 +1,71 @@
+@keyframes slideInDown {
+    0% {
+      transform: translateY(-10%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideInRight {
+    0% {
+      transform: translateX(-10%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+.list > * {
+    margin-bottom: 40px;
+}
+
+.hero {
+    margin: 8rem 0;
+    padding: 12rem;
+    background-color: cyan;
+    position: relative;
+    .hero__headline {
+        font-family: "Overpass";
+        font-size: 3.5rem;
+        letter-spacing: -0.03em;
+        line-height: 1.2;
+        margin-bottom: .5em;
+        position: relative;
+        &::before {
+            background-color: #2a2a2a;
+            border-radius: 1000px;
+            content: '';
+            display: block;
+            width: 8rem;
+            height: .2em;
+            margin-bottom: .8em;
+        }
+    }
+    &::before {
+        background-color: #2a2a2a;
+        opacity: 0.05;
+        border-radius: 1000px;
+        content: '';
+        display: block;
+        width: 8rem;
+        height: 70%;
+        position: absolute;
+        top: -4rem;
+        right: 14rem;
+        animation: 2s ease-out 0s 1 slideInDown;
+    }
+    &::after {
+        background-color: #2a2a2a;
+        opacity: 0.05;
+        border-radius: 1000px;
+        content: '';
+        display: block;
+        width: 8rem;
+        height: 70%;
+        position: absolute;
+        bottom: -4rem;
+        right: 4rem;
+        animation: 2.5s ease-out 0s 1 slideInDown;
+    }
+}

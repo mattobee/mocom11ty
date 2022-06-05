@@ -1,0 +1,17 @@
+.logo {
+    height: auto;
+    width: 6rem;
+}
+
+#masthead {
+    border-bottom: 1px solid #eee;
+    padding: 2rem 0;
+    > .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    a {
+        box-shadow: none;
+    }
+}

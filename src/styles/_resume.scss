@@ -1,0 +1,47 @@
+.role > * {
+    margin-top: 0;
+    margin-bottom: .5rem;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.role__date {
+    display: block;
+}
+
+.role__title {
+    margin-bottom: .5em;
+    position: relative;
+    &::before {
+        content: '';
+        display: inline-block;
+        background-color: #2a2a2a;
+        height: .4em;
+        margin-right: .5em;
+        margin-bottom: .15em;
+        width: .4em;
+    }
+}
+
+.role--now {
+    background-color: $yellow-marker;
+    // border-radius: 12px;
+    margin-left: -28px;
+    padding: 24px 28px;
+    position: relative;
+}
+
+.qual__title {
+    margin-bottom: .5em;
+    position: relative;
+    &::before {
+        content: '';
+        display: inline-block;
+        background-color: #2a2a2a;
+        height: .4em;
+        margin-right: .5em;
+        margin-bottom: .15em;
+        width: .4em;
+    }
+}
