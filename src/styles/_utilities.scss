@@ -63,5 +63,8 @@
 
 .bullet {
     list-style-type: disc;
-    margin-left: 1em;
+    margin-left: 2em;
+    li {
+        margin-bottom: 1em;
+    }
 }
