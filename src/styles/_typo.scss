@@ -32,14 +32,14 @@ h1 {
     margin: 4rem 0;
     position: relative;
     &::after {
-        animation: .5s ease-out 0s 1 slideInRight;
+        // animation: .5s ease-out 0s 1 slideInLeft;
         background-color: cyan;
         border-radius: 1000px;
         bottom: .3em;
         content: '';
         display: block;
         height: .4em;
-        left: 1em;
+        // left: -.5em;
         position: absolute;
         width: 120%;
         max-width: 3em;
@@ -52,8 +52,8 @@ h2 {
     font-size: 2.8rem;
     letter-spacing: -0.02em;
     line-height: 1.2;
-    margin-top: 2em;
-    margin-bottom: 1.8rem;
+    margin-top: 1.2em;
+    margin-bottom: .5em;
     position: relative;
     // &::after {
     //     background-color: cyan;
@@ -74,7 +74,7 @@ h3 {
     font-size: 1.953rem;
     line-height: 1.2;
     letter-spacing: -0.02em;
-    margin-bottom: 1em;
+    margin: 1.2em 0 1em;
 }
 
 h4 {
