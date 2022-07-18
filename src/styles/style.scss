@@ -9,15 +9,11 @@
 @import "patterns";
 @import "typo";
 @import "header";
+@import "footer";
 @import "nav";
 @import "resume";
 
 :root {
     scroll-behavior: smooth;
     scroll-snap-type: y;
-}
-
-footer {
-    background-color: #fff;
-    padding: 4rem;
 }
