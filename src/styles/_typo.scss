@@ -1,85 +1,90 @@
-@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@800&family=Roboto&family=Roboto+Slab&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@800&family=Roboto&family=Roboto+Slab&display=swap");
 
 body {
-    color: #2a2a2a;
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.5rem;
-    line-height: 1.5;
+  color: #2a2a2a;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.5;
 }
 
 p {
-    margin-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 a {
-    text-decoration: none;
-    box-shadow: inset 0 -0.1em 0 0;
-    color: inherit;
-    padding: 0 0.1em;
-    transition: all 0.2s;
-    &:hover, &:active, &:focus {
-        box-shadow: inset 0 -2em 0 0 #2a2a2a;
-        color: #fff;
-    }
+  text-decoration: none;
+  box-shadow: inset 0 -0.1em 0 0;
+  color: inherit;
+  padding: 0 0.1em;
+  transition: all 0.2s;
+  &:hover,
+  &:active,
+  &:focus {
+    box-shadow: inset 0 -2em 0 0 #2a2a2a;
+    color: #fff;
+  }
 }
 
 h1 {
-    display: inline-block;
-    font-family: "Overpass";
-    font-size: 5rem;
-    letter-spacing: -0.03em;
-    margin: 4rem 0;
-    position: relative;
-    &::after {
-        // animation: .5s ease-out 0s 1 slideInLeft;
-        background-color: cyan;
-        border-radius: 1000px;
-        bottom: .3em;
-        content: '';
-        display: block;
-        height: .4em;
-        // left: -.5em;
-        position: absolute;
-        width: 120%;
-        max-width: 3em;
-        z-index: -1;
-    }
+  display: inline-block;
+  font-family: "Overpass";
+  font-size: 5rem;
+  letter-spacing: -0.03em;
+  margin: 4rem 0;
+  position: relative;
+  &::after {
+    // animation: .5s ease-out 0s 1 slideInLeft;
+    background-color: cyan;
+    border-radius: 1000px;
+    bottom: 0.3em;
+    content: "";
+    display: block;
+    height: 0.4em;
+    // left: -.5em;
+    position: absolute;
+    width: 120%;
+    max-width: 3em;
+    z-index: -1;
+  }
 }
 
 h2 {
-    font-family: "Overpass";
-    font-size: 2.8rem;
-    letter-spacing: -0.02em;
-    line-height: 1.2;
-    margin-top: 1.2em;
-    margin-bottom: .5em;
-    position: relative;
-    // &::after {
-    //     background-color: cyan;
-    //     border-radius: 100%;
-    //     bottom: 0;
-    //     content: '';
-    //     display: block;
-    //     height: 1.5em;
-    //     left: -.5em;
-    //     position: absolute;
-    //     width: 1.5em;
-    //     z-index: -1;
-    // }
+  font-family: "Overpass";
+  font-size: 2.8rem;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin-top: 1.2em;
+  margin-bottom: 0.5em;
+  position: relative;
+  // &::after {
+  //     background-color: cyan;
+  //     border-radius: 100%;
+  //     bottom: 0;
+  //     content: '';
+  //     display: block;
+  //     height: 1.5em;
+  //     left: -.5em;
+  //     position: absolute;
+  //     width: 1.5em;
+  //     z-index: -1;
+  // }
 }
 
 h3 {
-    font-family: "Overpass";
-    font-size: 1.953rem;
-    line-height: 1.2;
-    letter-spacing: -0.02em;
-    margin: 1.2em 0 1em;
+  font-family: "Overpass";
+  font-size: 1.953rem;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin: 1.2em 0 1em;
 }
 
 h4 {
-    font-size: 1.563rem;
-    line-height: 1.2;
-    margin-bottom: 1em;
+  font-size: 1.563rem;
+  line-height: 1.2;
+  margin-bottom: 1em;
 }
 
+::selection {
+  color: #2a2a2a;
+  background: cyan;
+}
