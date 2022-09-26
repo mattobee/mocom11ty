@@ -10,6 +10,10 @@
     display: inlne;
 }
 
+.d-block {
+    display: block;
+}
+
 .marker {
     position: relative;
     display: inline;
@@ -67,4 +71,16 @@
     li {
         margin-bottom: 1em;
     }
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
 }
