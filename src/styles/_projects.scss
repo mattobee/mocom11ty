@@ -5,7 +5,12 @@
     display: block;
 }
 .project__name {
+    font-size: 1.2rem;
     font-weight: bold;
+}
+
+.project__description {
+    max-width: 30em;
 }
 
 .project {
