@@ -17,7 +17,7 @@
         }
         &.active {
             &::after {
-                background-color: #D100D1;
+                background-color: #2a2a2a;
                 border-radius: 1000px;
                 content: '';
                 display: block;
@@ -29,7 +29,7 @@
         &:hover {
             color: inherit;
             &::after {
-                background-color: #D100D1;
+                background-color: #2a2a2a;
                 border-radius: 1000px;
                 content: '';
                 display: block;
