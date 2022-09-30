@@ -1,5 +1,7 @@
 ---
 title: Work-Happy accessibility review
+type: responsive
+typedesc: Responsive website
 client: Work-Happy
 description: Monitor workplace happiness
 date: 2019-12-01
