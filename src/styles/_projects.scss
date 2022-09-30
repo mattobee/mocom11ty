@@ -26,7 +26,7 @@
     box-shadow: 0 0 1rem 0 (rgba(0,0,0,0.1));
     padding-bottom: 4rem;
     position: relative;
-    margin-bottom: 3rem;
+    margin-bottom: 5rem;
     // &::before {
     //     // animation: .5s ease-out 0s 1 slideInLeft;
     //     background-color: cyan;
@@ -43,14 +43,19 @@
 }
 
 .project__casestudy {
-    background-color: cyan;
+    background-color: rgba(42,42,42,1);
     border-radius: 1000px;
     border: none;
     box-shadow: none;
+    color: #fff;
     display: inline-block;
-    // margin-top: 1rem;
-    padding: .3em 1em;
+    padding: .2em 1em;
     position: absolute;
     right: 2rem;
     bottom: -1.5rem;
+    &:hover, &:active, &:focus {
+        background-color: cyan;
+        box-shadow: none;
+        color: rgba(42,42,42,1);
+    }
 }
