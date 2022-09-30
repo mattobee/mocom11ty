@@ -2,8 +2,10 @@
 layout: layouts/base.njk
 title: Projects - Matt Obee
 ---
-<div class="container readable">
+<div class="container">
     <h1>Projects</h1>
+</div>
+<div class="container readable">
     <ul class="projects">
         {% for project in collections.project | reverse %}
         {% if project.data.casestudy %}
