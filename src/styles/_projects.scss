@@ -1,22 +1,56 @@
 .project__client {
-    font-size: 1rem;
-    font-weight: normal;
     color: #6b7280;
     display: block;
+    margin-bottom: .2em;
 }
 .project__name {
-    font-size: 1.2rem;
-    font-weight: bold;
+    margin: 0;
 }
 
 .project__description {
-    max-width: 30em;
+    margin: 0;
 }
 
 .project {
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 2rem;
+    padding: 2rem;
 }
 
 .projects {
-    width: 100%;
+    margin: 0;
+}
+
+.project--casestudy {
+    background-color: #fff;
+    box-shadow: 0 0 1rem 0 (rgba(0,0,0,0.1));
+    padding-bottom: 4rem;
+    position: relative;
+    margin-bottom: 3rem;
+    // &::before {
+    //     // animation: .5s ease-out 0s 1 slideInLeft;
+    //     background-color: cyan;
+    //     border-radius: 1000px;
+    //     top: -1rem;
+    //     content: "";
+    //     display: block;
+    //     height: 70%;
+    //     left: -1.5rem;
+    //     position: absolute;
+    //     width: 3rem;
+    //     z-index: -1;
+    //   }
+}
+
+.project__casestudy {
+    background-color: cyan;
+    border-radius: 1000px;
+    border: none;
+    box-shadow: none;
+    display: inline-block;
+    // margin-top: 1rem;
+    padding: .3em 1em;
+    position: absolute;
+    right: 2rem;
+    bottom: -1.5rem;
 }

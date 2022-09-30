@@ -9,7 +9,7 @@
     <meta name="description" content="{{ renderData.description or description or metadata.description }}">
     <title>{{ renderData.title or title or metadata.title }}</title>
     <link rel="stylesheet" href="/styles/style.css">
-    <script src="https://kit.fontawesome.com/33cbca6a48.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/944b743d87.js" crossorigin="anonymous"></script>
   </head>
   <body id="top" itemscope itemtype="http://schema.org/Person">
     {% include "../header.njk" %}
@@ -23,11 +23,11 @@
           <li><a class="social__link" href="https://twitter.com/mattobee" itemprop="sameAs" aria-label="Matt Obee on Twitter"><i class="fab fa-twitter"></i></a></li>
           <li><a class="social__link" href="https://goodreads.com/mattobee" itemprop="sameAs" aria-label="Matt Obee on Goodreads"><i class="fab fa-goodreads"></i></a></li>
         </ul>
-        <p class="m-0"><small>&copy; 2022 Matt Obee</small></p>
+        <p class="m-0"><small>&copy; {% year %} Matt Obee</small></p>
         <p class="m-0"><small>This page conforms to <abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2.1 at Level <abbr title="Double-A">AA</abbr>, because <a href="/accessibility">accessibility</a> is important.</small></p>
         <p class="m-0"><small>Built with <a href="https://www.11ty.dev/">Eleventy</a> and hosted by <a href="https://www.netlify.com/">Netlify</a>.
       </div>
     </footer>
-    <script src="/scripts/index.js"></script>
+    {# <script src="/scripts/index.js"></script> #}
   </body>
 </html>
