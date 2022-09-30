@@ -1,9 +1,11 @@
 .project__client {
     display: block;
     margin-bottom: .2em;
+    order: 3;
 }
 .project__name {
     margin: 0;
+    order: 2;
 }
 
 .project__type {
@@ -12,15 +14,20 @@
     display: inline-block;
     font-size: 1.2rem;
     margin-bottom: 1rem;
+    order: 1;
     padding: .1em .4em;
 }
 
 .project__description {
     margin: 0;
+    order: 4;
 }
 
 .project {
+    align-items: flex-start;
     border-bottom: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
     margin-bottom: 2rem;
     padding: 2rem;
 }
