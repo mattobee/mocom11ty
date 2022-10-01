@@ -3,7 +3,7 @@ title: Toys R Us
 type: desktop
 typedesc: Mobile Website
 client: Red Ant / Toys 'R' Us
-description: I worked on a new transactional mobile site for Toys 'R' Us and Babies 'R' Us with the option to purchase items for delivery, or reserving them to collect in store, with store stock availability information based on the user’s location.
-date: 2012-12-01
+description: This toy shop needs no introduction. I was part of the multi-agency team that designed its mobile ecommerce website, complete with online ordering for delivery or collection, live stock information based on the user’s location, and convenient QR code driven purchasing.
+date: 2012-06-01
 casestudy: false
 ---
