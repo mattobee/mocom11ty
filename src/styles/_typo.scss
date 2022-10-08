@@ -56,11 +56,11 @@ h2 {
   margin-top: 1.2em;
   margin-bottom: 0.5em;
   position: relative;
-  &::before {
+  &:not(.project__name)::before {
       content: '';
       width: 1.5em;
       height: 1.5em;
-      background: linear-gradient(to bottom right, #fff 0%, #fff 50%, cyan 50%, cyan 100%);
+      background: linear-gradient(to bottom right, #fff 0%, #fff 50%, yellow 50%, yellow 100%);
       position: absolute;
       left: -.7em;
       bottom: .35em;
