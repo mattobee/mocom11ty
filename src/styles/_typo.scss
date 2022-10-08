@@ -56,18 +56,16 @@ h2 {
   margin-top: 1.2em;
   margin-bottom: 0.5em;
   position: relative;
-  // &::after {
-  //     background-color: cyan;
-  //     border-radius: 100%;
-  //     bottom: 0;
-  //     content: '';
-  //     display: block;
-  //     height: 1.5em;
-  //     left: -.5em;
-  //     position: absolute;
-  //     width: 1.5em;
-  //     z-index: -1;
-  // }
+  &::before {
+      content: '';
+      width: 1.5em;
+      height: 1.5em;
+      background: linear-gradient(to bottom right, #fff 0%, #fff 50%, cyan 50%, cyan 100%);
+      position: absolute;
+      left: -.7em;
+      bottom: .35em;
+      z-index: -1;
+  }
 }
 
 h3 {
