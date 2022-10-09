@@ -56,14 +56,27 @@ h2 {
   margin-top: 1.2em;
   margin-bottom: 0.5em;
   position: relative;
-  &:not(.project__name)::before {
-      content: '';
-      width: 1.5em;
-      height: 1.5em;
-      background: linear-gradient(to bottom right, #fff 0%, #fff 50%, yellow 50%, yellow 100%);
+  // &:not(.project__name)::before {
+  //     content: '';
+  //     width: 1.5em;
+  //     height: 1.5em;
+  //     background: linear-gradient(to bottom right, #fff 0%, #fff 50%, yellow 50%, yellow 100%);
+  //     position: absolute;
+  //     left: -.7em;
+  //     bottom: .35em;
+  //     z-index: -1;
+  // }
+    &:not(.project__name)::before {
+      background-color: yellow;
+      border-radius: 1000px;
+      top: 0;
+      content: "";
+      display: block;
+      height: 0.4em;
+      left: -2rem;
       position: absolute;
-      left: -.7em;
-      bottom: .35em;
+      width: 5rem;
+      max-width: 3em;
       z-index: -1;
   }
 }
