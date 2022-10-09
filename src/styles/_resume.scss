@@ -25,11 +25,15 @@
 }
 
 .role--now {
-    background-color: #eee;
+    background-color: #2a2a2a;
+    color: #fff;
     // border-radius: 12px;
     margin-left: -3rem;
     padding: 3rem;
     position: relative;
+    .role__title::before {
+        background-color: yellow;
+    }
 }
 
 .qual__title {
