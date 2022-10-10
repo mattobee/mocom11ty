@@ -1,0 +1,12 @@
+.btn {
+    background-color: #2a2a2a;
+    border: 0;
+    border-radius: 1000px;
+    color: #fff;
+    padding: .5em .8em;
+    &:hover, &:focus-visible {
+        background-color: yellow;
+        color: #2a2a2a;
+        cursor: pointer
+    }
+}
