@@ -1,5 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Overpass:wght@800&family=Roboto&family=Roboto+Slab&display=swap");
 
+html {
+  font-size: 75%;
+  @media (min-width: 640px) { 
+    font-size: 100%;
+  }
+}
+
 body {
   color: #2a2a2a;
   font-family: "Roboto", sans-serif;
