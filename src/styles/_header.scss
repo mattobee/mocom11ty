@@ -8,8 +8,12 @@
     padding: 2rem 0;
     > .container {
         display: flex;
+        flex-direction: column;
         justify-content: space-between;
         align-items: center;
+        @media (min-width: 640px) { 
+            flex-direction: row;
+        }
     }
     a {
         box-shadow: none;

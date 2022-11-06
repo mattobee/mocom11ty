@@ -27,10 +27,9 @@
 .role--now {
     background-color: #2a2a2a;
     color: #fff;
-    // border-radius: 12px;
-    margin-left: -3rem;
-    padding: 3rem;
-    position: relative;
+    margin-left: -2rem;
+    margin-right: -2rem;
+    padding: 2rem;
     .role__title::before {
         background-color: yellow;
     }

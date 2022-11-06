@@ -28,10 +28,14 @@ a {
 h1 {
   display: inline-block;
   font-family: "Overpass";
-  font-size: 5rem;
+  font-size: 4rem;
   letter-spacing: -0.03em;
-  margin: 4rem 0;
+  margin: 2rem 0;
   position: relative;
+  @media (min-width: 768px) { 
+    font-size: 5rem;
+    margin: 4rem 0;
+  }
   &::after {
     // animation: .5s ease-out 0s 1 slideInLeft;
     background-color: cyan;
@@ -40,32 +44,28 @@ h1 {
     content: "";
     display: block;
     height: 0.4em;
-    left: -2rem;
+    left: -1rem;
     position: absolute;
     width: 120%;
     max-width: 3em;
     z-index: -1;
+    @media (min-width: 1200px) { 
+      left: -2rem;
+    }
   }
 }
 
 h2 {
   font-family: "Overpass";
-  font-size: 2.8rem;
+  font-size: 2rem;
   letter-spacing: -0.02em;
   line-height: 1.2;
   margin-top: 1.2em;
   margin-bottom: 0.5em;
   position: relative;
-  // &:not(.project__name)::before {
-  //     content: '';
-  //     width: 1.5em;
-  //     height: 1.5em;
-  //     background: linear-gradient(to bottom right, #fff 0%, #fff 50%, yellow 50%, yellow 100%);
-  //     position: absolute;
-  //     left: -.7em;
-  //     bottom: .35em;
-  //     z-index: -1;
-  // }
+  @media (min-width: 1200px) { 
+    font-size: 2.8rem;
+  }
     &:not(.project__name)::before {
       background-color: cyan;
       border-radius: 1000px;
@@ -73,11 +73,14 @@ h2 {
       content: "";
       display: block;
       height: 0.4em;
-      left: -2rem;
+      left: -1rem;
       position: absolute;
       width: 5rem;
       max-width: 3em;
       z-index: -1;
+      @media (min-width: 1200px) { 
+        left: -2rem;
+      }
   }
 }
 
@@ -102,4 +105,8 @@ h4 {
 
 .muted {
   color: #6b7280;
+}
+
+small {
+  line-height: 1.2;
 }

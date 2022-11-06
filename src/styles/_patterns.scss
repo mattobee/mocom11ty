@@ -30,8 +30,8 @@
 }
 
 .hero {
-    margin: 8rem 0;
-    padding: 9rem;
+    margin: 2rem 0;
+    padding: 2rem;
     background-color: cyan;
     position: relative;
     p {
@@ -39,7 +39,7 @@
     }
     .hero__headline {
         font-family: "Overpass";
-        font-size: 3.5rem;
+        font-size: 2rem;
         letter-spacing: -0.03em;
         line-height: 1.2;
         margin-bottom: .5em;
@@ -53,8 +53,14 @@
             height: .3em;
             margin-bottom: .8em;
         }
+        @media (min-width: 640px) { 
+          font-size: 3.5rem;
+        }
     }
-    &::before {
+    @media (min-width: 768px) { 
+      margin: 8rem 0;
+      padding: 4rem;
+      &::before {
         background-color: #2a2a2a;
         opacity: 0.05;
         border-radius: 1000px;
@@ -66,23 +72,20 @@
         top: -4rem;
         right: 14rem;
         animation: 2s ease-out 0s 1 slideInDown;
-    }
-    &::after {
-        background-color: #2a2a2a;
-        opacity: 0.05;
-        border-radius: 1000px;
-        content: '';
-        display: block;
-        width: 8rem;
-        height: 70%;
-        position: absolute;
-        bottom: -4rem;
-        right: 4rem;
-        animation: 2.5s ease-out 0s 1 slideInDown;
-    }
-    ::selection {
-      color: cyan;
-      background: #2a2a2a;
+      }
+      &::after {
+          background-color: #2a2a2a;
+          opacity: 0.05;
+          border-radius: 1000px;
+          content: '';
+          display: block;
+          width: 8rem;
+          height: 70%;
+          position: absolute;
+          bottom: -4rem;
+          right: 4rem;
+          animation: 2.5s ease-out 0s 1 slideInDown;
+      }
     }
 }
 

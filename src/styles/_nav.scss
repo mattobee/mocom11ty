@@ -4,6 +4,9 @@
     .nav__item {
         display: inline-block;
         margin-right: 2rem;
+        &:last-child {
+            margin-right: 0;
+        }
     }
     a {
         border: none;
