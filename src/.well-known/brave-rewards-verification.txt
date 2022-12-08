@@ -1,4 +1,0 @@
-This is a Brave Rewards publisher verification file.
-
-Domain: mattobee.com
-Token: 5f4a845a75d00fc256cb40a9a620abe878819144208df758e3cd6a96ed7db279
