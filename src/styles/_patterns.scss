@@ -119,3 +119,24 @@
       }
   }
 }
+
+.a11y-webring-club {
+  background: #1a1a1a;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  padding: 2rem;
+  li {
+    @media (min-width: 768px) { 
+      display: inline-block;
+      margin-right: .5rem;
+    }
+    a {
+      box-shadow: none;
+      padding: .2em;
+    }
+  }
+}
+
+h2#a11y-webring-club {
+  font-size: 2rem;
+}
