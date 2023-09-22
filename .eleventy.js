@@ -1,7 +1,8 @@
 const eleventySass = require("@11tyrocks/eleventy-plugin-sass-lightningcss");
 
 module.exports = function(eleventyConfig) {
-  eleventyConfig.addPassthroughCopy('src/images')
+  eleventyConfig.addPassthroughCopy('src/images');
+  eleventyConfig.addPlugin(eleventySass);
   eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
 
   return {
