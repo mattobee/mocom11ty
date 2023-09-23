@@ -1,12 +1,11 @@
 window.addEventListener('DOMContentLoaded', () => {
+    const btn_copy = document.getElementById('copy');
+    const bio = document.getElementById('bio');
 
-    const btn_copy = document.getElementById('copy')
-    const bio = document.getElementById('bio')
-
-    copy.onclick = () => {
-        const value = bio.textContent
+    btn_copy.addEventListener('click', () => {
+        const value = bio.textContent;
         navigator.clipboard.writeText(value)
-        console.log("clicking copy")
-    }
-	
+            .then(() => console.log("Copied to clipboard"))
+            .catch((error) => console.error("Failed to copy to clipboard: ", error));
+    });
 });
