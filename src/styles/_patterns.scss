@@ -34,26 +34,15 @@
     }
     .hero__headline {
         font-family: "Overpass";
-        font-size: 2rem;
+        font-size: var(--step-4);
         letter-spacing: -0.03em;
         line-height: 1.2;
-        margin-bottom: .5em;
+        margin-bottom: var(--space-m);
         position: relative;
-        // &::before {
-        //     background-color: #2a2a2a;
-        //     border-radius: 1000px;
-        //     content: '';
-        //     display: block;
-        //     width: 8rem;
-        //     height: .3em;
-        //     margin-bottom: .8em;
-        // }
-        @media (min-width: 640px) { 
-          font-size: 3.5rem;
-        }
+        text-wrap: balance;
     }
     @media (min-width: 768px) { 
-      margin: 6rem 0;
+      margin: var(--space-l) 0;
       padding: 4rem;
       &::before {
         background-color: #2a2a2a;
