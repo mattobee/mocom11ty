@@ -3,7 +3,7 @@ layout: layouts/default.njk
 title: Projects
 ---
 <div class="container readable">
-    <ul class="projects flow">
+    <ul class="projects flow flow-xl">
         {% for project in collections.project | reverse %}
         {% if project.data.casestudy %}
         <li class="project project--casestudy">
