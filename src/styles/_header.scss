@@ -8,7 +8,7 @@
     border-bottom: 1px solid rgba(0,0,0,0.05);
     container-type: inline-size;
     container-name: headerContainer;
-    padding: var(--space-l);
+    padding: var(--space-l) 0;
     > .container {
         display: flex;
         flex-direction: row;
