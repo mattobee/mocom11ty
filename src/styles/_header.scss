@@ -5,18 +5,30 @@
 
 #masthead {
     background-color: #fff;
-    border-bottom: 1px solid #eee;
-    padding: 2rem 0;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    container-type: inline-size;
+    container-name: headerContainer;
+    padding: var(--space-l) 0;
     > .container {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        @media (min-width: 640px) { 
-            flex-direction: row;
-        }
     }
     a {
         box-shadow: none;
+    }
+}
+
+.open-menu {
+    display: none;
+}
+
+@container headerContainer (max-width: 800px) {
+    .nav {
+        display: none;
+    }
+    .open-menu {
+        display: block;
     }
 }

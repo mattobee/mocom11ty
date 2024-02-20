@@ -7,11 +7,7 @@ ul {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 2rem;
-}
-
-h1, h2, h3, h4, h5, h6, p {
-    margin: 0;
+    padding: var(--space-xl) var(--space-m);
 }
 
 *:focus-visible {
@@ -24,11 +20,12 @@ td, th {
 }
 
 th {
-    font-size: .8rem;
+    text-align: left;
 }
 
 table {
     font-size: 1rem;
+    width: 100%;
 }
 
 main {

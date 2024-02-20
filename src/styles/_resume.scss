@@ -1,17 +1,8 @@
-.role > * {
-    margin-top: 0;
-    margin-bottom: .5rem;
-    &:last-child {
-        margin-bottom: 0;
-    }
-}
-
 .role__date {
     display: block;
 }
 
 .role__title {
-    margin-bottom: .5em;
     position: relative;
     &::before {
         content: '';
@@ -19,33 +10,30 @@
         background-color: #2a2a2a;
         height: .4em;
         margin-right: .5em;
-        margin-bottom: .15em;
         width: .4em;
     }
 }
 
 .role--now {
-    background-color: #2a2a2a;
-    color: #fff;
+    background-color: var(--color-yellow-highlight);
+    border-radius: var(--space-xs);
     margin-left: -2rem;
     margin-right: -2rem;
     padding: 2rem;
-    .role__title::before {
-        background-color: yellow;
+    .muted {
+        color: rgba(0, 0, 0, 0.6);
     }
 }
 
 .qual__title {
-    font-size: 1.6rem;
-    margin-bottom: .1em;
+    font-size: var(--step-1);
     position: relative;
     &::before {
         content: '';
         display: inline-block;
-        background-color: #2a2a2a;
+        background-color: var(--color-grey);
         height: .4em;
         margin-right: .5em;
-        margin-bottom: .15em;
         width: .4em;
     }
 }

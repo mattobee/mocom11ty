@@ -1,0 +1,9 @@
+<sl-drawer label="Menu" class="drawer-menu">
+    <nav>
+        <ul class="flow flow-s">
+            <li><a {% if '/uses' in page.url %}aria-current="page"{% endif %} class="{{ 'active' if '/uses' in page.url }}"href="/uses">Uses</a></li>
+            <li><a {% if '/resume' in page.url %}aria-current="page"{% endif %} class="{{ 'active' if '/resume' in page.url }}" href="/resume">Résumé</a></li>
+            <li><a {% if '/projects' in page.url %}aria-current="page"{% endif %} class="{{ 'active' if '/projects' in page.url }}"href="/projects">Projects</a></li>
+        </ul>
+    </nav>
+</sl-drawer>

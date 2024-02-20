@@ -3,6 +3,7 @@
 @import "reset";
 @import "base";
 @import "variables";
+@import "space";
 @import "color";
 @import "utilities";
 @import "patterns";
@@ -13,8 +14,71 @@
 @import "nav";
 @import "resume";
 @import "projects";
+@import "drawer";
 
 :root {
     scroll-behavior: smooth;
     scroll-snap-type: y;
+}
+
+dl {
+    display: flex;
+    flex-direction: column;
+}
+
+dl > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: var(--space-2xs) 0;
+    @media (min-width: 700px) {
+        flex-direction: row;
+    }
+}
+
+dt, dd {
+    margin: 0;
+}
+
+dt {
+    font-weight: bold;
+}
+
+.section {
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.flow {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.flow > * {
+    margin-block: 0;
+}
+
+.flow > * + * {
+    margin-block-start: var(--flow-space, 1.5rem);
+}
+
+.flow-l > * {
+    --flow-space: var(--space-l);
+}
+
+.flow-m > * {
+    --flow-space: var(--space-m);
+}
+
+.flow-xl > * {
+    --flow-space: var(--space-xl);
+}
+
+.flow-xs > * {
+    --flow-space: var(--space-3xs);
+}
+
+.flow-s > * {
+    --flow-space: var(--space-s);
 }

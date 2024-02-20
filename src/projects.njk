@@ -1,12 +1,9 @@
 ---
-layout: layouts/base.njk
-title: Projects - Matt Obee
+layout: layouts/default.njk
+title: Projects
 ---
-<div class="container py-0">
-    <h1>Projects</h1>
-</div>
 <div class="container readable">
-    <ul class="projects">
+    <ul class="projects flow flow-xl">
         {% for project in collections.project | reverse %}
         {% if project.data.casestudy %}
         <li class="project project--casestudy">
@@ -28,8 +25,9 @@ title: Projects - Matt Obee
             <a class="project__casestudy" href="/" aria-label="{{ project.data.title }}">Read the case study <i class="fa-solid fa-arrow-right"></i></a>
         </li>
         {% else %}
-        <li class="project">
+        <li class="project flow">
             <h2 class="project__name">{{ project.data.title }}</h2>
+            <span class="project__client muted">for {{ project.data.client }}</span>
             {% if project.data.type and project.data.typedesc %}
             <span class="project__type">
                 {% if project.data.type === 'responsive' %}
@@ -43,7 +41,6 @@ title: Projects - Matt Obee
                 {{ project.data.typedesc }}
             </span>
             {% endif %}
-            <span class="project__client muted">for {{ project.data.client }}</span>
             <p class="project__description">{{ project.data.description }}</p>
         </li>
         {% endif %}
