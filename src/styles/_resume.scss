@@ -15,13 +15,16 @@
 }
 
 .role--now {
-    background-color: #2a2a2a;
+    background-color: var(--color-grey);
     color: #fff;
     margin-left: -2rem;
     margin-right: -2rem;
     padding: 2rem;
     .role__title::before {
         background-color: yellow;
+    }
+    .muted {
+        color: rgba(255,255,255,0.7);
     }
 }
 
@@ -31,7 +34,7 @@
     &::before {
         content: '';
         display: inline-block;
-        background-color: #2a2a2a;
+        background-color: var(--color-grey);
         height: .4em;
         margin-right: .5em;
         width: .4em;

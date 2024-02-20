@@ -58,6 +58,10 @@ dt, dd {
     --flow-space: var(--space-l);
 }
 
+.flow-m > * {
+    --flow-space: var(--space-m);
+}
+
 .flow-xl > * {
     --flow-space: var(--space-xl);
 }
