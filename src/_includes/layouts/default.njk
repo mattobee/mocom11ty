@@ -1,0 +1,14 @@
+---
+layout: layouts/base.njk
+---
+
+<div class="section">
+    <div class="container">
+        <h1><span aria-hidden="true" role="presentation">/</span>{{ title }}</h1>
+        {% if summary %}
+            <p class="large">{{ summary }}</p>
+        {% endif %}
+    </div>
+</div>
+
+{{ content | safe }}

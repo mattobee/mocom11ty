@@ -1,17 +1,8 @@
-.role > * {
-    margin-top: 0;
-    margin-bottom: .5rem;
-    &:last-child {
-        margin-bottom: 0;
-    }
-}
-
 .role__date {
     display: block;
 }
 
 .role__title {
-    margin-bottom: .5em;
     position: relative;
     &::before {
         content: '';
@@ -19,7 +10,6 @@
         background-color: #2a2a2a;
         height: .4em;
         margin-right: .5em;
-        margin-bottom: .15em;
         width: .4em;
     }
 }
@@ -36,8 +26,7 @@
 }
 
 .qual__title {
-    font-size: 1.6rem;
-    margin-bottom: .1em;
+    font-size: var(--step-1);
     position: relative;
     &::before {
         content: '';
@@ -45,7 +34,6 @@
         background-color: #2a2a2a;
         height: .4em;
         margin-right: .5em;
-        margin-bottom: .15em;
         width: .4em;
     }
 }

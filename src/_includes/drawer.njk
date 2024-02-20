@@ -1,0 +1,10 @@
+<sl-drawer label="Menu" class="drawer-menu">
+    <nav>
+        <ul>
+            <li class="nav__item"><a {% if '/now' in page.url %}aria-current="page"{% endif %} class="{{ 'active' if '/now' in page.url }}"href="/now">Now</a></li>
+            <li class="nav__item"><a {% if '/uses' in page.url %}aria-current="page"{% endif %} class="{{ 'active' if '/uses' in page.url }}"href="/uses">Uses</a></li>
+            <li class="nav__item"><a {% if '/resume' in page.url %}aria-current="page"{% endif %} class="{{ 'active' if '/resume' in page.url }}" href="/resume">Résumé</a></li>
+            <li class="nav__item"><a {% if '/projects' in page.url %}aria-current="page"{% endif %} class="{{ 'active' if '/projects' in page.url }}"href="/projects">Projects</a></li>
+        </ul>
+    </nav>
+</sl-drawer>

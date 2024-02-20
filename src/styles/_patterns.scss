@@ -25,10 +25,6 @@
     }
   }
 
-.list > * {
-    margin-bottom: 3rem;
-}
-
 .hero {
     padding: 2rem;
     background-color: cyan;
@@ -109,7 +105,7 @@
       border: none;
       box-shadow: none;
       opacity: 0.8;
-      margin-right: .8rem;
+      margin-right: var(--space-2xs);
       &:hover {
           opacity: 1;
       }
@@ -121,10 +117,11 @@
 }
 
 .a11y-webring-club {
-  background: #1a1a1a;
-  font-size: 1.2rem;
+  background: var(--color-grey-darker);
+  border-radius: var(--space-xs);
   margin-bottom: 1rem;
-  padding: 2rem;
+  padding: var(--space-m);
+  width: fit-content;
   li {
     @media (min-width: 768px) { 
       display: inline-block;
@@ -138,5 +135,5 @@
 }
 
 h2#a11y-webring-club {
-  font-size: 2rem;
+  font-size: var(--step-2);
 }
