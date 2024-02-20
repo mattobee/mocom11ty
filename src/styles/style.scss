@@ -14,6 +14,7 @@
 @import "nav";
 @import "resume";
 @import "projects";
+@import "drawer";
 
 :root {
     scroll-behavior: smooth;
@@ -76,4 +77,8 @@ dt {
 
 .flow-xs > * {
     --flow-space: var(--space-3xs);
+}
+
+.flow-s > * {
+    --flow-space: var(--space-s);
 }
