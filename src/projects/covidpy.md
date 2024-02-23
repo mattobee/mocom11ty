@@ -1,5 +1,5 @@
 ---
-title: COVID Alert PY
+title: COVID Alert PA
 type: native
 typedesc: Native mobile app
 role: UX
