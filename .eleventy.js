@@ -8,10 +8,10 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(eleventySass);
   eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
 
-  // Fetch notes data at build time
-  eleventyConfig.addGlobalData("notes", async () => {
-    return await fetchNotes();
-  });
+    // Fetch notes data at build time
+    eleventyConfig.addCollection("notes", async () => {
+      return await fetchNotes();
+    });
 
   return {
     dir: { input: "src", output: "dist", data: "_data" },

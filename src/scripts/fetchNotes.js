@@ -1,14 +1,28 @@
 // fetchNotes.js
-import sanityClient from './sanityClient';
+// const sanityClient = require('./sanityClient');
 
-export async function fetchNotes() {
-  const query = `*[_type == "note"]{
-    _id,
-    title,
-    "slug": slug.current,
-    content
-  }`;
-
-  const notes = await sanityClient.fetch(query);
-  return notes;
+async function fetchNotes() {
+  // Return a hard-coded list of notes for debugging
+  return [
+    {
+      _id: '1',
+      title: 'Note 1',
+      slug: 'note-1',
+      content: 'This is the content of note 1.'
+    },
+    {
+      _id: '2',
+      title: 'Note 2',
+      slug: 'note-2',
+      content: 'This is the content of note 2.'
+    },
+    {
+      _id: '3',
+      title: 'Note 3',
+      slug: 'note-3',
+      content: 'This is the content of note 3.'
+    }
+  ];
 }
+
+module.exports = fetchNotes;

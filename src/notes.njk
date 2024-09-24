@@ -6,7 +6,7 @@ summary: A somewhat up-to-date summary of what I'm up to.
 
 <div class="container">
 
-    {% for note in notes %}
+    {% for note in collections.notes %}
       <li>
         <article>
           <h2><a href="/notes/{{ note.slug }}">{{ note.title }}</a></h2>
