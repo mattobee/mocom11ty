@@ -1,1 +1,3 @@
-export const schemaTypes = []
+import note from './note'
+
+export const schemaTypes = [note]

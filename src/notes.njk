@@ -1,0 +1,19 @@
+---
+layout: layouts/default.njk
+title: Notes
+summary: A somewhat up-to-date summary of what I'm up to.
+---
+
+<div class="container">
+
+    {% for note in notes %}
+      <li>
+        <article>
+          <h2><a href="/notes/{{ note.slug }}">{{ note.title }}</a></h2>
+          <p>{{ note.content }}</p>
+        </article>
+      </li>
+    {% endfor %}
+
+</div>
+<!-- End container -->
