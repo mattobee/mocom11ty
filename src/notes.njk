@@ -1,19 +1,22 @@
 ---
 layout: layouts/default.njk
 title: Notes
-summary: A somewhat up-to-date summary of what I'm up to.
+summary: A collection of incomplete thoughts and ideas.
 ---
 
 <div class="container">
 
+  <ul role="list" class="flow">
     {% for note in collections.notes %}
       <li>
-        <article>
-          <h2><a href="/notes/{{ note.slug }}">{{ note.title }}</a></h2>
+        <article class="flow flow-xs">
+          <h2><a class="undecorated" href="/notes/{{ note.slug }}">{{ note.title }}</a></h2>
           <p>{{ note.content }}</p>
+          <span><small>Updated <sl-relative-time date="{{ note._updatedAt }}"></sl-relative-time></small></span>
         </article>
       </li>
     {% endfor %}
+  </ul>
 
 </div>
 <!-- End container -->

@@ -1,7 +1,7 @@
-const sanityClient = require('@sanity/client');
+const { createClient } = require('@sanity/client');
 
-const client = sanityClient({
-projectId: 'eb20sjiu',
+const client = createClient({
+  projectId: 'eb20sjiu',
   dataset: 'production',
   useCdn: true,
 });
