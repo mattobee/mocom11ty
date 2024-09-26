@@ -7,10 +7,12 @@ async function fetchNotes() {
     title,
     "slug": slug.current,
     content,
+    maturity,
     _updatedAt
   }`;
 
   const notes = await sanityClient.fetch(query);
+  console.log('notes', notes);
   return notes;
 }
 

@@ -17,6 +17,20 @@ export default {
           maxLength: 96,
         },
       },
+      // digital garden maturity level
+      {
+        name: 'maturity',
+        type: 'string',
+        title: 'Maturity',
+        options: {
+          list: [
+            { title: 'Seedling', value: 'seedling' },
+            { title: 'Budding', value: 'budding' },
+            { title: 'Evergreen', value: 'evergreen' },
+          ],
+        },
+        initialValue: 'seedling',
+      },
       {
         name: 'content',
         type: 'text',
