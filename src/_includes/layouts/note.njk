@@ -1,0 +1,40 @@
+---
+layout: layouts/base.njk
+---
+
+{% set maturityTitles = {
+  'seedling': 'Seedling',
+  'budding': 'Budding',
+  'evergreen': 'Evergreen'
+} %}
+
+<article>
+    <header class="page-header section">
+        <div class="container">
+            <h1 class="note">{{ note.title }}</h1>
+            <span class="note__status"><small>{{ maturityTitles[note.maturity] }} &middot; Updated <sl-relative-time date="{{ note._updatedAt }}"></sl-relative-time></small></span>
+        </div>
+    </header>
+
+    <div class="container readable flow">
+
+        <div class="article">
+
+            {% if note.content %}
+                {{ note.content | markdown | safe }}
+            {% else %}
+            <p>Content is not available.</p>
+            {% endif %}
+
+        </div>
+        <!-- End article -->
+
+        <div class="signature flow flow-xs role role--now">
+            <h2>Cheers for reading</h2>
+            <p>Matt Obee is a design technologist specialising in accessibility and Chocolate Hobnobs, currently working as a Staff Accessibility Designer at GitHub. He is the maintainer of <a href="https://eventua11y.com">Eventua11y</a> and <a href="https://a11y.courses">A11y.courses</a>.</p>
+        </div>
+        <!-- End signatute -->
+
+    </div>
+
+</article>

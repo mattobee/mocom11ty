@@ -1,5 +1,5 @@
 ---
-layout: layouts/default.njk
+layout: layouts/note.njk
 pagination:
   data: collections.notes
   size: 1
@@ -11,10 +11,7 @@ permalink: "notes/{{ note.slug }}/index.html"
 
 <div class="container">
 
-<article>
-  <h1>{{ note.title }}</h1>
   <div>{{ note.content }}</div>
-</article>
 
 </div>
 <!-- End container -->

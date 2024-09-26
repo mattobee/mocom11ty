@@ -33,7 +33,7 @@ export default {
       },
       {
         name: 'content',
-        type: 'text',
+        type: 'markdown',
         title: 'Content'
       },
     ],

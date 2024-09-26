@@ -36,11 +36,14 @@ a {
 }
 
 h1 {
-  display: inline-block;
   font-family: "Overpass";
   font-size: var(--step-6);
   letter-spacing: -0.03em;
   text-transform: lowercase;
+  &.note {
+    text-transform: none;
+    font-size: var(--step-5);
+  }
 }
 
 h2 {

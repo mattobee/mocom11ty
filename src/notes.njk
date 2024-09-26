@@ -17,7 +17,6 @@ summary: A collection of incomplete thoughts and ideas.
       <li>
         <article class="flow flow-xs">
           <h2><a class="undecorated" href="/notes/{{ note.slug }}">{{ note.title }}</a></h2>
-          <p>{{ note.content }}</p>
           <span class="note__status"><small>{{ maturityTitles[note.maturity] }} &middot; Updated <sl-relative-time date="{{ note._updatedAt }}"></sl-relative-time></small></span>
         </article>
       </li>
