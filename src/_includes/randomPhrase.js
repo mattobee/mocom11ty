@@ -6,7 +6,6 @@ module.exports = function (eleventyConfig) {
       'lemon drizzle cake',
       'coffee drinking',
       'LEGO',
-      'rabbit holes',
       'obscure facts',
       'expensive gadgets',
       'Star Trek'
