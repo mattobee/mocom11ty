@@ -12,7 +12,7 @@ layout: layouts/base.njk
     <header class="page-header section">
         <div class="container">
             <h1 class="note">{{ note.title }}</h1>
-            <span class="note__status muted"><small>{{ maturityTitles[note.maturity] }} &middot; Updated <sl-relative-time date="{{ note._updatedAt }}"></sl-relative-time></small></span>
+            <span class="note__status muted">{{ maturityTitles[note.maturity] }} &middot; Updated <sl-relative-time date="{{ note._updatedAt }}"></sl-relative-time></span>
         </div>
     </header>
 
