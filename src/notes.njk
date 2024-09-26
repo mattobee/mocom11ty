@@ -17,7 +17,7 @@ summary: A collection of incomplete thoughts and ideas.
       <li>
         <article>
           <h2><a class="undecorated" href="/notes/{{ note.slug }}">{{ note.title }}</a></h2>
-          <span class="note__status"><small>{{ maturityTitles[note.maturity] }} &middot; Updated <sl-relative-time date="{{ note._updatedAt }}"></sl-relative-time></small></span>
+          <span class="note__status muted"><small>{{ maturityTitles[note.maturity] }} &middot; Updated <sl-relative-time date="{{ note._updatedAt }}"></sl-relative-time></small></span>
         </article>
       </li>
     {% endfor %}
