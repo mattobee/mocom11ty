@@ -13,9 +13,9 @@ summary: A collection of incomplete thoughts and ideas.
 <div class="container">
 
   <ul role="list" class="flow">
-    {% for note in collections.notes %}
+    {% for note in collections.sortedNotes %}
       <li>
-        <article class="flow flow-xs">
+        <article>
           <h2><a class="undecorated" href="/notes/{{ note.slug }}">{{ note.title }}</a></h2>
           <span class="note__status"><small>{{ maturityTitles[note.maturity] }} &middot; Updated <sl-relative-time date="{{ note._updatedAt }}"></sl-relative-time></small></span>
         </article>
