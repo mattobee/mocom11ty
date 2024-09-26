@@ -1,6 +1,7 @@
 const eleventySass = require("@11tyrocks/eleventy-plugin-sass-lightningcss");
 const fetchNotes = require('./src/scripts/fetchNotes');
 const markdownFilter = require('./src/_includes/markdownFilter');
+const randomPhrase = require('./src/_includes/randomPhrase');
 
 module.exports = function (eleventyConfig) {
 
@@ -10,12 +11,18 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(eleventySass);
   eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
 
-  // Add the custom Markdown filter
+  // Filters
   markdownFilter(eleventyConfig);
 
-  // Fetch notes data at build time
-  eleventyConfig.addCollection("notes", async () => {
-    return await fetchNotes();
+  // Shortcodes
+  randomPhrase(eleventyConfig);
+
+  // Fetch notes data at build time and sort by most recently updated
+  eleventyConfig.addCollection("sortedNotes", async () => {
+    const notes = await fetchNotes();
+    return notes.sort((a, b) => {
+      return new Date(b._updatedAt) - new Date(a._updatedAt);
+    });
   });
 
   return {
