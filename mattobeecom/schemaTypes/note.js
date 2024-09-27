@@ -27,6 +27,7 @@ export default {
             { title: 'Seedling', value: 'seedling' },
             { title: 'Budding', value: 'budding' },
             { title: 'Evergreen', value: 'evergreen' },
+            { title: 'Worth mentioning', value: 'mention' },
           ],
         },
         initialValue: 'seedling',

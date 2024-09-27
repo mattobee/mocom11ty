@@ -4,11 +4,19 @@ module.exports = function (eleventyConfig) {
     const phrases = [
       'Chocolate Hobnobs',
       'lemon drizzle cake',
-      'coffee drinking',
+      'belgian buns',
       'LEGO',
-      'obscure facts',
-      'expensive gadgets',
-      'Star Trek'
+      'Brio trains',
+      'Forrero Rocher',
+      'oven chips',
+      'expensive hobbies',
+      'Star Trek',
+      'Labrador Retrievers',
+      'procrastination',
+      'not finishing books',
+      'drawing rectangles',
+      'opening tabs',
+      'spilling coffee',
     ];
 
     const randomPhrase = phrases[Math.floor(Math.random() * phrases.length)];
