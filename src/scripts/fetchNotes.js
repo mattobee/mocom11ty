@@ -7,8 +7,9 @@ async function fetchNotes() {
     title,
     "slug": slug.current,
     content,
+    tldr,
     maturity,
-    _updatedAt
+    _updatedAt,
   }`;
 
   const notes = await sanityClient.fetch(query);

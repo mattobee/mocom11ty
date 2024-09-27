@@ -90,6 +90,10 @@ small {
   line-height: 1.2;
 }
 
+abbr {
+  text-decoration: none;
+}
+
 .large {
   font-size: var(--step-1);
 }

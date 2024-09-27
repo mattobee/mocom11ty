@@ -16,7 +16,14 @@ layout: layouts/base.njk
         </div>
     </header>
 
-    <div class="container readable flow">
+    <div class="container readable flow flow-l">
+
+        {% if note.tldr %}
+        <section class="callout flow flow-xs">
+            <h2><abbr title="Too long; didn't read">TL;DR</abbr></h2>
+            {{ note.tldr | markdown | safe }}
+        </section>
+        {% endif %}
 
         <div class="article">
 

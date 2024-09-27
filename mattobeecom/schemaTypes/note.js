@@ -36,5 +36,10 @@ export default {
         type: 'markdown',
         title: 'Content'
       },
+      {
+        name: 'tldr',
+        type: 'markdown',
+        title: 'TLDR'
+      },
     ],
   }
