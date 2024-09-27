@@ -6,7 +6,7 @@ module.exports = function (eleventyConfig) {
       'lemon drizzle cake',
       'belgian buns',
       'LEGO',
-      'Brio trains',
+      'the storylines of Paw Patrol',
       'Forrero Rocher',
       'oven chips',
       'expensive hobbies',
