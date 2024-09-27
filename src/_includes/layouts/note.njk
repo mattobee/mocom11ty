@@ -8,11 +8,11 @@ layout: layouts/base.njk
   'evergreen': 'Evergreen'
 } %}
 
-<article>
+<article itemscope itemtype="https://schema.org/BlogPosting">
     <header class="page-header section">
         <div class="container">
-            <h1 class="note">{{ note.title }}</h1>
-            <span class="note__status muted">{{ maturityTitles[note.maturity] }} &middot; Updated <sl-relative-time date="{{ note._updatedAt }}"></sl-relative-time></span>
+            <h1 itemprop="name" class="note">{{ note.title }}</h1>
+            <span class="note__status muted"><span itemprop="creativeWorkStatus">{{ maturityTitles[note.maturity] }}</span> &middot; Updated <sl-relative-time date="{{ note._updatedAt }}" itemprop="dateModified"></sl-relative-time></span>
         </div>
     </header>
 
@@ -21,11 +21,11 @@ layout: layouts/base.njk
         {% if note.tldr %}
         <section class="callout flow flow-xs">
             <h2><abbr title="Too long; didn't read">TL;DR</abbr></h2>
-            {{ note.tldr | markdown | safe }}
+            <div itemprop="abstract">{{ note.tldr | markdown | safe }}</div>
         </section>
         {% endif %}
 
-        <div class="article">
+        <div class="article" itemprop="articleBody">
 
             {% if note.content %}
                 {{ note.content | markdown | safe }}
@@ -38,7 +38,7 @@ layout: layouts/base.njk
 
         <div class="signature flow flow-xs role role--now">
             <h2>Cheers for reading</h2>
-            <p>I'm Matt Obee, a design technologist specialising in accessibility and {% randomPhrase %}. Currently a Staff Accessibility Designer at <a href="https://github.com">GitHub</a> and the maintainer of <a href="https://eventua11y.com">Eventua11y</a>, I have been working in accessibility since 2006.</p>
+            <p>I'm <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Matt Obee</span></a>, a design technologist specialising in accessibility and {% randomPhrase %}. Currently a Staff Accessibility Designer at <a href="https://github.com">GitHub</a> and the maintainer of <a href="https://eventua11y.com">Eventua11y</a>, I have been working in accessibility since 2006.</p>
         </div>
         <!-- End signatute -->
 
