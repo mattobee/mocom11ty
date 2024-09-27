@@ -98,6 +98,10 @@
     text-align: center;
 }
 
+.text-balance {
+    text-wrap: balance;
+}
+
 .block a[href]::after {
     content: "";
     display: block;
