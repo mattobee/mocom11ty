@@ -1,0 +1,13 @@
+---
+layout: layouts/base.njk
+---
+
+<header class="page-header section">
+    <div class="container">
+        <h1 itemprop="name" class="note">Notes on {{ topic.title }}</h1>
+    </div>
+</header>
+
+<div class="container">
+    {{ content | safe }}
+</div>

@@ -42,5 +42,12 @@ export default {
         type: 'markdown',
         title: 'TLDR'
       },
+      {
+        name: 'topic',
+        type: 'array',
+        title: 'Topic',
+        layout: 'tags',
+        of: [{ type: 'reference', to: [{ type: 'topic' }] }],
+      },
     ],
   }

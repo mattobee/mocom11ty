@@ -1,0 +1,24 @@
+---
+layout: layouts/topic.njk
+pagination:
+  data: collections.topics
+  size: 1
+  alias: topic
+  addAllPagesToCollections: true
+  templateData: topic
+permalink: "topics/{{ topic.slug }}/index.html"
+---
+
+<ul>
+  {% for note in collections.sortedNotes %}
+    {% set noteAdded = false %}
+    {% for noteTopic in note.topics %}
+      {% if noteTopic.slug == topic.slug and not noteAdded %}
+        <li>
+          <a href="/notes/{{ note.slug }}">{{ note.title }}</a>
+        </li>
+        {% set noteAdded = true %}
+      {% endif %}
+    {% endfor %}
+  {% endfor %}
+</ul>

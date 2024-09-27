@@ -1,5 +1,6 @@
 const eleventySass = require("@11tyrocks/eleventy-plugin-sass-lightningcss");
 const fetchNotes = require('./src/scripts/fetchNotes');
+const fetchTopics = require('./src/scripts/fetchTopics');
 const markdownFilter = require('./src/_includes/markdownFilter');
 const randomPhrase = require('./src/_includes/randomPhrase');
 
@@ -23,6 +24,12 @@ module.exports = function (eleventyConfig) {
     return notes.sort((a, b) => {
       return new Date(b._updatedAt) - new Date(a._updatedAt);
     });
+  });
+
+  // Fetch topics data at build time
+  eleventyConfig.addCollection("topics", async () => {
+    const topics = await fetchTopics();
+    return topics;
   });
 
   return {

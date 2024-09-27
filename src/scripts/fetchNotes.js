@@ -10,6 +10,7 @@ async function fetchNotes() {
     tldr,
     maturity,
     _updatedAt,
+    "topics": topic[]->{title, "slug": slug.current}
   }`;
 
   const notes = await sanityClient.fetch(query);

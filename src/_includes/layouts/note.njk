@@ -3,7 +3,7 @@ layout: layouts/base.njk
 ---
 
 {% set maturityTitles = {
-  'seedling': 'Seedling',
+  'seedling': 'Just an idea',
   'budding': 'Half-baked',
   'evergreen': 'Evergreen',
   'mention': 'Worth mentioning'
@@ -13,7 +13,11 @@ layout: layouts/base.njk
     <header class="page-header section">
         <div class="container">
             <h1 itemprop="name" class="note">{{ note.title }}</h1>
-            <span class="note__status muted"><span itemprop="creativeWorkStatus">{{ maturityTitles[note.maturity] }}</span> &middot; Updated <sl-relative-time date="{{ note._updatedAt }}" itemprop="dateModified"></sl-relative-time></span>
+            <span class="note__status muted"><span itemprop="creativeWorkStatus">{{ maturityTitles[note.maturity] }}</span> &middot; Updated <sl-relative-time date="{{ note._updatedAt }}" itemprop="dateModified"></sl-relative-time> &middot; 
+            {% for topic in note.topics %}
+                <a href="/topics/{{ topic.slug }}">{{ topic.title }}</a>{% if not loop.last %}, {% endif %}
+            {% endfor %}
+            </span>
         </div>
     </header>
 
