@@ -3,11 +3,31 @@ layout: layouts/base.njk
 title: Matt Obee
 ---
 
-<div class="container">
+<div class="container flow flow-xl">
     <div class="hero">
         <h1 class="sr-only">Matt Obee</h1>
         <p class="hero__headline">I’m a design technologist specialising in accessibility.</p>
         <p>From small charities to global enterprises, retailers to government agencies, I’ve worked on projects across a broad spectrum of industries for a wide range of clients.</p>
         <p class="mb-0"><strong>I help make software work better for people, like you.</strong></p>
     </div>
+    {% set maturityTitles = {
+  'seedling': 'Just an idea',
+  'budding': 'Half-baked',
+  'evergreen': 'Fully-formed',
+  'mention': 'Worth mentioning'
+} %}
+
+    <section class="flow flow-l">
+        <h2>Recent notes</h2>
+        <ul role="list" class="flow flow-s">
+            {% for note in collections.sortedNotes.slice(0, 3) %}
+            <li>
+                <article itemscope itemtype="https://schema.org/BlogPosting">
+                <h3 itemprop="name"><a itemprop="url" class="undecorated" href="/notes/{{ note.slug }}">{{ note.title }}</a></h3>
+                <span class="note__status muted"><span itemprop="creativeWorkStatus">{{ maturityTitles[note.maturity] }}</span> &middot; Updated <sl-relative-time date="{{ note._updatedAt }}"></sl-relative-time></span>
+                </article>
+            </li>
+            {% endfor %}
+        </ul>
+    </section>
 </div>
