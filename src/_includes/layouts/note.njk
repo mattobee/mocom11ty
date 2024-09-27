@@ -22,7 +22,7 @@ layout: layouts/base.njk
         {% if note.tldr %}
         <section class="callout flow flow-xs">
             <h2><abbr title="Too long; didn't read">TL;DR</abbr></h2>
-            <div itemprop="abstract">{{ note.tldr | markdown | safe }}</div>
+            <div itemprop="abstract" class="flow">{{ note.tldr | markdown | safe }}</div>
         </section>
         {% endif %}
 
