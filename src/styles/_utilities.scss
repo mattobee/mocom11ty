@@ -14,6 +14,14 @@
     display: block;
 }
 
+.d-flex {
+    display: flex;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
 .marker {
     position: relative;
     display: inline;
@@ -115,4 +123,20 @@
   .undecorated {
     box-shadow: none;
     padding: 0;
+  }
+
+  .bg-muted {
+    background-color: var(--color-bg-muted);
+  }
+
+  .bg-blue {
+    background-color: var(--color-blue);
+  }
+
+  .bg-grey {
+    background-color: var(--color-grey);
+  }
+
+  .fg-white {
+    color: var(--color-white);
   }
