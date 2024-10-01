@@ -7,11 +7,6 @@ pagination:
   addAllPagesToCollections: true
   templateData: note
 permalink: "notes/{{ note.slug }}/index.html"
+eleventyComputed:
+  title: "{{ note.title }}"
 ---
-
-<div class="container">
-
-  <div>{{ note.content }}</div>
-
-</div>
-<!-- End container -->

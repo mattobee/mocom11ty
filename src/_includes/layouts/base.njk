@@ -8,7 +8,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Matt Obee is a design technologist specialising in accessibility.">
     <meta name="generator" content="Eleventy">
-    <title>{{ renderData.title or title or metadata.title }} - design technologist specialising in accessibility</title>
+    <title>
+      {% if renderData.title or title or metadata.title %}
+        {{ renderData.title or title or metadata.title }} - Matt Obee
+      {% else %}
+        Matt Obee - design technologist specialising in accessibility
+      {% endif %}
+    </title>
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
