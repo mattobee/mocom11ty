@@ -1,5 +1,5 @@
 // src/_includes/randomPhraseShortcode.js
-module.exports = function (eleventyConfig) {
+export default function (eleventyConfig) {
   eleventyConfig.addShortcode('randomPhrase', () => {
     const phrases = [
       'Chocolate Hobnobs',
@@ -22,4 +22,4 @@ module.exports = function (eleventyConfig) {
     const randomPhrase = phrases[Math.floor(Math.random() * phrases.length)];
     return randomPhrase;
   });
-};
+}

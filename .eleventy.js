@@ -1,15 +1,16 @@
-const eleventySass = require("@11tyrocks/eleventy-plugin-sass-lightningcss");
-const fetchNotes = require('./src/scripts/fetchNotes');
-const fetchTopics = require('./src/scripts/fetchTopics');
-const markdownFilter = require('./src/_includes/markdownFilter');
-const randomPhrase = require('./src/_includes/randomPhrase');
+import eleventySass from "@11tyrocks/eleventy-plugin-sass-lightningcss";
+import fetchNotes from './src/scripts/fetchNotes.js';
+import fetchTopics from './src/scripts/fetchTopics.js';
+import markdownFilter from './src/_includes/markdownFilter.js';
+import randomPhrase from './src/_includes/randomPhrase.js';
 
-module.exports = function (eleventyConfig) {
+export default function(eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy("src/images");
   eleventyConfig.addPassthroughCopy("src/scripts");
 
   eleventyConfig.addPlugin(eleventySass);
+
   eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
 
   // Filters
@@ -38,4 +39,4 @@ module.exports = function (eleventyConfig) {
     templateFormats: ["njk", "md", "css", "html", "yml", "png"],
     htmlTemplateEngine: "njk",
   };
-};
+}

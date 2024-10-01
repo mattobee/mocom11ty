@@ -1,5 +1,5 @@
 // fetchTopics.js
-const sanityClient = require('./sanityClient');
+import sanityClient from './sanityClient.js';
 
 async function fetchTopics() {
   const query = `*[_type == "topic"]{
@@ -13,4 +13,4 @@ async function fetchTopics() {
   return topics;
 }
 
-module.exports = fetchTopics;
+export default fetchTopics;

@@ -1,5 +1,5 @@
 // fetchNotes.js
-const sanityClient = require('./sanityClient');
+import sanityClient from './sanityClient.js';
 
 async function fetchNotes() {
   const query = `*[_type == "note"]{
@@ -18,4 +18,4 @@ async function fetchNotes() {
   return notes;
 }
 
-module.exports = fetchNotes;
+export default fetchNotes;
