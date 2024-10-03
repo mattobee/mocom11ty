@@ -10,7 +10,7 @@ if (!apiToken) {
 
 // Create and configure the Sanity client
 const client = createClient({
-  projectId: 'eb20sjiu',
+  projectId: process.env.SANITY_PROJECT_ID,
   dataset: 'production',
   apiVersion: '2024-10-03', // Use the current date or a specific version date
   useCdn: true, // `true` to use the CDN for faster responses, `false` for fresh data
