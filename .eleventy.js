@@ -1,6 +1,6 @@
 import eleventySass from "@11tyrocks/eleventy-plugin-sass-lightningcss";
-import fetchNotes from './src/scripts/fetchNotes.js';
-import fetchTopics from './src/scripts/fetchTopics.js';
+import { fetchNotes } from './src/scripts/fetchNotes.js';
+import { fetchTopics } from './src/scripts/fetchTopics.js';
 import markdownFilter from './src/_includes/markdownFilter.js';
 import randomPhrase from './src/_includes/randomPhrase.js';
 import { logInfo, logError } from './src/utils/logger.js';
