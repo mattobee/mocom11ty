@@ -9,16 +9,21 @@ pagination:
 permalink: "notes/{{ topic.slug }}/index.html"
 ---
 
-<ul>
-  {% for note in collections.sortedNotes %}
+  <ul role="list" class="flow flow-l">
+    {% for note in collections.sortedNotes %}
     {% set noteAdded = false %}
     {% for noteTopic in note.topics %}
       {% if noteTopic.slug == topic.slug and not noteAdded %}
         <li>
-          <a href="/notes/{{ note.slug }}">{{ note.title }}</a>
+          <article itemscope itemtype="https://schema.org/BlogPosting">
+            <h2 itemprop="name"><a itemprop="url" class="undecorated" href="/notes/{{ note.slug }}">{{ note.title }}</a></h2>
+            <div class="note__status muted">
+              <small>Updated <sl-relative-time date="{{ note._updatedAt }}"></sl-relative-time></small>
+            </div>
+          </article>
         </li>
         {% set noteAdded = true %}
       {% endif %}
+      {% endfor %}
     {% endfor %}
-  {% endfor %}
-</ul>
+  </ul>

@@ -11,15 +11,32 @@ layout: layouts/base.njk
 
 <article itemscope itemtype="https://schema.org/BlogPosting">
     <header class="page-header section">
-        <div class="container">
+        <div class="container flow flow-s">
             <h1 itemprop="name" class="note">{{ note.title }}</h1>
-            <span class="note__status muted"><span itemprop="creativeWorkStatus">{{ maturityTitles[note.maturity] }}</span> &middot; Updated <sl-relative-time date="{{ note._updatedAt }}" itemprop="dateModified"></sl-relative-time> &middot; 
-            {% for topic in note.topics %}
+            <div>
+            <span class="note__status muted">Updated <sl-relative-time date="{{ note._updatedAt }}" itemprop="dateModified"></sl-relative-time> &middot; 
+            on the topic of {% for topic in note.topics %}
                 <a href="/notes/{{ topic.slug }}">{{ topic.title }}</a>{% if not loop.last %}, {% endif %}
             {% endfor %}
             </span>
+            {# <sl-details class="status"class="custom-icons">
+                <div slot="summary"><i class="fa-solid fa-seedling"></i> This note is a seedling</div>
+                <sl-icon name="plus-square" slot="expand-icon"></sl-icon>
+                <sl-icon name="dash-square" slot="collapse-icon"></sl-icon>
+                Seedling notes are incomplete and likely to change over time. I have captured some ideas but haven't fully explored them yet.
+            </sl-details> #}
+            </div>
         </div>
+        {# <div class="status">
+            <div class="container">
+                <details>
+                    <summary>This <span itemprop="creativeWorkStatus">working draft</span> is incomplete and likely to change.</summary>
+                    <p>It's a <span itemprop="creativeWorkStatus">working draft</span> and is likely to change. If you have any feedback, please <a href="https://twitter.com/mattobee">let me know</a>.</p>
+                </details>
+            </div>
+        </div> #}
     </header>
+    
 
     <div class="container readable flow flow-l">
 

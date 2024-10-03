@@ -2,7 +2,7 @@
 layout: layouts/base.njk
 ---
 
-<div class="container flow flow-xl">
+<div class="container flow flow-xs">
     <div class="hero">
         <h1 class="sr-only">Matt Obee</h1>
         <p class="hero__headline">I’m a design technologist specialising in accessibility.</p>
@@ -16,14 +16,18 @@ layout: layouts/base.njk
   'mention': 'Worth mentioning'
 } %}
 
-    <section class="flow flow-l">
-        <h2>Recent notes</h2>
-        <ul role="list" class="flow flow-s">
+    <section id="recent-notes" class="flow flow-m p-xl">
+        <h2 id="recent-notes-heading" class="list-heading">Recent notes</h2>
+        <ul role="list" class="flow flow-m" aria-labelledby="recent-notes-heading">
             {% for note in collections.sortedNotes.slice(0, 3) %}
             <li>
                 <article itemscope itemtype="https://schema.org/BlogPosting">
                 <h3 itemprop="name"><a itemprop="url" class="undecorated" href="/notes/{{ note.slug }}">{{ note.title }}</a></h3>
-                <span class="note__status muted"><span itemprop="creativeWorkStatus">{{ maturityTitles[note.maturity] }}</span> &middot; Updated <sl-relative-time date="{{ note._updatedAt }}"></sl-relative-time></span>
+                <span class="note__status muted">
+                    <small>Updated <sl-relative-time date="{{ note._updatedAt }}"></sl-relative-time> &middot; on the topic of {% for topic in note.topics %}
+              <a href="/notes/{{ topic.slug }}">{{ topic.title }}</a>{% if not loop.last %}, {% endif %}
+            {% endfor %}</small>
+                </span>
                 </article>
             </li>
             {% endfor %}

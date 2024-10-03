@@ -1,7 +1,7 @@
 ---
 layout: layouts/default.njk
 title: Notes
-summary: A collection of incomplete thoughts and ideas.
+summary: Irregular and incomplete observations and ideas.
 ---
 
 {% set maturityTitles = {
@@ -18,7 +18,11 @@ summary: A collection of incomplete thoughts and ideas.
       <li>
         <article itemscope itemtype="https://schema.org/BlogPosting">
           <h2 itemprop="name"><a itemprop="url" class="undecorated" href="/notes/{{ note.slug }}">{{ note.title }}</a></h2>
-          <span class="note__status muted"><span itemprop="creativeWorkStatus">{{ maturityTitles[note.maturity] }}</span> &middot; Updated <sl-relative-time date="{{ note._updatedAt }}"></sl-relative-time></span>
+          <div class="note__status muted">
+            <small>Updated <sl-relative-time date="{{ note._updatedAt }}"></sl-relative-time> &middot; on the topic of {% for topic in note.topics %}
+              <a href="/notes/{{ topic.slug }}">{{ topic.title }}</a>{% if not loop.last %}, {% endif %}
+            {% endfor %}</small>
+          </div>
         </article>
       </li>
     {% endfor %}
