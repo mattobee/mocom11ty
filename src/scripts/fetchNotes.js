@@ -1,6 +1,9 @@
-// fetchNotes.js
 import sanityClient from './sanityClient.js';
 
+/**
+ * Fetches notes from the Sanity dataset.
+ * @returns {Promise<Array>} A promise that resolves to an array of notes.
+ */
 async function fetchNotes() {
   const query = `*[_type == "note"]{
     _id,
@@ -13,9 +16,14 @@ async function fetchNotes() {
     "topics": topic[]->{title, "slug": slug.current}
   }`;
 
-  const notes = await sanityClient.fetch(query);
-  console.log('notes', notes);
-  return notes;
+  try {
+    const notes = await sanityClient.fetch(query);
+    console.log(`fetchNotes fetched ${notes.length} notes`);
+    return notes;
+  } catch (error) {
+    console.error('Error fetching notes:', error);
+    throw new Error('Failed to fetch notes');
+  }
 }
 
 export default fetchNotes;

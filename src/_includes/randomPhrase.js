@@ -1,6 +1,11 @@
-// src/_includes/randomPhraseShortcode.js
+/**
+ * Adds a shortcode to generate a random phrase.
+ * @param {Object} eleventyConfig - The Eleventy configuration object.
+ * @returns {void}
+ */
 export default function (eleventyConfig) {
   eleventyConfig.addShortcode('randomPhrase', () => {
+    // List of phrases to choose from
     const phrases = [
       'Chocolate Hobnobs',
       'lemon drizzle cake',
@@ -19,6 +24,7 @@ export default function (eleventyConfig) {
       'spilling coffee',
     ];
 
+    // Select a random phrase from the list
     const randomPhrase = phrases[Math.floor(Math.random() * phrases.length)];
     return randomPhrase;
   });
