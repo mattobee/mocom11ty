@@ -1,8 +1,8 @@
-import { defineConfig } from 'sanity';
-import { structureTool } from 'sanity/structure';
-import { visionTool } from '@sanity/vision';
-import { markdownSchema } from 'sanity-plugin-markdown';
-import { schemaTypes } from './schemaTypes';
+import {defineConfig} from 'sanity'
+import {structureTool} from 'sanity/structure'
+import {visionTool} from '@sanity/vision'
+import {markdownSchema} from 'sanity-plugin-markdown'
+import {schemaTypes} from './schemaTypes'
 
 // Define and export the Sanity configuration
 export default defineConfig({
@@ -20,4 +20,4 @@ export default defineConfig({
   schema: {
     types: schemaTypes,
   },
-});
+})

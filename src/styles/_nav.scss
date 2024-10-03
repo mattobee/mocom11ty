@@ -1,56 +1,58 @@
 .nav {
-    font-size: var(--step-1);
-    font-weight: bold;
-    .nav__item {
-        display: inline-block;
-        margin-right: 2rem;
-        &:last-child {
-            margin-right: 0;
-        }
+  font-size: var(--step-1);
+  font-weight: bold;
+  .nav__item {
+    display: inline-block;
+    margin-right: 2rem;
+    &:last-child {
+      margin-right: 0;
     }
-    a {
-        border: none;
-        box-shadow: none;
-        padding: 0;
-        &::after {
-            border-radius: 1000px;
-            content: '';
-            display: block;
-            height: .2em;
-            margin: 0 auto;
-            margin-top: .2em;
-        }
-        &.active {
-            &::after {
-                background-color: #2a2a2a;
-                border-radius: 1000px;
-                content: '';
-                display: block;
-                height: .2em;
-                margin: 0 auto;
-                margin-top: .2em;
-                width: 50%;
-            }
-        }
-        &:hover, &:active, &:focus {
-            color: inherit;
-            &::after {
-                background-color: #2a2a2a;
-                border-radius: 1000px;
-                content: '';
-                display: block;
-                height: .2em;
-                margin: 0 auto;
-                margin-top: .2em;
-                width: 50%;
-                transition: all;
-                transition-duration: 200ms;
-            }
-        }
-        &:focus-visible {
-            &::after { 
-                content: none;
-            }
-        }
+  }
+  a {
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    &::after {
+      border-radius: 1000px;
+      content: '';
+      display: block;
+      height: 0.2em;
+      margin: 0 auto;
+      margin-top: 0.2em;
     }
+    &.active {
+      &::after {
+        background-color: #2a2a2a;
+        border-radius: 1000px;
+        content: '';
+        display: block;
+        height: 0.2em;
+        margin: 0 auto;
+        margin-top: 0.2em;
+        width: 50%;
+      }
+    }
+    &:hover,
+    &:active,
+    &:focus {
+      color: inherit;
+      &::after {
+        background-color: #2a2a2a;
+        border-radius: 1000px;
+        content: '';
+        display: block;
+        height: 0.2em;
+        margin: 0 auto;
+        margin-top: 0.2em;
+        width: 50%;
+        transition: all;
+        transition-duration: 200ms;
+      }
+    }
+    &:focus-visible {
+      &::after {
+        content: none;
+      }
+    }
+  }
 }

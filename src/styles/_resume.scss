@@ -1,39 +1,39 @@
 .role__date {
-    display: block;
+  display: block;
 }
 
 .role__title {
-    position: relative;
-    &::before {
-        content: '';
-        display: inline-block;
-        background-color: #2a2a2a;
-        height: .4em;
-        margin-right: .5em;
-        width: .4em;
-    }
+  position: relative;
+  &::before {
+    content: '';
+    display: inline-block;
+    background-color: #2a2a2a;
+    height: 0.4em;
+    margin-right: 0.5em;
+    width: 0.4em;
+  }
 }
 
 .role--now {
-    background-color: var(--color-yellow-highlight);
-    border-radius: var(--space-xs);
-    margin-left: -2rem;
-    margin-right: -2rem;
-    padding: 2rem;
-    .muted {
-        color: rgba(0, 0, 0, 0.6);
-    }
+  background-color: var(--color-green-highlight);
+  border-radius: var(--border-radius);
+  margin-left: -2rem;
+  margin-right: -2rem;
+  padding: 2rem;
+  .muted {
+    color: rgba(0, 0, 0, 0.6);
+  }
 }
 
 .qual__title {
-    font-size: var(--step-1);
-    position: relative;
-    &::before {
-        content: '';
-        display: inline-block;
-        background-color: var(--color-grey);
-        height: .4em;
-        margin-right: .5em;
-        width: .4em;
-    }
+  font-size: var(--step-1);
+  position: relative;
+  &::before {
+    content: '';
+    display: inline-block;
+    background-color: var(--color-grey);
+    height: 0.4em;
+    margin-right: 0.5em;
+    width: 0.4em;
+  }
 }
