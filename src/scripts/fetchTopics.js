@@ -1,4 +1,5 @@
 import sanityClient from './sanityClient.js';
+import { logInfo, logError } from '../utils/logger.js';
 
 /**
  * Fetches topics from the Sanity dataset.
@@ -13,10 +14,10 @@ async function fetchTopics() {
 
   try {
     const topics = await sanityClient.fetch(query);
-    console.log(`fetchTopics fetched ${topics.length} topics`);
+    logInfo(`fetchTopics fetched ${topics.length} topics`);
     return topics;
   } catch (error) {
-    console.error('Error fetching topics:', error);
+    logError('Error fetching topics:', error);
     throw new Error('Failed to fetch topics');
   }
 }

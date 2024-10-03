@@ -3,6 +3,7 @@ import fetchNotes from './src/scripts/fetchNotes.js';
 import fetchTopics from './src/scripts/fetchTopics.js';
 import markdownFilter from './src/_includes/markdownFilter.js';
 import randomPhrase from './src/_includes/randomPhrase.js';
+import { logInfo, logError } from './src/utils/logger.js';
 
 export default function(eleventyConfig) {
   // Passthrough copy for static assets
@@ -25,10 +26,10 @@ export default function(eleventyConfig) {
   eleventyConfig.addCollection("sortedNotes", async () => {
     try {
       const notes = await fetchNotes();
-      console.log(`Fetched ${notes.length} notes`);
+      logInfo(`fetchNotes fetched ${notes.length} notes`);
       return notes.sort((a, b) => new Date(b._updatedAt) - new Date(a._updatedAt));
     } catch (error) {
-      console.error('Error fetching notes:', error);
+      logError('Error fetching notes:', error);
       return [];
     }
   });
@@ -37,10 +38,10 @@ export default function(eleventyConfig) {
   eleventyConfig.addCollection("topics", async () => {
     try {
       const topics = await fetchTopics();
-      console.log(`Fetched ${topics.length} topics`);
+      logInfo(`fetchTopics fetched ${topics.length} topics`);
       return topics;
     } catch (error) {
-      console.error('Error fetching topics:', error);
+      logError('Error fetching topics:', error);
       return [];
     }
   });

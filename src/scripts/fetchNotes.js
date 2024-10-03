@@ -1,4 +1,5 @@
 import sanityClient from './sanityClient.js';
+import { logInfo, logError } from '../utils/logger.js';
 
 /**
  * Fetches notes from the Sanity dataset.
@@ -18,10 +19,10 @@ async function fetchNotes() {
 
   try {
     const notes = await sanityClient.fetch(query);
-    console.log(`fetchNotes fetched ${notes.length} notes`);
+    logInfo(`fetchNotes fetched ${notes.length} notes`);
     return notes;
   } catch (error) {
-    console.error('Error fetching notes:', error);
+    logError('Error fetching notes:', error);
     throw new Error('Failed to fetch notes');
   }
 }
