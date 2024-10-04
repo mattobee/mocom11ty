@@ -15,8 +15,7 @@
     "format": "npx prettier --write .",
     "clean": "rm -rf node_modules",
     "reinstall": "npm run clean && npm install",
-    "rebuild": "npm run clean && npm install && npm run build",
-    "postinstall": "npm install"
+    "rebuild": "npm run clean && npm install && npm run build"
   },
   "repository": {
     "type": "git",
