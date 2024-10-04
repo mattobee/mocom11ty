@@ -11,8 +11,6 @@
   --step-7: clamp(4.0311rem, 3.3205rem + 3.0565vi, 6.1035rem);
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@800&family=Roboto&family=Roboto+Slab&display=swap');
-
 body {
   color: var(--color-grey);
   font-family: 'Atkinson Hyperlegible', sans-serif;
@@ -51,23 +49,6 @@ h2 {
   font-size: var(--step-3);
   letter-spacing: -0.02em;
   line-height: 1.2;
-  position: relative;
-  &:not(.project__name)::before {
-    background-color: cyan;
-    border-radius: 1000px;
-    top: 0;
-    content: '';
-    display: block;
-    height: 0.4em;
-    left: -1rem;
-    position: absolute;
-    width: 5rem;
-    max-width: 3em;
-    z-index: -1;
-    @media (min-width: 1200px) {
-      left: -2rem;
-    }
-  }
 }
 
 h3 {

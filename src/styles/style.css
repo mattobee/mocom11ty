@@ -1,19 +1,17 @@
-@import url('https://use.typekit.net/iap3vru.css');
-
-@import 'reset';
-@import 'base';
-@import 'variables';
-@import 'space';
-@import 'utilities';
-@import 'patterns';
-@import 'typo';
-@import 'btn';
-@import 'header';
-@import 'footer';
-@import 'nav';
-@import 'resume';
-@import 'projects';
-@import 'drawer';
+@import url('reset.css');
+@import url('base.css');
+@import url('variables.css');
+@import url('typo.css');
+@import url('space.css');
+@import url('patterns.css');
+@import url('btn.css');
+@import url('header.css');
+@import url('footer.css');
+@import url('nav.css');
+@import url('resume.css');
+@import url('projects.css');
+@import url('drawer.css');
+@import url('utilities.css');
 
 :root {
   scroll-behavior: smooth;
@@ -29,7 +27,7 @@ dl > div {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid var(--color-grey-lighter);
   padding: var(--space-2xs) 0;
   @media (min-width: 700px) {
     flex-direction: row;
@@ -46,8 +44,8 @@ dt {
 }
 
 .section:not([class*='bg-']) {
-  border-top: 1px solid rgba(0, 0, 0, 0.05);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  border-top: 1px solid var(--color-grey-lighter);
+  border-bottom: 1px solid var(--color-grey-lighter);
 }
 
 .flow {

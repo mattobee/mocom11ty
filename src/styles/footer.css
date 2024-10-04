@@ -3,7 +3,6 @@ footer {
   color: #fff;
   line-height: 1.2;
   a {
-    // color: cyan;
     &:hover,
     &:active,
     &:focus {

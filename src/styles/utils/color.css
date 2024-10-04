@@ -1,0 +1,15 @@
+.bg-muted {
+  background-color: var(--color-bg-muted);
+}
+
+.bg-blue {
+  background-color: var(--color-blue);
+}
+
+.bg-grey {
+  background-color: var(--color-grey);
+}
+
+.fg-white {
+  color: var(--color-white);
+}

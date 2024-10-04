@@ -36,6 +36,7 @@
   .hero__headline {
     font-family: 'Overpass';
     font-size: var(--step-4);
+    font-weight: 800;
     letter-spacing: -0.03em;
     line-height: 1.2;
     margin-bottom: var(--space-m);

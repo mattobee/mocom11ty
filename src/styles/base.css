@@ -10,8 +10,8 @@
 
 td,
 th {
-  border-bottom: 1px solid #eee;
-  padding: 1rem;
+  border-bottom: 1px solid var(--color-grey-lighter);
+  padding: var(--space-l-xl) var(--space-s-m);
 }
 
 th {
@@ -19,16 +19,11 @@ th {
 }
 
 table {
-  font-size: 1rem;
+  font-size: var(--step-0);
   width: 100%;
 }
 
-main {
-  background-color: #fff;
-  // padding: 8rem 0;
-}
-
 body {
-  background-color: #222;
+  background-color: var(--color-white);
   margin: 0;
 }
