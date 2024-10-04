@@ -1,86 +1,86 @@
 @keyframes slideInDown {
-    0% {
-      transform: translateY(-10%);
-    }
-    100% {
-      transform: translateY(0);
-    }
+  0% {
+    transform: translateY(-10%);
   }
+  100% {
+    transform: translateY(0);
+  }
+}
 
-  @keyframes slideInRight {
-    0% {
-      transform: translateX(-10%);
-    }
-    100% {
-      transform: translateX(0);
-    }
+@keyframes slideInRight {
+  0% {
+    transform: translateX(-10%);
   }
+  100% {
+    transform: translateX(0);
+  }
+}
 
-  @keyframes slideInLeft {
-    0% {
-      transform: translateX(10%);
-    }
-    100% {
-      transform: translateX(0);
-    }
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(10%);
   }
+  100% {
+    transform: translateX(0);
+  }
+}
 
 .hero {
-    padding: 2rem;
-    background-color: var(--color-yellow-highlight);
-    border-radius: var(--space-xs);
+  padding: var(--space-m);
+  background-color: var(--color-green-highlight);
+  border-radius: var(--border-radius);
+  position: relative;
+  p {
+    max-width: 29em;
+  }
+  .hero__headline {
+    font-family: 'Overpass';
+    font-size: var(--step-4);
+    letter-spacing: -0.03em;
+    line-height: 1.2;
+    margin-bottom: var(--space-m);
     position: relative;
-    p {
-      max-width: 29em;
+    text-wrap: balance;
+  }
+  @media (min-width: 768px) {
+    margin: var(--space-l) 0;
+    padding: var(--space-xl);
+    &::before {
+      background-color: #2a2a2a;
+      opacity: 0.05;
+      border-radius: 1000px;
+      content: '';
+      display: block;
+      width: 6rem;
+      height: 70%;
+      position: absolute;
+      top: -4rem;
+      right: 12rem;
+      animation: 2s ease-out 0s 1 slideInDown;
     }
-    .hero__headline {
-        font-family: "Overpass";
-        font-size: var(--step-4);
-        letter-spacing: -0.03em;
-        line-height: 1.2;
-        margin-bottom: var(--space-m);
-        position: relative;
-        text-wrap: balance;
+    &::after {
+      background-color: #2a2a2a;
+      opacity: 0.05;
+      border-radius: 1000px;
+      content: '';
+      display: block;
+      width: 6rem;
+      height: 70%;
+      position: absolute;
+      bottom: -4rem;
+      right: 4rem;
+      animation: 2.5s ease-out 0s 1 slideInDown;
     }
-    @media (min-width: 768px) { 
-      margin: var(--space-l) 0;
-      padding: 4rem;
-      &::before {
-        background-color: #2a2a2a;
-        opacity: 0.05;
-        border-radius: 1000px;
-        content: '';
-        display: block;
-        width: 6rem;
-        height: 70%;
-        position: absolute;
-        top: -4rem;
-        right: 12rem;
-        animation: 2s ease-out 0s 1 slideInDown;
-      }
-      &::after {
-          background-color: #2a2a2a;
-          opacity: 0.05;
-          border-radius: 1000px;
-          content: '';
-          display: block;
-          width: 6rem;
-          height: 70%;
-          position: absolute;
-          bottom: -4rem;
-          right: 4rem;
-          animation: 2.5s ease-out 0s 1 slideInDown;
-      }
-    }
+  }
 }
 
 .callout {
   background-color: var(--color-bg-muted);
-  border-radius: var(--space-xs);
+  border-radius: var(--border-radius);
   margin-left: -2rem;
   margin-right: -2rem;
   padding: 2rem;
-  @media (min-width: 640px) { 
+  @media (min-width: 640px) {
     padding: 2rem;
   }
 }
@@ -93,34 +93,36 @@
   padding: 0;
   width: 100%;
   &__link {
-      border: none;
+    border: none;
+    box-shadow: none;
+    opacity: 0.8;
+    margin-right: var(--space-2xs);
+    &:hover {
+      opacity: 1;
+    }
+    &:hover,
+    &:active,
+    &:focus {
       box-shadow: none;
-      opacity: 0.8;
-      margin-right: var(--space-2xs);
-      &:hover {
-          opacity: 1;
-      }
-      &:hover,&:active,&:focus {
-        box-shadow: none;
-        color: inherit;
-      }
+      color: inherit;
+    }
   }
 }
 
 .a11y-webring-club {
   background: var(--color-grey-darker);
-  border-radius: var(--space-xs);
+  border-radius: var(--border-radius);
   margin-bottom: 1rem;
   padding: var(--space-m);
   width: fit-content;
   li {
-    @media (min-width: 768px) { 
+    @media (min-width: 768px) {
       display: inline-block;
-      margin-right: .5rem;
+      margin-right: 0.5rem;
     }
     a {
       box-shadow: none;
-      padding: .2em;
+      padding: 0.2em;
     }
   }
 }
@@ -135,4 +137,8 @@ h2#a11y-webring-club {
     margin-bottom: 0;
     text-wrap: balance;
   }
+}
+
+.status {
+  max-width: 40rem;
 }
