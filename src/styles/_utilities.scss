@@ -22,32 +22,6 @@
   justify-content: space-between;
 }
 
-.marker {
-  position: relative;
-  display: inline;
-  z-index: 1;
-}
-
-.marker::before {
-  background-color: $green-marker;
-  content: '';
-  position: absolute;
-  width: calc(100% + 4px);
-  height: 70%;
-  left: -2px;
-  bottom: 0;
-  z-index: -1;
-  transform: rotate(-2deg);
-}
-
-.marker--green::before {
-  background-color: $green-marker;
-}
-
-.marker--pink::before {
-  background-color: $pink-marker;
-}
-
 .sr-only {
   position: absolute !important;
   width: 1px;
