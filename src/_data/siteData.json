@@ -1,3 +1,12 @@
 {
-  "name": "Hello World"
+  "name": "Matt Obee",
+  "description": "Design technologist specialising in accessibility",
+  "url": "https://mattobee.com",
+  "author": {
+    "name:": "Matt Obee",
+    "bio": "Matt Obee is a design technologist specializing in accessibility, currently working as a Staff Accessibility Designer at GitHub. With almost two decades of experience spanning product design, UX, UI, and QA, he has a broad perspective on building inclusive software products and a pragmatic approach to getting things done. From small charities to global enterprises, retailers to government agencies, Matt has worked on projects of all shapes and sizes for a wide range of clients across a broad spectrum of industries.",
+    "github": "https://github.com/mattobee",
+    "linkedin": "https://www.linkedin.com/in/mattobee/",
+    "mastodon": "https://mastodon.social/@mattobee"
+  }
 }

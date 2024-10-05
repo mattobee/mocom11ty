@@ -1,0 +1,17 @@
+.py-0 {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.p-s {
+  padding: var(--space-s);
+}
+.p-m {
+  padding: var(--space-m);
+}
+.p-l {
+  padding: var(--space-l);
+}
+.p-xl {
+  padding: var(--space-xl);
+}
