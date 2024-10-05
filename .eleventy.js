@@ -3,11 +3,15 @@ import { fetchTopics } from './src/scripts/fetchTopics.js';
 import markdownFilter from './src/_includes/markdownFilter.js';
 import randomPhrase from './src/_includes/randomPhrase.js';
 import { logInfo, logError } from './src/utils/logger.js';
+import lightningCSS from '@11tyrocks/eleventy-plugin-lightningcss';
 
 export default function (eleventyConfig) {
   // Passthrough copy for static assets
   eleventyConfig.addPassthroughCopy('src/images');
   eleventyConfig.addPassthroughCopy('src/scripts');
+
+  // Add plugins
+  eleventyConfig.addPlugin(lightningCSS);
 
   // Add shortcodes
   eleventyConfig.addShortcode('year', () => `${new Date().getFullYear()}`);

@@ -93,7 +93,7 @@
   margin: 1rem 0;
   padding: 0;
   width: 100%;
-  &__link {
+  __link {
     border: none;
     box-shadow: none;
     opacity: 0.8;
@@ -132,12 +132,10 @@ h2#a11y-webring-club {
   font-size: var(--step-2);
 }
 
-.page-header {
-  &__summary {
-    font-size: var(--step-1);
-    margin-bottom: 0;
-    text-wrap: balance;
-  }
+.page-header__summary {
+  font-size: var(--step-1);
+  margin-bottom: 0;
+  text-wrap: balance;
 }
 
 .status {

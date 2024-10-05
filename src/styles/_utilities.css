@@ -1,10 +1,10 @@
-@import url('utils/a11y.css');
-@import url('utils/border.css');
-@import url('utils/color.css');
-@import url('utils/display.css');
-@import url('utils/margin.css');
-@import url('utils/padding.css');
-@import url('utils/text.css');
+@import url('utils/_a11y.css');
+@import url('utils/_border.css');
+@import url('utils/_color.css');
+@import url('utils/_display.css');
+@import url('utils/_margin.css');
+@import url('utils/_padding.css');
+@import url('utils/_text.css');
 
 .justify-between {
   justify-content: space-between;
