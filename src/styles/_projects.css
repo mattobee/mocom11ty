@@ -3,7 +3,6 @@
 }
 
 .project__type {
-  color: (var(--color-grey));
   display: inline-block;
   font-size: 1.2rem;
 }

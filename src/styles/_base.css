@@ -10,7 +10,7 @@
 
 td,
 th {
-  border-bottom: 1px solid var(--color-grey-lighter);
+  border-bottom: 1px solid var(--color-border);
   padding: var(--space-l-xl) var(--space-s-m);
 }
 
@@ -24,6 +24,13 @@ table {
 }
 
 body {
-  background-color: var(--color-white);
+  background-color: var(--body-color-bg);
   margin: 0;
 }
+
+/* main {
+  position: relative;
+  background: url('../images/pattern6.svg') repeat-x bottom;
+  background-size: auto;
+  padding-bottom: 185px;
+} */

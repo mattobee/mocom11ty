@@ -3,8 +3,13 @@
   width: 6rem;
 }
 
+.logo path {
+  fill: var(--masthead-color-fg);
+}
+
 #masthead {
-  background-color: #fff;
+  background-color: var(--masthead-color-bg);
+  color: var(--masthead-color-fg);
   container-type: inline-size;
   container-name: headerContainer;
   padding: var(--space-l) 0;

@@ -1,0 +1,40 @@
+@media (prefers-color-scheme: dark) {
+  :root {
+
+    /* Colors */
+    --color-primary: var(--color-green);
+    --color-secondary: var(--color-grey);
+    --color-primary-bg: var(--color-primary);
+    --color-primary-fg: var(--color-grey-800);
+    --color-secondary-bg: var(--color-secondary);
+    --color-secondary-fg: var(--color-white);
+    --color-bg: var(--color-grey-800);
+    --color-fg: var(--color-white);
+    --color-bg-inverse: var(--color-white);
+    --color-fg-inverse: var(--color-grey-800);
+    --color-muted-bg: var(--color-grey-900);
+    --color-muted-fg: var(--color-grey-300);
+    --color-border: var(--color-grey-600);
+
+    /* Body */
+    --body-color-bg: var(--color-bg);
+    --body-color-fg: var(--color-fg);
+    --color-link: inherit;
+
+    /* Masthead */
+    --masthead-color-bg: var(--color-bg);
+    --masthead-color-fg: var(--color-fg);
+    --nav-active-accent: var(--color-primary);
+
+    /* Footer */
+    --footer-color-bg: var(--color-grey-900);
+    --footer-color-muted-fg: var(--color-grey-400);
+    --footer-color-link: var(--color-primary);
+
+    /* Page header */
+    --page-header-color-bg: var(--color-grey-900);
+    --page-header-color-fg: var(--color-white);
+    --page-header-child-color-bg: none;
+    --page-header-child-color-fg: none;
+  }
+}

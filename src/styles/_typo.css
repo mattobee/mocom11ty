@@ -12,7 +12,7 @@
 }
 
 body {
-  color: var(--color-grey);
+  color: var(--body-color-fg);
   font-family: 'Atkinson Hyperlegible', sans-serif;
   font-size: var(--step-0);
   font-weight: 400;
@@ -22,20 +22,20 @@ body {
 a {
   text-decoration: none;
   box-shadow: inset 0 -0.1em 0 0;
-  color: inherit;
+  color: var(--color-link);
   padding: 0 0.1em;
   transition: all 0.2s;
   &:hover,
   &:active,
   &:focus {
-    box-shadow: inset 0 -2em 0 0 #2a2a2a;
-    color: #fff;
+    box-shadow: inset 0 -2em 0 0 var(--body-color-fg);
+    color: var(--body-color-bg);
   }
 }
 
 h1 {
   font-family: 'Overpass';
-  font-size: var(--step-6);
+  font-size: var(--step-7);
   letter-spacing: -0.03em;
   text-transform: lowercase;
   &.note {
@@ -67,12 +67,15 @@ p {
 }
 
 .muted {
-  color: #6b7280;
+  color: var(--color-muted-fg);
 }
 
 small {
   font-size: var(--step--1);
   line-height: 1.2;
+  a {
+    color: currentColor;
+  }
 }
 
 abbr {
@@ -100,7 +103,7 @@ article {
 }
 
 .list-heading {
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid var(--color-border);
   font-size: var(--step-0);
   padding-bottom: var(--step--2);
 }

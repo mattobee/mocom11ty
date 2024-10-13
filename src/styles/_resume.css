@@ -2,20 +2,9 @@
   display: block;
 }
 
-.role__title {
-  position: relative;
-  &::before {
-    content: '';
-    display: inline-block;
-    background-color: #2a2a2a;
-    height: 0.4em;
-    margin-right: 0.5em;
-    width: 0.4em;
-  }
-}
-
 .role--now {
-  background-color: var(--color-green-highlight);
+  background-color: var(--color-primary);
+  color: var(--color-primary-fg);
   border-radius: var(--border-radius);
   margin-left: -2rem;
   margin-right: -2rem;
@@ -27,13 +16,4 @@
 
 .qual__title {
   font-size: var(--step-1);
-  position: relative;
-  &::before {
-    content: '';
-    display: inline-block;
-    background-color: var(--color-grey);
-    height: 0.4em;
-    margin-right: 0.5em;
-    width: 0.4em;
-  }
 }

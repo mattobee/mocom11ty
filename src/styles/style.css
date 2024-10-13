@@ -1,3 +1,5 @@
+@import url('themes/_light.css');
+@import url('themes/_dark.css');
 @import url('_reset.css');
 @import url('_base.css');
 @import url('_variables.css');
@@ -27,7 +29,7 @@ dl > div {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border-bottom: 1px solid var(--color-grey-lighter);
+  border-bottom: 1px solid var(--color-border);
   padding: var(--space-2xs) 0;
   @media (min-width: 700px) {
     flex-direction: row;
@@ -44,8 +46,8 @@ dt {
 }
 
 .section:not([class*='bg-']) {
-  border-top: 1px solid var(--color-grey-lighter);
-  border-bottom: 1px solid var(--color-grey-lighter);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
 }
 
 .flow {

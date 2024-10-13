@@ -26,8 +26,10 @@
 }
 
 .hero {
+  color: var(--color-grey-700);
   padding: var(--space-m);
-  background-color: var(--color-green-highlight);
+  background: rgb(116, 253, 109);
+  background: var(--color-gradient-brand);
   border-radius: var(--border-radius);
   position: relative;
   p {
@@ -76,7 +78,7 @@
 }
 
 .callout {
-  background-color: var(--color-bg-muted);
+  background-color: var(--color-muted-bg);
   border-radius: var(--border-radius);
   margin-left: -2rem;
   margin-right: -2rem;
@@ -93,25 +95,24 @@
   margin: 1rem 0;
   padding: 0;
   width: 100%;
-  __link {
-    border: none;
-    box-shadow: none;
-    opacity: 0.8;
-    margin-right: var(--space-2xs);
-    &:hover {
-      opacity: 1;
-    }
-    &:hover,
-    &:active,
-    &:focus {
-      box-shadow: none;
-      color: inherit;
-    }
-  }
+}
+
+.social__link {
+  border: none;
+  box-shadow: none;
+  color: var(--footer-color-link);
+  margin-right: var(--space-2xs);
+}
+
+.social__link:hover,
+.social__link:active,
+.social__link:focus {
+  box-shadow: none;
+  color: var(--color-primary-dark);
 }
 
 .a11y-webring-club {
-  background: var(--color-grey-darker);
+  background: var(--color-grey-800);
   border-radius: var(--border-radius);
   margin-bottom: 1rem;
   padding: var(--space-m);
@@ -161,4 +162,13 @@ h2#a11y-webring-club {
 
 .status {
   max-width: 40rem;
+}
+
+.panel {
+  border-radius: var(--border-radius);
+  padding: var(--padding-m);
+  @media (min-width: 768px) {
+    margin: var(--space-l) 0;
+    padding: var(--space-xl);
+  }
 }

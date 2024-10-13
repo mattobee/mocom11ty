@@ -11,6 +11,7 @@
   a {
     border: none;
     box-shadow: none;
+    color: var(--color-fg)
     padding: 0;
     &::after {
       border-radius: 1000px;
@@ -22,7 +23,7 @@
     }
     &.active {
       &::after {
-        background-color: #2a2a2a;
+        background-color: var(--nav-active-accent);
         border-radius: 1000px;
         content: '';
         display: block;
@@ -37,7 +38,7 @@
     &:focus {
       color: inherit;
       &::after {
-        background-color: #2a2a2a;
+        background-color: var(--masthead-color-fg);
         border-radius: 1000px;
         content: '';
         display: block;
