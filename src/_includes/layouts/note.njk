@@ -10,7 +10,7 @@ layout: layouts/base.njk
 } %}
 
 <article itemscope itemtype="https://schema.org/BlogPosting">
-    <header class="page-header section">
+    <header class="page-header page-header--child section">
         <div class="container flow flow-s">
             <h1 itemprop="name" class="note">{{ note.title }}</h1>
             <div>
@@ -58,7 +58,7 @@ layout: layouts/base.njk
         </div>
         <!-- End article -->
 
-        <div class="signature flow flow-xs role role--now">
+        <div class="panel bg-gradient fg-body flow flow-xs">
             <h2>Cheers for reading</h2>
             <p class="text-balance">I'm <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Matt Obee</span></a>, a design technologist specialising in accessibility and {% randomPhrase %}. Currently a Staff Accessibility Designer at <a href="https://github.com">GitHub</a> and the maintainer of <a href="https://eventua11y.com">Eventua11y</a>, I have been working in accessibility since 2006.</p>
         </div>

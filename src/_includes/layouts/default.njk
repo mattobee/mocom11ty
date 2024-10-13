@@ -2,12 +2,14 @@
 layout: layouts/base.njk
 ---
 
-<div class="page-header section bg-grey fg-white">
+<div class="page-header">
     <div class="container">
-        <h1><span aria-hidden="true" role="presentation">/</span>{{ title }}</h1>
-        {% if summary %}
-            <p class="page-header__summary">{{ summary }}</p>
-        {% endif %}
+        <div class="content">
+            <h1>{{ title }}</h1>
+            {% if summary %}
+                <p class="page-header__summary">{{ summary }}</p>
+            {% endif %}
+        </div>
     </div>
 </div>
 
