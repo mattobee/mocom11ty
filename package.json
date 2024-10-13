@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "build": "npm run lint && npm run format && npx @11ty/eleventy",
-    "start": "npm run lint:warn && npm run format && npx @11ty/eleventy --serve --port=8081 --quiet",
+    "start": "npm run lint:warn && npx @11ty/eleventy --serve --port=8081 --quiet",
     "debug": "DEBUG=Eleventy* npm run lint:warn && npm run format && npx @11ty/eleventy",
     "debugstart": "DEBUG=Eleventy* npm run lint:warn && npm run format && npx @11ty/eleventy --serve --port=8081",
     "benchmark": "DEBUG=Eleventy:Benchmark* npm run lint:warn && npm run format && npx @11ty/eleventy",
