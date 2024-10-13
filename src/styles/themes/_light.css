@@ -23,7 +23,8 @@
   /* Masthead */
   --masthead-color-bg: var(--color-bg);
   --masthead-color-fg: var(--color-fg);
-  --nav-active-accent: var(--color-green-darker);
+  --nav-active-bg: var(--color-grey-600);
+  --nav-active-fg: var(--color-white);
 
   /* Footer */
   --footer-color-bg: var(--color-grey-600);

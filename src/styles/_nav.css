@@ -1,59 +1,24 @@
 .nav {
   font-size: var(--step-1);
   font-weight: bold;
-  .nav__item {
-    display: inline-block;
-    margin-right: 2rem;
-    &:last-child {
-      margin-right: 0;
-    }
+  ul {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--step--2);
+    justify-content: flex-start
   }
   a {
-    border: none;
-    box-shadow: none;
-    color: var(--color-fg)
-    padding: 0;
-    &::after {
-      border-radius: 1000px;
-      content: '';
-      display: block;
-      height: 0.2em;
-      margin: 0 auto;
-      margin-top: 0.2em;
-    }
-    &.active {
-      &::after {
-        background-color: var(--nav-active-accent);
-        border-radius: 1000px;
-        content: '';
-        display: block;
-        height: 0.2em;
-        margin: 0 auto;
-        margin-top: 0.2em;
-        width: 50%;
-      }
-    }
-    &:hover,
-    &:active,
-    &:focus {
-      color: inherit;
-      &::after {
-        background-color: var(--masthead-color-fg);
-        border-radius: 1000px;
-        content: '';
-        display: block;
-        height: 0.2em;
-        margin: 0 auto;
-        margin-top: 0.2em;
-        width: 50%;
-        transition: all;
-        transition-duration: 200ms;
-      }
-    }
-    &:focus-visible {
-      &::after {
-        content: none;
-      }
-    }
+    border-radius: var(--border-radius-s);
+    padding: var(--step--2);
+    transition: none;
+  }
+  a:hover, a:active, a:focus-visible {
+    color: var(--color-primary);
+  }
+  a.active {
+    background-color: var(--nav-active-bg);
+    color: var(--nav-active-fg);
+    padding: var(--step--2)
   }
 }

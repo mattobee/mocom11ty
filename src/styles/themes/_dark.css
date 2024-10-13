@@ -24,7 +24,8 @@
     /* Masthead */
     --masthead-color-bg: var(--color-bg);
     --masthead-color-fg: var(--color-fg);
-    --nav-active-accent: var(--color-primary);
+    --nav-active-bg: var(--color-primary);
+    --nav-active-fg: var(--color-fg-inverse);
 
     /* Footer */
     --footer-color-bg: var(--color-grey-900);
