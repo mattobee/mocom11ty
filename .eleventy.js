@@ -11,7 +11,9 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('src/scripts');
 
   // Add plugins
-  eleventyConfig.addPlugin(lightningCSS);
+  eleventyConfig.addPlugin(lightningCSS, {
+    sourceMap: true,
+  });
 
   // Add shortcodes
   eleventyConfig.addShortcode('year', () => `${new Date().getFullYear()}`);
