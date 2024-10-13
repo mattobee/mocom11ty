@@ -1,0 +1,19 @@
+.role__date {
+  display: block;
+}
+
+.role--now {
+  background-color: var(--color-primary);
+  color: var(--color-primary-fg);
+  border-radius: var(--border-radius);
+  margin-left: -2rem;
+  margin-right: -2rem;
+  padding: 2rem;
+  .muted {
+    color: rgba(0, 0, 0, 0.6);
+  }
+}
+
+.qual__title {
+  font-size: var(--step-1);
+}

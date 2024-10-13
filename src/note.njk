@@ -1,0 +1,12 @@
+---
+layout: layouts/note.njk
+pagination:
+  data: collections.sortedNotes
+  size: 1
+  alias: note
+  addAllPagesToCollections: true
+  templateData: note
+permalink: "notes/{{ note.slug }}/index.html"
+eleventyComputed:
+  title: "{{ note.title }}"
+---

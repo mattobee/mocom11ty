@@ -1,5 +1,5 @@
 ---
-title: Airfix, Scalextric, Corgi, & Humbrol 
+title: Airfix, Scalextric, Corgi, & Humbrol
 client: Red Ant / Hornby
 type: desktop
 typedesc: Website

@@ -15,8 +15,8 @@ $ npm install
 $ npm start
 ```
 
- And in debug mode:
- 
+And in debug mode:
+
 ```
 $ npm run debugstart
 ```
