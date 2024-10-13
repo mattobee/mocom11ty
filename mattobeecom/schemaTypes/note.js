@@ -49,5 +49,10 @@ export default {
       layout: 'tags',
       of: [{type: 'reference', to: [{type: 'topic'}]}],
     },
+    {
+      name: 'published',
+      title: 'Published',
+      type: 'datetime',
+    },
   ],
 }

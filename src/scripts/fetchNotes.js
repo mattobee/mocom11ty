@@ -14,6 +14,7 @@ export async function fetchNotes() {
     tldr,
     maturity,
     _updatedAt,
+    published,
     "topics": topic[]->{title, "slug": slug.current}
   }`;
   return fetchData(query, 'Notes');

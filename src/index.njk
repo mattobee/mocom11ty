@@ -16,18 +16,23 @@ layout: layouts/base.njk
   'mention': 'Worth mentioning'
 } %}
 
-    <section id="recent-notes" class="flow flow-m p-xl">
+    <section id="recent-notes" class="panel flow flow-m">
         <h2 id="recent-notes-heading" class="list-heading">Recent notes</h2>
         <ul role="list" class="flow flow-m" aria-labelledby="recent-notes-heading">
             {% for note in collections.sortedNotes.slice(0, 3) %}
             <li>
-                <article itemscope itemtype="https://schema.org/BlogPosting">
-                <h3 itemprop="name"><a itemprop="url" class="undecorated" href="/notes/{{ note.slug }}">{{ note.title }}</a></h3>
-                <span class="note__status muted">
-                    <small>Updated <sl-relative-time date="{{ note._updatedAt }}"></sl-relative-time> &middot; on the topic of {% for topic in note.topics %}
-              <a href="/notes/{{ topic.slug }}">{{ topic.title }}</a>{% if not loop.last %}, {% endif %}
-            {% endfor %}</small>
-                </span>
+                <article class="d-flex flex-col" itemscope itemtype="https://schema.org/BlogPosting">
+                    <h3 class="order-2" itemprop="name"><a itemprop="url" class="undecorated" href="/notes/{{ note.slug }}">{{ note.title }}</a></h3>
+                    <div order="1" class="muted">
+                        {% for topic in note.topics %}
+                            {{ topic.title }}{% if not loop.last %}, {% endif %}
+                        {% endfor %}
+                    </div>
+                    <span class="note__status muted order-3">
+                        <small>
+                            Updated <sl-relative-time date="{{ note.published }}"></sl-relative-time>
+                        </small>
+                    </span>
                 </article>
             </li>
             {% endfor %}

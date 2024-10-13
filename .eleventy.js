@@ -28,7 +28,7 @@ export default function (eleventyConfig) {
       const notes = await fetchNotes();
       logInfo(`fetchNotes fetched ${notes.length} notes`);
       return notes.sort(
-        (a, b) => new Date(b._updatedAt) - new Date(a._updatedAt)
+        (a, b) => new Date(b.published) - new Date(a.published)
       );
     } catch (error) {
       logError('Error fetching notes:', error);

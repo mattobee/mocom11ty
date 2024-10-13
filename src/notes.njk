@@ -19,7 +19,7 @@ summary: Irregular and incomplete observations and ideas.
         <article itemscope itemtype="https://schema.org/BlogPosting">
           <h2 itemprop="name"><a itemprop="url" class="undecorated" href="/notes/{{ note.slug }}">{{ note.title }}</a></h2>
           <div class="note__status muted">
-            <small>Updated <sl-relative-time date="{{ note._updatedAt }}"></sl-relative-time> &middot; on the topic of {% for topic in note.topics %}
+            <small>Updated <sl-relative-time date="{{ note.published }}"></sl-relative-time> &middot; on the topic of {% for topic in note.topics %}
               <a href="/notes/{{ topic.slug }}">{{ topic.title }}</a>{% if not loop.last %}, {% endif %}
             {% endfor %}</small>
           </div>
