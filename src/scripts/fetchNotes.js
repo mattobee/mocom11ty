@@ -6,7 +6,7 @@ import { fetchData } from '../utils/fetchData.js';
  * @returns {Promise<Array>} A promise that resolves to an array of notes.
  */
 export async function fetchNotes() {
-  const query = `*[_type == "note"]{
+  const query = `*[_type == "note" && !(_id in path("drafts.**"))]{
     _id,
     title,
     "slug": slug.current,
@@ -17,5 +17,7 @@ export async function fetchNotes() {
     published,
     "topics": topic[]->{title, "slug": slug.current}
   }`;
-  return fetchData(query, 'Notes');
+  const notes = await fetchData(query, 'Notes');
+  console.log('Fetched notes:', notes); // Add logging to inspect fetched notes
+  return notes;
 }
