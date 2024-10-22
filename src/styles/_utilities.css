@@ -1,0 +1,46 @@
+@import url('utils/_a11y.css');
+@import url('utils/_border.css');
+@import url('utils/_color.css');
+@import url('utils/_display.css');
+@import url('utils/_margin.css');
+@import url('utils/_padding.css');
+@import url('utils/_text.css');
+@import url('utils/_order.css');
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.readable {
+  max-width: 52rem;
+}
+
+.bullet {
+  list-style-type: disc;
+  margin-left: 1.3rem;
+  @media (min-width: 640px) {
+    margin-left: 3rem;
+  }
+  li {
+    margin-bottom: 1em;
+  }
+}
+
+.block a[href]::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.undecorated {
+  box-shadow: none;
+  padding: 0;
+  &:hover, &:active, &:focus {
+    box-shadow: none;
+    color: var(--color-primary);
+  }
+}

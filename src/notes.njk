@@ -1,0 +1,37 @@
+---
+layout: layouts/default.njk
+title: Notes
+summary: Irregular and incomplete observations and ideas.
+---
+
+{% set maturityTitles = {
+  'seedling': 'Just an idea',
+  'budding': 'Half-baked',
+  'evergreen': 'Fully-formed',
+  'mention': 'Worth mentioning'
+} %}
+
+<div class="container">
+
+        <ul role="list" class="flow flow-l">
+            {% for note in collections.sortedNotes %}
+            <li>
+                <article class="d-flex flex-col" itemscope itemtype="https://schema.org/BlogPosting">
+                    <h2 class="order-2" itemprop="name"><a itemprop="url" class="undecorated" href="/notes/{{ note.slug }}">{{ note.title }}</a></h2>
+                    <div order="1" class="muted">
+                        {% for topic in note.topics %}
+                            {{ topic.title }}{% if not loop.last %}, {% endif %}
+                        {% endfor %}
+                    </div>
+                    <span class="note__status muted order-3">
+                        <small>
+                            <sl-relative-time date="{{ note.published or note._updatedAt }}" itemprop="dateModified"></sl-relative-time>
+                        </small>
+                    </span>
+                </article>
+            </li>
+            {% endfor %}
+        </ul>
+
+</div>
+<!-- End container -->

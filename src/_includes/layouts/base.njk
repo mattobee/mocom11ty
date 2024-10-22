@@ -8,17 +8,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Matt Obee is a design technologist specialising in accessibility.">
     <meta name="generator" content="Eleventy">
-    <title>{{ renderData.title or title or metadata.title }} - design technologist specialising in accessibility</title>
+    <title>
+      {% if renderData.title or title or metadata.title %}
+        {{ renderData.title or title or metadata.title }} - Matt Obee
+      {% else %}
+        Matt Obee - design technologist specialising in accessibility
+      {% endif %}
+    </title>
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="stylesheet" href="/styles/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.14.0/cdn/themes/light.css" />
     <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.14.0/cdn/shoelace-autoloader.js"></script>
     <script defer src="https://kit.fontawesome.com/944b743d87.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Overpass:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   </head>
   <body id="top" itemscope itemtype="http://schema.org/Person">
     {% include "../header.njk" %}
@@ -31,6 +36,7 @@
           <li><a class="social__link" href="https://linkedin.com/in/mattobee" itemprop="sameAs" rel="me" aria-label="Matt Obee on LinkedIn"><i class="fab fa-linkedin"></i></a></li>
           <li><a class="social__link" href="https://github.com/mattobee" itemprop="sameAs" rel="me" aria-label="Matt Obee on GitHub"><i class="fab fa-github"></i></a></li>
           <li><a class="social__link" href="https://mastodon.social/@mattobee" itemprop="sameAs" rel="me" aria-label="Matt Obee on Mastodon"><i class="fab fa-mastodon"></i></a></li>
+          <li><a class="social__link" href="https://bsky.app/profile/obee.me" itemprop="sameAs" rel="me" aria-label="Matt Obee on Bluesky"><i class="fab fa-bluesky"></i></a></li>
           <li><a class="social__link" href="https://goodreads.com/mattobee" itemprop="sameAs" rel="me" aria-label="Matt Obee on Goodreads"><i class="fab fa-goodreads"></i></a></li>
         </ul>
         <!-- Start a11y-webring-club -->
@@ -44,9 +50,9 @@
           </ul>
         </nav>
         <!-- End a11y-webring-club -->
-        <p class="m-0"><small>&copy; {% year %} Matt Obee</small></p>
-        <p class="m-0"><small>This page conforms to <abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2.2 at Level <abbr title="Double-A">AA</abbr>, because accessibility is important.</small></p>
-        <p class="m-0"><small>Built with <a href="https://www.11ty.dev/">Eleventy</a> and hosted by <a href="https://www.netlify.com/">Netlify</a>. Basic accessibility tests by <a href="https://github.com/pa11y/pa11y">pa11y</a>/<a href="https://github.com/dequelabs/axe-core">axe-core</a>.
+        <p class="m-0"><small class="muted">&copy; {% year %} <span itemprop="name">Matt Obee</span></small></p>
+        <p class="m-0"><small class="muted">This page conforms to <abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2.2 at Level <abbr title="Double-A">AA</abbr>.</small></p>
+        <p class="m-0"><small class="muted">Built with <a href="https://www.11ty.dev/">Eleventy</a> and hosted by <a href="https://www.netlify.com/">Netlify</a>. Basic accessibility tests by <a href="https://github.com/pa11y/pa11y">pa11y</a>/<a href="https://github.com/dequelabs/axe-core">axe-core</a>.</small></p>
       </div>
     </footer>
     {% include "../drawer.njk" %}

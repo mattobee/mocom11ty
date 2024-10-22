@@ -1,0 +1,36 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--space-l-xl) var(--space-s-m);
+}
+
+*:focus-visible {
+  outline-offset: 0.1em;
+}
+
+td,
+th {
+  border-bottom: 1px solid var(--color-border);
+  padding: var(--space-l-xl) var(--space-s-m);
+}
+
+th {
+  text-align: left;
+}
+
+table {
+  font-size: var(--step-0);
+  width: 100%;
+}
+
+body {
+  background-color: var(--body-color-bg);
+  margin: 0;
+}
+
+/* main {
+  position: relative;
+  background: url('../images/pattern6.svg') repeat-x bottom;
+  background-size: auto;
+  padding-bottom: 185px;
+} */

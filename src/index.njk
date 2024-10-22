@@ -1,13 +1,41 @@
 ---
 layout: layouts/base.njk
-title: Matt Obee
 ---
 
-<div class="container">
+<div class="container flow flow-xs">
     <div class="hero">
         <h1 class="sr-only">Matt Obee</h1>
         <p class="hero__headline">I’m a design technologist specialising in accessibility.</p>
         <p>From small charities to global enterprises, retailers to government agencies, I’ve worked on projects across a broad spectrum of industries for a wide range of clients.</p>
         <p class="mb-0"><strong>I help make software work better for people, like you.</strong></p>
     </div>
+    {% set maturityTitles = {
+  'seedling': 'Just an idea',
+  'budding': 'Half-baked',
+  'evergreen': 'Fully-formed',
+  'mention': 'Worth mentioning'
+} %}
+
+    <section id="recent-notes" class="panel flow flow-m">
+        <h2 id="recent-notes-heading" class="list-heading">Recent notes</h2>
+        <ul role="list" class="flow flow-m" aria-labelledby="recent-notes-heading">
+            {% for note in collections.sortedNotes.slice(0, 3) %}
+            <li>
+                <article class="d-flex flex-col" itemscope itemtype="https://schema.org/BlogPosting">
+                    <h3 class="order-2" itemprop="name"><a itemprop="url" class="undecorated" href="/notes/{{ note.slug }}">{{ note.title }}</a></h3>
+                    <div order="1" class="muted">
+                        {% for topic in note.topics %}
+                            {{ topic.title }}{% if not loop.last %}, {% endif %}
+                        {% endfor %}
+                    </div>
+                    <span class="note__status muted order-3">
+                        <small>
+                            <sl-relative-time date="{{ note.published or note._updatedAt }}" itemprop="dateModified"></sl-relative-time>
+                        </small>
+                    </span>
+                </article>
+            </li>
+            {% endfor %}
+        </ul>
+    </section>
 </div>

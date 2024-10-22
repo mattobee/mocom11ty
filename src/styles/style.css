@@ -1,0 +1,88 @@
+/* @import url('../../node_modules/@shoelace-style/shoelace/dist/themes/light.css');
+@import url('../../node_modules/@shoelace-style/shoelace/dist/themes/dark.css'); */
+
+@import url('themes/_light.css');
+@import url('themes/_dark.css');
+@import url('_reset.css');
+@import url('_base.css');
+@import url('_variables.css');
+@import url('_typo.css');
+@import url('_space.css');
+@import url('_patterns.css');
+@import url('_btn.css');
+@import url('_header.css');
+@import url('_footer.css');
+@import url('_nav.css');
+@import url('_resume.css');
+@import url('_projects.css');
+@import url('_drawer.css');
+@import url('_utilities.css');
+
+:root {
+  scroll-behavior: smooth;
+  scroll-snap-type: y;
+}
+
+dl {
+  display: flex;
+  flex-direction: column;
+}
+
+dl > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--color-border);
+  padding: var(--space-2xs) 0;
+  @media (min-width: 700px) {
+    flex-direction: row;
+  }
+}
+
+dt,
+dd {
+  margin: 0;
+}
+
+dt {
+  font-weight: bold;
+}
+
+.section:not([class*='bg-']) {
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.flow {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.flow > * {
+  margin-block: 0;
+}
+
+.flow > * + * {
+  margin-block-start: var(--flow-space, 1.5rem);
+}
+
+.flow-l > * {
+  --flow-space: var(--space-l);
+}
+
+.flow-m > * {
+  --flow-space: var(--space-m);
+}
+
+.flow-xl > * {
+  --flow-space: var(--space-xl);
+}
+
+.flow-xs > * {
+  --flow-space: var(--space-3xs);
+}
+
+.flow-s > * {
+  --flow-space: var(--space-s);
+}

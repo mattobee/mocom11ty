@@ -1,0 +1,29 @@
+---
+layout: layouts/topic.njk
+pagination:
+  data: collections.topics
+  size: 1
+  alias: topic
+  addAllPagesToCollections: true
+  templateData: topic
+permalink: "notes/{{ topic.slug }}/index.html"
+---
+
+  <ul role="list" class="flow flow-l">
+    {% for note in collections.sortedNotes %}
+    {% set noteAdded = false %}
+    {% for noteTopic in note.topics %}
+      {% if noteTopic.slug == topic.slug and not noteAdded %}
+        <li>
+          <article itemscope itemtype="https://schema.org/BlogPosting">
+            <h2 itemprop="name"><a itemprop="url" class="undecorated" href="/notes/{{ note.slug }}">{{ note.title }}</a></h2>
+            <div class="note__status muted">
+              <small><sl-relative-time date="{{ note.published or note._updatedAt }}" itemprop="dateModified"></sl-relative-time></small>
+            </div>
+          </article>
+        </li>
+        {% set noteAdded = true %}
+      {% endif %}
+      {% endfor %}
+    {% endfor %}
+  </ul>

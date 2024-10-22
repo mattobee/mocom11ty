@@ -1,0 +1,210 @@
+@keyframes slideInDown {
+  0% {
+    transform: translateY(-10%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    transform: translateX(-10%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(10%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.hero {
+  color: var(--color-grey-700);
+  padding: var(--space-m);
+  background: rgb(116, 253, 109);
+  background: var(--color-gradient-brand);
+  border-radius: var(--border-radius);
+  position: relative;
+  p {
+    max-width: 29em;
+  }
+  .hero__headline {
+    font-family: 'Overpass';
+    font-size: var(--step-4);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1.2;
+    margin-bottom: var(--space-m);
+    position: relative;
+    text-wrap: balance;
+  }
+  @media (min-width: 768px) {
+    margin: var(--space-l) 0;
+    padding: var(--space-xl);
+    &::before {
+      background-color: #2a2a2a;
+      opacity: 0.05;
+      border-radius: 1000px;
+      content: '';
+      display: block;
+      width: 6rem;
+      height: 70%;
+      position: absolute;
+      top: -4rem;
+      right: 12rem;
+      animation: 2s ease-out 0s 1 slideInDown;
+    }
+    &::after {
+      background-color: #2a2a2a;
+      opacity: 0.05;
+      border-radius: 1000px;
+      content: '';
+      display: block;
+      width: 6rem;
+      height: 70%;
+      position: absolute;
+      bottom: -4rem;
+      right: 4rem;
+      animation: 2.5s ease-out 0s 1 slideInDown;
+    }
+  }
+}
+
+.callout {
+  background-color: var(--color-muted-bg);
+  border-radius: var(--border-radius);
+  margin-left: -2rem;
+  margin-right: -2rem;
+  padding: 2rem;
+  @media (min-width: 640px) {
+    padding: 2rem;
+  }
+}
+
+.social {
+  display: flex;
+  font-size: 2rem;
+  list-style-type: none;
+  margin: 1rem 0;
+  padding: 0;
+  width: 100%;
+}
+
+.social__link {
+  border: none;
+  box-shadow: none;
+  color: var(--footer-color-link);
+  margin-right: var(--space-2xs);
+}
+
+.social__link:hover,
+.social__link:active,
+.social__link:focus {
+  box-shadow: none;
+  color: var(--color-primary-dark);
+}
+
+.a11y-webring-club {
+  background: var(--color-grey-800);
+  border-radius: var(--border-radius);
+  margin-bottom: 1rem;
+  padding: var(--space-m);
+  width: fit-content;
+  li {
+    @media (min-width: 768px) {
+      display: inline-block;
+      margin-right: 0.5rem;
+    }
+    a {
+      box-shadow: none;
+      padding: 0.2em;
+    }
+  }
+}
+
+h2#a11y-webring-club {
+  font-size: var(--step-1);
+}
+
+h1:not(.page-header--child h1) {
+  animation-name: fadeIn;
+  /* animation-delay: 0.1s; */
+  animation-duration: .5s;
+  animation-fill-mode: backwards;
+}
+
+.page-header {
+  background-color: var(--page-header-color-bg);
+  color: var(--page-header-color-fg);
+  @media (min-width: 768px) {
+    padding-top: var(--space-2xl);
+  }
+  .content::after {
+    content: '';
+    display: block;
+    height: var(--space-xs);
+    width: var(--space-3xl);
+    background-color: var(--page-header-accent-color);
+    border-radius: 1000px;
+    margin-top: var(--space-m);
+    animation-duration: .5s;
+    animation-name: animate-sausage;
+    animation-fill-mode: backwards;
+    animation-timing-function: ease-out; 
+  }
+}
+
+@keyframes animate-sausage {
+  0% { position: relative; left: -5rem; opacity: 0; }
+  100% { position: relative; left: 0; opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.page-header--child {
+  background-color: var(--page-header-child-color-bg);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  color: var(--page-header-child-color-fg);
+  @media (min-width: 768px) {
+    padding-top: 0;
+  }
+}
+
+.page-header--topic {
+  background-color: var(--color-muted-bg);
+}
+
+.page-header__summary {
+  font-size: var(--step-1);
+  margin-bottom: 0;
+  text-wrap: balance;
+}
+
+.status {
+  max-width: 40rem;
+}
+
+.panel {
+  border-radius: var(--border-radius);
+  padding: var(--padding-m);
+  @media (min-width: 768px) {
+    margin: var(--space-l) 0;
+    padding: var(--space-xl);
+  }
+}

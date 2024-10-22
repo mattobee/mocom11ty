@@ -1,0 +1,124 @@
+:root {
+  --step--2: clamp(0.7813rem, 0.7747rem + 0.0326vi, 0.8rem);
+  --step--1: clamp(0.9375rem, 0.9158rem + 0.1087vi, 1rem);
+  --step-0: clamp(1.125rem, 1.0815rem + 0.2174vi, 1.25rem);
+  --step-1: clamp(1.35rem, 1.2761rem + 0.3696vi, 1.5625rem);
+  --step-2: clamp(1.62rem, 1.5041rem + 0.5793vi, 1.9531rem);
+  --step-3: clamp(1.944rem, 1.771rem + 0.8651vi, 2.4414rem);
+  --step-4: clamp(2.3328rem, 2.0827rem + 1.2504vi, 3.0518rem);
+  --step-5: clamp(2.7994rem, 2.4462rem + 1.7658vi, 3.8147rem);
+  --step-6: clamp(3.3593rem, 2.8883rem + 2.3011vi, 4.8828rem);
+  --step-7: clamp(4.0311rem, 3.3205rem + 3.0565vi, 6.1035rem);
+}
+
+body {
+  color: var(--body-color-fg);
+  font-family: 'Atkinson Hyperlegible', sans-serif;
+  font-size: var(--step-0);
+  font-weight: 400;
+  line-height: var(--leading-base);
+}
+
+a {
+  text-decoration: none;
+  box-shadow: inset 0 -0.1em 0 0;
+  color: var(--color-link);
+  padding: 0 0.1em;
+  transition: all 0.2s;
+  &:hover,
+  &:active,
+  &:focus {
+    box-shadow: inset 0 -2em 0 0 var(--body-color-fg);
+    color: var(--body-color-bg);
+  }
+}
+
+h1 {
+  font-family: 'Overpass';
+  font-size: var(--step-7);
+  letter-spacing: -0.03em;
+  text-transform: lowercase;
+  &.note {
+    text-transform: none;
+    font-size: var(--step-5);
+  }
+}
+
+h2 {
+  font-family: 'Overpass';
+  font-size: var(--step-3);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+h3 {
+  font-family: 'Overpass';
+  font-size: var(--step-2);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.tldr__heading {
+  letter-spacing: normal;
+}
+
+p {
+  margin-bottom: 1.5em;
+}
+
+.muted {
+  color: var(--color-muted-fg);
+}
+
+small {
+  font-size: var(--step--1);
+  line-height: 1.2;
+  a {
+    color: currentColor;
+  }
+}
+
+abbr {
+  text-decoration: none;
+}
+
+.large {
+  font-size: var(--step-1);
+}
+
+.feature {
+  font-size: var(--step-7);
+  font-family: 'Overpass';
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  text-transform: lowercase;
+}
+
+.accent {
+  color: var(--color-pink);
+}
+
+article {
+  line-height: var(--leading-loose);
+}
+
+.listing {
+  h2 {
+    font-size: var(--step-1);
+    @media (min-width: 768px) {
+      font-size: var(--step-3);
+    }
+  }
+}
+
+.list-heading {
+  border-bottom: 1px solid var(--color-border);
+  font-size: var(--step-0);
+  padding-bottom: var(--step--2);
+}
+
+.eyebrow {
+  display: block;
+  font-size: var(--step-2);
+  letter-spacing: normal;
+}

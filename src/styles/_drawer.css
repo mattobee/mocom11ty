@@ -1,0 +1,15 @@
+.open-menu {
+  font-size: 2rem;
+}
+
+.drawer__header-actions .sl-icon-button,
+.drawer__close {
+  font-size: 2rem !important;
+}
+
+.drawer-menu {
+  a {
+    font-size: var(--step-2);
+    font-weight: bold;
+  }
+}

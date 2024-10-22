@@ -1,0 +1,54 @@
+---
+layout: layouts/base.njk
+---
+
+{% set maturityTitles = {
+  'seedling': 'Just an idea',
+  'budding': 'Half-baked',
+  'evergreen': 'Evergreen',
+  'mention': 'Worth mentioning'
+} %}
+
+<article itemscope itemtype="https://schema.org/BlogPosting">
+    <header class="page-header page-header--child">
+        <div class="container flow flow-s items-start">
+            <a class="undecorated" href="/notes"><i class="fa-solid fa-arrow-left"></i> Back to notes</a>
+            <div class="contents">
+                <h1 itemprop="name" class="note">{{ note.title }}</h1>
+                <div>
+                    <span class="note__status muted">
+                      <sl-relative-time date="{{ note.published or note._updatedAt }}" itemprop="dateModified"></sl-relative-time> 
+                      &middot;
+                    on the topic of {% for topic in note.topics %}
+                        <a href="/notes/{{ topic.slug }}">{{ topic.title }}</a>{% if not loop.last %}, {% endif %}
+                    {% endfor %}
+                    </span>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+
+    <div class="container readable flow flow-l">
+
+        {% if note.tldr %}
+        <section id="tldr" class="callout flow flow-xs">
+            <h2 class="tldr__heading"><abbr title="Too long; didn't read">TL;DR</abbr></h2>
+            <div itemprop="abstract" class="flow">{{ note.tldr | markdown | safe }}</div>
+        </section>
+        {% endif %}
+
+        <div class="article" itemprop="articleBody">
+
+            {% if note.content %}
+                {{ note.content | markdown | safe }}
+            {% else %}
+            <p>Content is not available.</p>
+            {% endif %}
+
+        </div>
+        <!-- End article -->
+
+    </div>
+
+</article>

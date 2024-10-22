@@ -1,0 +1,15 @@
+.role__date {
+  display: block;
+}
+
+.role--now {
+  background-color: var(--color-lowlight-bg);
+  color: var(--color-fg);
+  margin-left: -2rem;
+  margin-right: -2rem;
+  padding: 2rem;
+}
+
+.qual__title {
+  font-size: var(--step-1);
+}
