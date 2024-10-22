@@ -17,7 +17,6 @@ layout: layouts/base.njk
                 <h1 itemprop="name" class="note">{{ note.title }}</h1>
                 <div>
                     <span class="note__status muted">
-                      Updated 
                       <sl-relative-time date="{{ note.published or note._updatedAt }}" itemprop="dateModified"></sl-relative-time> 
                       &middot;
                     on the topic of {% for topic in note.topics %}
