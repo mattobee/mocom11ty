@@ -5,20 +5,32 @@
     align-items: center;
     display: flex;
     flex-wrap: wrap;
-    gap: var(--step--2);
-    justify-content: flex-start
+    gap: var(--space-2xs);
+    justify-content: flex-start;
   }
   a {
     border-radius: var(--border-radius-s);
-    padding: var(--step--2);
+    padding: var(--space-2xs) var(--space-xs);
     transition: none;
   }
   a:hover, a:active, a:focus-visible {
-    color: var(--color-primary);
+    background-color: var(--nav-hover-bg);
+    color: var(--nav-hover-fg);
   }
   a.active {
     background-color: var(--nav-active-bg);
     color: var(--nav-active-fg);
-    padding: var(--step--2)
+  }
+}
+
+@media (max-width: 600px) {
+  .nav {
+    font-size: var(--step-0);
+    ul {
+      gap: var(--space-3xs);
+    }
+    a {
+      padding: var(--space-3xs) var(--space-2xs);
+    }
   }
 }

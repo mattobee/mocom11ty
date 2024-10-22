@@ -6,6 +6,10 @@
   display: block;
 }
 
+.d-inline-block {
+  display: inline-block;
+}
+
 .d-flex {
   display: flex;
 }
@@ -16,4 +20,8 @@
 
 .flex-col {
   flex-direction: column;
+}
+
+.items-start {
+  align-items: flex-start;
 }

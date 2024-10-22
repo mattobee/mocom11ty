@@ -133,25 +133,61 @@ h2#a11y-webring-club {
   font-size: var(--step-1);
 }
 
+h1:not(.page-header--child h1) {
+  animation-name: fadeIn;
+  /* animation-delay: 0.1s; */
+  animation-duration: .5s;
+  animation-fill-mode: backwards;
+}
+
 .page-header {
   background-color: var(--page-header-color-bg);
   color: var(--page-header-color-fg);
-
+  @media (min-width: 768px) {
+    padding-top: var(--space-2xl);
+  }
   .content::after {
     content: '';
     display: block;
     height: var(--space-xs);
     width: var(--space-3xl);
-    background-color: var(--color-primary);
+    background-color: var(--page-header-accent-color);
     border-radius: 1000px;
     margin-top: var(--space-m);
+    animation-duration: .5s;
+    animation-name: animate-sausage;
+    animation-fill-mode: backwards;
+    animation-timing-function: ease-out; 
+  }
+}
+
+@keyframes animate-sausage {
+  0% { position: relative; left: -5rem; opacity: 0; }
+  100% { position: relative; left: 0; opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
 
+  to {
+    opacity: 1;
+  }
 }
 
 .page-header--child {
   background-color: var(--page-header-child-color-bg);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
   color: var(--page-header-child-color-fg);
+  @media (min-width: 768px) {
+    padding-top: 0;
+  }
+}
+
+.page-header--topic {
+  background-color: var(--color-muted-bg);
 }
 
 .page-header__summary {

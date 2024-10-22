@@ -15,7 +15,7 @@
   padding: var(--space-l) 0;
   > .container {
     display: flex;
-    flex-direction: row;
+    flex-direction: row; /* Default to row for larger viewports */
     justify-content: space-between;
     align-items: center;
   }
@@ -24,15 +24,14 @@
   }
 }
 
+@media (max-width: 600px) {
+  #masthead > .container {
+    flex-direction: column; /* Change to column for small viewports */
+  }
+}
+
 .open-menu {
   display: none;
 }
 
-@container headerContainer (max-width: 800px) {
-  .nav {
-    display: none;
-  }
-  .open-menu {
-    display: block;
-  }
-}
+

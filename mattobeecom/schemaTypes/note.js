@@ -28,6 +28,7 @@ export default {
           {title: 'Budding', value: 'budding'},
           {title: 'Evergreen', value: 'evergreen'},
           {title: 'Worth mentioning', value: 'mention'},
+          {title: 'Journal', value: 'journal'},
         ],
       },
       initialValue: 'seedling',

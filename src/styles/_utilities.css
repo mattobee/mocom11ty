@@ -39,4 +39,8 @@
 .undecorated {
   box-shadow: none;
   padding: 0;
+  &:hover, &:active, &:focus {
+    box-shadow: none;
+    color: var(--color-primary);
+  }
 }

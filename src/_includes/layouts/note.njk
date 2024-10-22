@@ -10,31 +10,23 @@ layout: layouts/base.njk
 } %}
 
 <article itemscope itemtype="https://schema.org/BlogPosting">
-    <header class="page-header page-header--child section">
-        <div class="container flow flow-s">
-            <h1 itemprop="name" class="note">{{ note.title }}</h1>
-            <div>
-            <span class="note__status muted">Updated <sl-relative-time date="{{ note._updatedAt }}" itemprop="dateModified"></sl-relative-time> &middot; 
-            on the topic of {% for topic in note.topics %}
-                <a href="/notes/{{ topic.slug }}">{{ topic.title }}</a>{% if not loop.last %}, {% endif %}
-            {% endfor %}
-            </span>
-            {# <sl-details class="status"class="custom-icons">
-                <div slot="summary"><i class="fa-solid fa-seedling"></i> This note is a seedling</div>
-                <sl-icon name="plus-square" slot="expand-icon"></sl-icon>
-                <sl-icon name="dash-square" slot="collapse-icon"></sl-icon>
-                Seedling notes are incomplete and likely to change over time. I have captured some ideas but haven't fully explored them yet.
-            </sl-details> #}
+    <header class="page-header page-header--child">
+        <div class="container flow flow-s items-start">
+            <a class="undecorated" href="/notes"><i class="fa-solid fa-arrow-left"></i> Back to notes</a>
+            <div class="contents">
+                <h1 itemprop="name" class="note">{{ note.title }}</h1>
+                <div>
+                    <span class="note__status muted">
+                      Updated 
+                      <sl-relative-time date="{{ note.published or note._updatedAt }}" itemprop="dateModified"></sl-relative-time> 
+                      &middot;
+                    on the topic of {% for topic in note.topics %}
+                        <a href="/notes/{{ topic.slug }}">{{ topic.title }}</a>{% if not loop.last %}, {% endif %}
+                    {% endfor %}
+                    </span>
+                </div>
             </div>
         </div>
-        {# <div class="status">
-            <div class="container">
-                <details>
-                    <summary>This <span itemprop="creativeWorkStatus">working draft</span> is incomplete and likely to change.</summary>
-                    <p>It's a <span itemprop="creativeWorkStatus">working draft</span> and is likely to change. If you have any feedback, please <a href="https://twitter.com/mattobee">let me know</a>.</p>
-                </details>
-            </div>
-        </div> #}
     </header>
     
 
@@ -57,12 +49,6 @@ layout: layouts/base.njk
 
         </div>
         <!-- End article -->
-
-        <div class="panel bg-gradient fg-body flow flow-xs">
-            <h2>Cheers for reading</h2>
-            <p class="text-balance">I'm <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Matt Obee</span></a>, a design technologist specialising in accessibility and {% randomPhrase %}. Currently a Staff Accessibility Designer at <a href="https://github.com">GitHub</a> and the maintainer of <a href="https://eventua11y.com">Eventua11y</a>, I have been working in accessibility since 2006.</p>
-        </div>
-        <!-- End signatute -->
 
     </div>
 
