@@ -8,8 +8,9 @@ title: Projects
         {% if project.data.casestudy %}
         <li class="project project--casestudy">
             <h2 class="project__name">{{ project.data.title }}</h2>
-            {% if project.data.type and project.data.typedesc %}
-            <span class="project__type">
+            <div>
+                {% if project.data.type and project.data.typedesc %}
+                <span class="project__type">
                 {% if project.data.type === 'responsive' %}
                     <i class="fa-regular fa-laptop-mobile"></i> 
                 {% elif project.data.type === 'native' %}
@@ -18,29 +19,32 @@ title: Projects
                     <i class="fa-regular fa-laptop"></i> 
                 {% endif %}
                 {{ project.data.typedesc }}
-            </span>
-            {% endif %}
-            <span class="project__client muted">for {{ project.data.client }}</span>
+                </span>
+                {% endif %}
+                <span class="project__client muted">for {{ project.data.client }}</span>
+            </div>
             <p class="project__description">{{ project.data.description }}</p>
             <a class="project__casestudy" href="/" aria-label="{{ project.data.title }}">Read the case study <i class="fa-solid fa-arrow-right"></i></a>
         </li>
         {% else %}
         <li class="project flow">
             <h2 class="project__name">{{ project.data.title }}</h2>
-            <span class="project__client muted">for {{ project.data.client }}</span>
-            {% if project.data.type and project.data.typedesc %}
-            <span class="project__type">
-                {% if project.data.type === 'responsive' %}
-                    <i class="fa-regular fa-laptop-mobile"></i> 
-                {% elif project.data.type === 'native' %}
-                    <i class="fa-regular fa-mobile"></i> 
-                {% elif project.data.type === 'desktop' %}
-                    <i class="fa-regular fa-laptop"></i> 
-                {% else %}
+            <div>
+                {% if project.data.type and project.data.typedesc %}
+                <span class="project__type muted">
+                    {% if project.data.type === 'responsive' %}
+                        <i class="fa-regular fa-laptop-mobile"></i> 
+                    {% elif project.data.type === 'native' %}
+                        <i class="fa-regular fa-mobile"></i> 
+                    {% elif project.data.type === 'desktop' %}
+                        <i class="fa-regular fa-laptop"></i> 
+                    {% else %}
+                    {% endif %}
+                    {{ project.data.typedesc }}
+                </span>
                 {% endif %}
-                {{ project.data.typedesc }}
-            </span>
-            {% endif %}
+                <span class="project__client muted">for {{ project.data.client }}</span>
+            </div>
             <p class="project__description">{{ project.data.description }}</p>
         </li>
         {% endif %}
