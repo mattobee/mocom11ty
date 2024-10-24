@@ -53,6 +53,11 @@ dt {
   border-bottom: 1px solid var(--color-border);
 }
 
+.page-header + .section {
+  border-top: none;
+}
+
+
 .flow {
   display: flex;
   flex-direction: column;
