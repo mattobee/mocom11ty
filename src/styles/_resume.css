@@ -4,6 +4,7 @@
 
 .role--now {
   background-color: var(--color-lowlight-bg);
+  border-radius: var(--border-radius);
   color: var(--color-fg);
   margin-left: -2rem;
   margin-right: -2rem;
