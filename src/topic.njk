@@ -9,6 +9,13 @@ pagination:
 permalink: "notes/{{ topic.slug }}/index.html"
 ---
 
+{% set maturityTitles = {
+  'seedling': 'Seedling',
+  'budding': 'Budding',
+  'evergreen': 'Evergreen',
+  'journal': 'Journal Entry'
+} %}
+
   <ul role="list" class="flow flow-l">
     {% for note in collections.sortedNotes %}
     {% set noteAdded = false %}
@@ -18,7 +25,13 @@ permalink: "notes/{{ topic.slug }}/index.html"
           <article itemscope itemtype="https://schema.org/BlogPosting">
             <h2 itemprop="name"><a itemprop="url" class="undecorated" href="/notes/{{ note.slug }}">{{ note.title }}</a></h2>
             <div class="note__status muted">
-              <small><sl-relative-time date="{{ note.published or note._updatedAt }}" itemprop="dateModified"></sl-relative-time></small>
+              <small>
+                {% if note.maturity %}
+                  {{ maturityTitles[note.maturity] }}
+                  &middot;
+                {% endif %}
+                <sl-relative-time date="{{ note.published or note._updatedAt }}" itemprop="dateModified"></sl-relative-time>
+              </small>
             </div>
           </article>
         </li>

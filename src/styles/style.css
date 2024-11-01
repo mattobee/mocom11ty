@@ -118,6 +118,11 @@ dt {
   outline: none;
 }
 
+
 .note__date {
-  text-transform: capitalize;
+  display: inline-block; /* Ensure it is inline-block or block */
+}
+
+.note__date::first-letter {
+  text-transform: uppercase;
 }

@@ -3,10 +3,17 @@ layout: layouts/base.njk
 ---
 
 {% set maturityTitles = {
-  'seedling': 'Just an idea',
-  'budding': 'Half-baked',
-  'evergreen': 'Evergreen',
-  'mention': 'Worth mentioning'
+  'seedling': '<i class="fa-solid fa-seedling"></i> Seedling',
+  'budding': '<i class="fa-solid fa-leaf"></i> Budding',
+  'evergreen': '<i class="fa-solid fa-tree"></i> Evergreen',
+  'journal': 'Journal Entry'
+} %}
+
+{% set maturityExplanations = {
+  'journal': 'This is a <strong>journal entry</strong>. It was worth mentioning at the time but I probably won\'t make changes to it, other than to fix mistakes.',
+  'seedling': 'This is a <i class="fa-solid fa-seedling"></i> <strong>Seedling</strong> note which means that it is incomplete and potentially inaccurate.',
+  'budding': 'This is a <i class="fa-solid fa-leaf"></i> <strong>Budding</strong> note that is still growing. I have spent some time on it but it still needs some work.',
+  'evergreen': 'This is a fully grown <i class="fa-solid fa-tree"></i> <strong>Evergreen</strong> note. The information is complete and I will endeavour to keep it up to date.'
 } %}
 
 <article itemscope itemtype="https://schema.org/BlogPosting">
@@ -17,7 +24,11 @@ layout: layouts/base.njk
                 <h1 itemprop="name" class="note">{{ note.title }}</h1>
                 <div>
                     <span class="note__status muted">
-                      <sl-relative-time date="{{ note.published or note._updatedAt }}" itemprop="dateModified"></sl-relative-time> 
+                        {% if note.maturity %}
+                            {{ maturityTitles[note.maturity] | safe }}
+                            &middot;
+                        {% endif %}
+                      <sl-relative-time class="note__date" date="{{ note.published or note._updatedAt }}" itemprop="dateModified"></sl-relative-time> 
                       &middot;
                     on the topic of {% for topic in note.topics %}
                         <a href="/notes/{{ topic.slug }}">{{ topic.title }}</a>{% if not loop.last %}, {% endif %}
@@ -48,6 +59,15 @@ layout: layouts/base.njk
 
         </div>
         <!-- End article -->
+
+        {% if note.maturity %}
+          {% set explanation = maturityExplanations[note.maturity] %}
+          {% if explanation %}
+            <div id="maturity" class="callout">
+              <p>{{ explanation | safe }}</p>
+            </div>
+          {% endif %}
+        {% endif %}
 
     </div>
 

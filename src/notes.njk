@@ -5,10 +5,10 @@ summary: Irregular and incomplete observations and ideas.
 ---
 
 {% set maturityTitles = {
-  'seedling': 'Just an idea',
-  'budding': 'Half-baked',
-  'evergreen': 'Fully-formed',
-  'mention': 'Worth mentioning'
+  'seedling': '<i class="fa-solid fa-seedling"></i> Seedling',
+  'budding': '<i class="fa-solid fa-leaf"></i> Budding',
+  'evergreen': '<i class="fa-solid fa-tree"></i> Evergreen',
+  'journal': 'Journal Entry'
 } %}
 
 <div class="container">
@@ -25,7 +25,11 @@ summary: Irregular and incomplete observations and ideas.
                     </div>
                     <span class="note__status muted order-3">
                         <small>
-                            <sl-relative-time date="{{ note.published or note._updatedAt }}" itemprop="dateModified"></sl-relative-time>
+                            {% if note.maturity %}
+                            {{ maturityTitles[note.maturity] | safe }}
+                            &middot;
+                            {% endif %}
+                            <sl-relative-time class="note__date" date="{{ note.published or note._updatedAt }}" itemprop="dateModified"></sl-relative-time>
                         </small>
                     </span>
                 </article>

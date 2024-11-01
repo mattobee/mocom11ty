@@ -2,6 +2,13 @@
 layout: layouts/base.njk
 ---
 
+{% set maturityTitles = {
+  'seedling': '<i class="fa-solid fa-seedling"></i> Seedling',
+  'budding': '<i class="fa-solid fa-leaf"></i> Budding',
+  'evergreen': '<i class="fa-solid fa-tree"></i> Evergreen',
+  'journal': 'Journal Entry'
+} %}
+
 <div class="container flow flow-xs">
     <div class="hero">
         <h1 class="sr-only">Matt Obee</h1>
@@ -9,12 +16,6 @@ layout: layouts/base.njk
         <p>From small charities to global enterprises, retailers to government agencies, I’ve worked on projects across a broad spectrum of industries for a wide range of clients.</p>
         <p class="mb-0"><strong>I help make software work better for people, like you.</strong></p>
     </div>
-    {% set maturityTitles = {
-  'seedling': 'Just an idea',
-  'budding': 'Half-baked',
-  'evergreen': 'Fully-formed',
-  'mention': 'Worth mentioning'
-} %}
 
     <section id="recent-notes" class="panel flow flow-m">
         <h2 id="recent-notes-heading" class="list-heading">Recent notes</h2>
@@ -30,7 +31,11 @@ layout: layouts/base.njk
                     </div>
                     <span class="note__status muted order-3">
                         <small>
-                            <sl-relative-time date="{{ note.published or note._updatedAt }}" itemprop="dateModified"></sl-relative-time>
+                            {% if note.maturity %}
+                            {{ maturityTitles[note.maturity] | safe }}
+                            &middot;
+                            {% endif %}
+                            <sl-relative-time class="note__date" date="{{ note.published or note._updatedAt }}" itemprop="dateModified"></sl-relative-time>
                         </small>
                     </span>
                 </article>
