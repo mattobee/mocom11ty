@@ -62,7 +62,7 @@ h3 {
   letter-spacing: normal;
 }
 
-p {
+p:not(:last-child) {
   margin-bottom: 1.5em;
 }
 
