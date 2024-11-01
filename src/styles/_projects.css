@@ -1,12 +1,3 @@
-.project__client {
-  display: block;
-}
-
-.project__type {
-  display: inline-block;
-  font-size: 1.2rem;
-}
-
 .project {
   align-items: flex-start;
   display: flex;

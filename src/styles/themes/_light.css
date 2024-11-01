@@ -13,7 +13,7 @@
   --color-fg-inverse: var(--color-white);
   --color-muted-bg: var(--color-grey-100);
   --color-muted-fg: var(--color-grey-500);
-  --color-lowlight-bg: var(--color-grey-100);
+  --color-lowlight-bg: var(--color-grey-50);
   --color-border: var(--color-grey-200);
 
   /* Body */

@@ -4,6 +4,7 @@
 
 .role--now {
   background-color: var(--color-lowlight-bg);
+  border-radius: var(--border-radius);
   color: var(--color-fg);
   margin-left: -2rem;
   margin-right: -2rem;
@@ -12,4 +13,17 @@
 
 .qual__title {
   font-size: var(--step-1);
+}
+
+#skills {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: var(--space-xl);
+}
+
+@media (max-width: 700px) {
+  #skills {
+    grid-template-columns: 1fr;
+    gap: var(--space-l);
+  }
 }

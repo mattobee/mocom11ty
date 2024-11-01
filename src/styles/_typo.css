@@ -99,7 +99,7 @@ abbr {
 }
 
 article {
-  line-height: var(--leading-loose);
+  line-height: var(--leading-looser);
 }
 
 .listing {
