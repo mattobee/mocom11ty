@@ -117,3 +117,7 @@ dt {
   display: block;
   outline: none;
 }
+
+.note__date {
+  text-transform: capitalize;
+}
