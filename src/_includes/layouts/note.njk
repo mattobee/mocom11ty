@@ -12,7 +12,7 @@ layout: layouts/base.njk
 {% set maturityExplanations = {
   'journal': 'This is a <strong>journal entry</strong>. It was worth mentioning at the time but I probably won\'t make changes to it, other than to fix mistakes.',
   'seedling': 'This is a <i class="fa-solid fa-seedling"></i> <strong>Seedling</strong> note which means that it is incomplete and potentially inaccurate.',
-  'budding': 'This is a <i class="fa-solid fa-leaf"></i> <strong>Budding</strong> note that is still growing. I have spent some time on it but it still needs some work.',
+  'budding': 'This is a <i class="fa-solid fa-leaf"></i> <strong>Budding</strong> note that is still growing. I have spent some time on it but it still needs a little work.',
   'evergreen': 'This is a fully grown <i class="fa-solid fa-tree"></i> <strong>Evergreen</strong> note. The information is complete and I will endeavour to keep it up to date.'
 } %}
 
@@ -64,7 +64,7 @@ layout: layouts/base.njk
           {% set explanation = maturityExplanations[note.maturity] %}
           {% if explanation %}
             <div id="maturity" class="callout">
-              <p>{{ explanation | safe }}</p>
+              <p>{{ explanation | safe }} It was last updated <sl-relative-time class="note__date" date="{{ note.published or note._updatedAt }}" itemprop="dateModified"></sl-relative-time>.</p>
             </div>
           {% endif %}
         {% endif %}
