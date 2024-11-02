@@ -13,3 +13,19 @@
 .text-balance {
   text-wrap: balance;
 }
+
+.leading-tight {
+  line-height: var(--leading-tight);
+}
+
+.leading-base {
+  line-height: var(--leading-base);
+}
+
+.leading-loose {
+  line-height: var(--leading-loose);
+}
+
+.leading-looser {
+  line-height: var(--leading-looser);
+}
