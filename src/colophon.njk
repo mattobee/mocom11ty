@@ -1,0 +1,25 @@
+---
+layout: layouts/default.njk
+title: Colophon
+summary: How I built this site
+---
+
+<div class="container readable flow flow-m leading-looser">
+    <h2>Typography</h2>
+    <p>Headings and display text use <a href="https://fonts.google.com/specimen/Overpass">Overpass</a>, an open source font family inspired by <a href="https://en.wikipedia.org/wiki/Highway_Gothic">Highway Gothic</a>. Body text is <a href="https://fonts.google.com/specimen/Atkinson+Hyperlegible">Atkinson Hyperlegible</a>, another open source family which was designed by the Braille Institute to maximise legibility for people with low vision.
+    <h2>Colour</h2>
+    <p>There are two colour themes, the default light mode and a dark mode that is activated by the user's system preferences (using the <code>prefers-color-scheme</code> media query). I am planning to add a manual in-page toggle at some point.
+    <h2>Accessibility</h2>
+    <p>I intend every page of this site to conform to WCAG 2.2 at Level AA. If you notice any defects or experience any difficulty in using it, please let me know and I'll do my best to fix it.</p>
+    <p>Netlify's <a href="https://www.netlify.com/integrations/community-built/netlify-plugin-a11y-build-plugin/">a11y plugin</a> runs some automated checks using <a href="https://github.com/pa11y/pa11y">Pa11y</a> and <a href="https://github.com/dequelabs/axe-core">axe-core</a> whenever the site is built. It fails the build and blocks deployment if any issues are found. I am however conscious that automated testing on its own is not sufficient.</p>
+    <h2>Content management</h2>
+    <p>This site is fully static, meaning there are no database calls when a page loads. Instead, every page is pre-built and served as a simple HTML file using <a href="https://www.11ty.dev/">Eleventy</a>, a brilliantly simple static site generator that supports multiple template languages. I'm using <a href="https://mozilla.github.io/nunjucks/">Nunjucks</a>.</p> 
+    <p>Content is managed through Sanity's <a href="https://www.sanity.io/content-lake">Content Lake</a> and edited in <a href="https://www.sanity.io/studio">Sanity Studio</a>. Eleventy’s built-in support for data files makes it easy to pull in data from various sources, including APIs. In this setup, I use the Sanity API to pull the content for <a href="/notes">my notes</a>.</p>
+    <h2>Hosting and deployment</h2>
+    <p>The site is hosted on <a href="https://www.netlify.com/">Netlify</a>, which is configured to rebuild and deploy automatically whenever a commit is pushed to the main branch in GitHub. Changes to content in Sanity will also trigger a rebuild, by Sanity calling a <a href="https://docs.netlify.com/configure-builds/build-hooks/">Netlify build hook</a>.</p>
+    <h2>Analytics</h2>
+    <p>I use <a href="https://usefathom.com/ref/VZYIPT">Fathom</a>, which is a privacy-first analytics tool. It gives me just enough information to understand how many visitors I'm getting and where they come from, without tracking individual users or relying on cookies.</p>
+</p>
+
+</div>
+<!-- End container -->
