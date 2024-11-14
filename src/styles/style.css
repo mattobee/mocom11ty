@@ -115,7 +115,7 @@ dt {
   background-color: var(--color-fg);
   box-shadow: none;
   display: block;
-  outline: none;
+  outline-offset: -.2em;
 }
 
 
