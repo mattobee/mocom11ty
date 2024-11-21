@@ -82,6 +82,20 @@ abbr {
   text-decoration: none;
 }
 
+p > code,
+li > code,
+dd > code,
+td > code {
+  background-color: var(--color-muted-bg);
+  border-radius: .2em;
+  box-decoration-break: clone;
+  color: var(--color-code);
+  font-family: 'Fira Code', monospace;
+  font-size: .9em;
+  padding: .1em .3em;
+  word-wrap: break-word;
+}
+
 .large {
   font-size: var(--step-1);
 }
