@@ -42,7 +42,7 @@
     "globals": "^15.12.0",
     "markdown-it": "^14.1.0",
     "markdown-it-anchor": "^9.0.1",
-    "netlify-cli": "^17.37.2",
+    "netlify-cli": "^19.0.0",
     "prettier": "^3.4.2"
   },
   "dependencies": {
