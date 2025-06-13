@@ -20,7 +20,7 @@ jobs:
       - name: Wait for Netlify Deploy Preview
         run: |
           PR_NUMBER=${{ github.event.pull_request.number }}
-          NETLIFY_URL="https://deploy-preview-${PR_NUMBER}--mocom11ty.netlify.app/"
+          NETLIFY_URL="https://deploy-preview-${PR_NUMBER}--mattobee.netlify.app/"
           echo "Waiting for Netlify deployment at $NETLIFY_URL"
           retries=30
           count=0
