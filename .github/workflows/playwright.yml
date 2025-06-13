@@ -42,4 +42,4 @@ jobs:
           BASE_URL: ${{ env.NETLIFY_URL }}
         run: |
           echo "Running tests against: $BASE_URL"
-          npx playwright test --base-url=$BASE_URL
+          npx playwright test

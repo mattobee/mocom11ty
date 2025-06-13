@@ -8,6 +8,6 @@ export default {
   retries: 0,
   use: {
     headless: true,
-    baseURL: 'http://localhost:8888', // Change if your dev server runs elsewhere
+    baseURL: process.env.BASE_URL || 'http://localhost:8888', // Uses BASE_URL env var if set
   },
 };
