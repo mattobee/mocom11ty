@@ -1,7 +1,6 @@
 // Playwright configuration file
 // See https://playwright.dev/docs/test-configuration
 
-
 /** @type {import('@playwright/test').PlaywrightTestConfig} */
 export default {
   testDir: './tests/playwright',

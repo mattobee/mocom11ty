@@ -1,10 +1,10 @@
-
-import { defineConfig, globalIgnores } from "eslint/config";
-import globals from "globals";
-import pluginJs from "@eslint/js";
+import { defineConfig, globalIgnores } from 'eslint/config';
+import globals from 'globals';
+import pluginJs from '@eslint/js';
+import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
 
 export default defineConfig([
-  globalIgnores(["dist/", "mattobeecom/dist/"]),
+  globalIgnores(['dist/', 'mattobeecom/dist/']),
   {
     languageOptions: {
       globals: {
@@ -13,8 +13,8 @@ export default defineConfig([
       },
     },
   },
-  pluginJs.configs.recommended,
   {
-    extends: ["prettier"],
+    ...pluginJs.configs.recommended,
   },
+  eslintPluginPrettierRecommended,
 ]);
