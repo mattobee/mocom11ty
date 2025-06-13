@@ -17,5 +17,29 @@ jobs:
         run: npm ci
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
-      - name: Run Playwright tests
-        run: npx playwright test
+      - name: Wait for Netlify Deploy Preview
+        run: |
+          PR_NUMBER=${{ github.event.pull_request.number }}
+          NETLIFY_URL="https://deploy-preview-${PR_NUMBER}--mocom11ty.netlify.app/"
+          echo "Waiting for Netlify deployment at $NETLIFY_URL"
+          retries=30
+          count=0
+          echo "Initial wait for Netlify build to start (60 seconds)..."
+          sleep 60
+          until curl -s -o /dev/null -w "%{http_code}" "$NETLIFY_URL" | grep -q "200"; do
+            ((count++))
+            if [ ${count} -ge ${retries} ]; then
+              echo "Max retries reached (${retries} attempts). Failing the job."
+              exit 1
+            fi
+            echo "Attempt ${count}/${retries}: Netlify site not ready, retrying in 30 seconds..."
+            sleep 30
+          done
+          echo "✅ Netlify deployment is ready!"
+          echo "NETLIFY_URL=$NETLIFY_URL" >> $GITHUB_ENV
+      - name: Run Playwright tests against Netlify deploy
+        env:
+          BASE_URL: ${{ env.NETLIFY_URL }}
+        run: |
+          echo "Running tests against: $BASE_URL"
+          npx playwright test --base-url=$BASE_URL
