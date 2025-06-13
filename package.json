@@ -39,11 +39,12 @@
     "@shoelace-style/shoelace": "^2.19.1",
     "dotenv": "^16.5.0",
     "eslint": "^9.29.0",
+    "eslint-config-prettier": "^10.1.5",
     "globals": "^16.2.0",
     "markdown-it": "^14.1.0",
     "markdown-it-anchor": "^9.0.1",
     "netlify-cli": "^19.0.2",
-    "prettier": "^3.4.2"
+    "prettier": "^3.5.3"
   },
   "dependencies": {
     "@sanity/client": "^6.24.1"

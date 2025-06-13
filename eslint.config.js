@@ -14,4 +14,7 @@ export default defineConfig([
     },
   },
   pluginJs.configs.recommended,
+  {
+    extends: ["prettier"],
+  },
 ]);
