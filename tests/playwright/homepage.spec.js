@@ -1,5 +1,6 @@
 // Basic Playwright test for the homepage
 import { test, expect } from '@playwright/test';
+import AxeBuilder from '@axe-core/playwright';
 
 test.describe('Homepage', () => {
   test('should load successfully', async ({ page }) => {
@@ -7,6 +8,9 @@ test.describe('Homepage', () => {
     await expect(page).toHaveTitle(
       'Matt Obee - design technologist specialising in accessibility'
     );
+    // Accessibility scan
+    const accessibilityScanResults = await new AxeBuilder({ page }).analyze();
+    expect(accessibilityScanResults.violations).toEqual([]);
   });
 
   test('should display the site header', async ({ page }) => {
