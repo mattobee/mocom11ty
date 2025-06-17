@@ -51,6 +51,6 @@
     "prettier": "^3.5.3"
   },
   "dependencies": {
-    "@sanity/client": "^6.24.1"
+    "@sanity/client": "^7.6.0"
   }
 }
