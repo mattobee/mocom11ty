@@ -1,14 +1,30 @@
-.role__date {
-  display: block;
+.roles {
+  display: flex;
+  flex-direction: column;
 }
 
-.role--now {
-  background-color: var(--color-lowlight-bg);
-  border-radius: var(--border-radius);
-  color: var(--color-fg);
-  margin-left: -2rem;
-  margin-right: -2rem;
-  padding: 2rem;
+.role {
+  border-bottom: 1px solid var(--color-border);
+  padding: var(--space-2xs) 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3xs);
+}
+
+.role__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.role__date {
+  font-size: var(--step--1);
+}
+
+.role__projects {
+  .fa-li {
+    color: var(--color-muted-fg);
+  }
 }
 
 .qual__title {
@@ -25,5 +41,10 @@
   #skills {
     grid-template-columns: 1fr;
     gap: var(--space-l);
+  }
+  .role__row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-2xs);
   }
 }

@@ -48,6 +48,7 @@
   --border-radius-s: var(--space-3xs);
   --border-radius: var(--space-2xs);
   --border-radius-l: var(--space-xs);
+  --border-radius-full: 9999px;
 
   --padding-xs: var(--space-xs);
   --padding-s: var(--space-s);
