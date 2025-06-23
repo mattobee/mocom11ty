@@ -1,2 +1,7 @@
 [dev]
   targetPort = 8081
+
+[[redirects]]
+  from = "/resume"
+  to = "/about"
+  status = 301
