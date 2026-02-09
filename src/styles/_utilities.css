@@ -39,7 +39,9 @@
 .undecorated {
   box-shadow: none;
   padding: 0;
-  &:hover, &:active, &:focus {
+  &:hover,
+  &:active,
+  &:focus {
     box-shadow: none;
     color: var(--color-undecorated-link-hover, inherit);
     text-decoration: underline;

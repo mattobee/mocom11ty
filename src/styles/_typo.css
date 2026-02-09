@@ -87,12 +87,12 @@ li > code,
 dd > code,
 td > code {
   background-color: var(--color-muted-bg);
-  border-radius: .2em;
+  border-radius: 0.2em;
   box-decoration-break: clone;
   color: var(--color-code);
   font-family: 'Fira Code', monospace;
-  font-size: .9em;
-  padding: .1em .3em;
+  font-size: 0.9em;
+  padding: 0.1em 0.3em;
   word-wrap: break-word;
 }
 

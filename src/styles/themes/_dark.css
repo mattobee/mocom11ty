@@ -1,6 +1,5 @@
 @media (prefers-color-scheme: dark) {
   :root {
-
     /* Colors */
     --color-primary: var(--color-green);
     --color-secondary: var(--color-grey);
@@ -57,6 +56,5 @@
     --sl-color-primary-950: var(--color-primary-950);
 
     --sl-focus-ring: auto;
-
   }
 }

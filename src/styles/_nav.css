@@ -13,7 +13,9 @@
     padding: var(--space-2xs) var(--space-xs);
     transition: none;
   }
-  a:hover, a:active, a:focus-visible {
+  a:hover,
+  a:active,
+  a:focus-visible {
     background-color: var(--nav-hover-bg);
     color: var(--nav-hover-fg);
   }

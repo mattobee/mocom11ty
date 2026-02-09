@@ -61,7 +61,6 @@ dt {
   border-top: none;
 }
 
-
 .flow {
   display: flex;
   flex-direction: column;
@@ -119,9 +118,8 @@ dt {
   background-color: var(--color-fg);
   box-shadow: none;
   display: block;
-  outline-offset: -.2em;
+  outline-offset: -0.2em;
 }
-
 
 .note__date {
   display: inline-block; /* Ensure it is inline-block or block */

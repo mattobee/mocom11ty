@@ -2,7 +2,7 @@ name: E2E Tests with Playwright
 
 on:
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 permissions:
   contents: read
