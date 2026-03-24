@@ -26,12 +26,12 @@ If effort estimates are missing, read the affected code and estimate before prio
 
 If issues arrive without effort estimates and `estimating-accessibility-effort` is not available, use this scale:
 
-| Size | Typical scope |
-|------|--------------|
-| **XS** | Single attribute or property change, one file |
-| **S** | Localised change within one component, a few attributes |
-| **M** | Changes to one component plus its consumers, or 2-5 files |
-| **L** | Structural changes affecting multiple components or a shared layout |
+| Size   | Typical scope                                                                   |
+| ------ | ------------------------------------------------------------------------------- |
+| **XS** | Single attribute or property change, one file                                   |
+| **S**  | Localised change within one component, a few attributes                         |
+| **M**  | Changes to one component plus its consumers, or 2-5 files                       |
+| **L**  | Structural changes affecting multiple components or a shared layout             |
 | **XL** | Architectural changes affecting routing, state management, or component library |
 
 ## Scoring model
@@ -40,31 +40,31 @@ Each issue is scored on three dimensions. The priority score determines the reme
 
 ### Severity (WCAG compliance level)
 
-| Rating | Definition | Score |
-|--------|-----------|-------|
-| Critical | WCAG Level A violation. The feature is unusable for some disability group. | 3 |
-| Serious | WCAG Level AA violation. The feature is degraded but partially usable. | 2 |
-| Moderate | Best practice or WCAG AAA. Usability improvement, not a compliance failure. | 1 |
+| Rating   | Definition                                                                  | Score |
+| -------- | --------------------------------------------------------------------------- | ----- |
+| Critical | WCAG Level A violation. The feature is unusable for some disability group.  | 3     |
+| Serious  | WCAG Level AA violation. The feature is degraded but partially usable.      | 2     |
+| Moderate | Best practice or WCAG AAA. Usability improvement, not a compliance failure. | 1     |
 
 ### User impact
 
 User impact measures how many people are affected and how severely their experience is degraded. This is distinct from WCAG severity — a Serious (AA) issue that affects every keyboard user on every page has higher user impact than a Critical (A) issue on a rarely visited admin screen.
 
-| Rating | Definition | Score |
-|--------|-----------|-------|
-| High | Affects a core user flow (navigation, auth, primary actions) or affects users across many pages. Multiple disability groups impacted. | 3 |
-| Medium | Affects a secondary flow or a specific page. One disability group primarily impacted. | 2 |
-| Low | Affects an edge case, a rarely used feature, or a minor inconvenience rather than a barrier. | 1 |
+| Rating | Definition                                                                                                                            | Score |
+| ------ | ------------------------------------------------------------------------------------------------------------------------------------- | ----- |
+| High   | Affects a core user flow (navigation, auth, primary actions) or affects users across many pages. Multiple disability groups impacted. | 3     |
+| Medium | Affects a secondary flow or a specific page. One disability group primarily impacted.                                                 | 2     |
+| Low    | Affects an edge case, a rarely used feature, or a minor inconvenience rather than a barrier.                                          | 1     |
 
 ### Effort (inverse — lower effort scores higher)
 
 Lower effort means faster delivery of accessibility improvement. All else being equal, fix the easy things first.
 
-| Rating | Effort sizes | Score |
-|--------|-------------|-------|
-| Low effort | XS, S | 3 |
-| Medium effort | M | 2 |
-| High effort | L, XL | 1 |
+| Rating        | Effort sizes | Score |
+| ------------- | ------------ | ----- |
+| Low effort    | XS, S        | 3     |
+| Medium effort | M            | 2     |
+| High effort   | L, XL        | 1     |
 
 ### Priority score
 
@@ -121,21 +121,21 @@ Present batches as grouped items with a combined effort estimate and a note on w
 
 ### Tier 1 - Fix Immediately
 
-| # | Issue | WCAG | Severity | Impact | Effort | Score |
-|---|-------|------|----------|--------|--------|-------|
-| 1 | ... | ... | ... | ... | ... | ... |
+| #   | Issue | WCAG | Severity | Impact | Effort | Score |
+| --- | ----- | ---- | -------- | ------ | ------ | ----- |
+| 1   | ...   | ...  | ...      | ...    | ...    | ...   |
 
 ### Tier 2 - Plan for Next Sprint
 
-| # | Issue | WCAG | Severity | Impact | Effort | Score |
-|---|-------|------|----------|--------|--------|-------|
-| 1 | ... | ... | ... | ... | ... | ... |
+| #   | Issue | WCAG | Severity | Impact | Effort | Score |
+| --- | ----- | ---- | -------- | ------ | ------ | ----- |
+| 1   | ...   | ...  | ...      | ...    | ...    | ...   |
 
 ### Tier 3 - Schedule When Capacity Allows
 
-| # | Issue | WCAG | Severity | Impact | Effort | Score |
-|---|-------|------|----------|--------|--------|-------|
-| 1 | ... | ... | ... | ... | ... | ... |
+| #   | Issue | WCAG | Severity | Impact | Effort | Score |
+| --- | ----- | ---- | -------- | ------ | ------ | ----- |
+| 1   | ...   | ...  | ...      | ...    | ...    | ...   |
 
 ### Batches
 

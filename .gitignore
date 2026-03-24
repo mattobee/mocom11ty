@@ -68,4 +68,4 @@ dist
 .netlify
 
 # Ignore Playwright test run metadata
-.test-results/.last-run.json
+test-results/
