@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "skills": {
+    "designing-agent-teams": {
+      "source": "mattobee/skills",
+      "sourceType": "github",
+      "computedHash": "4dc6d9102019902be9c5911c70325ae7c2f969433de39aa8216ac9a3862d1846"
+    },
+    "estimating-accessibility-effort": {
+      "source": "mattobee/skills",
+      "sourceType": "github",
+      "computedHash": "8ce32a7e4cad06792c20adc01a48ea3fb75e474396015f95e4dc4068d7df5177"
+    },
+    "predicting-accessibility-risks": {
+      "source": "mattobee/skills",
+      "sourceType": "github",
+      "computedHash": "df425249fa75064e4f21581af1301dc38badb49abc439ff03672eecda9295682"
+    },
+    "prioritising-accessibility-fixes": {
+      "source": "mattobee/skills",
+      "sourceType": "github",
+      "computedHash": "d52ce1a8beda3bda41c7fc624c07e2da5c1d8443e8d3919643412b02c0785ffa"
+    },
+    "reviewing-accessibility": {
+      "source": "mattobee/skills",
+      "sourceType": "github",
+      "computedHash": "ccc56519870fb54fc74fee11c317b733117cda123c7a0747c657c7bd090d1a48"
+    },
+    "suggesting-next-steps": {
+      "source": "mattobee/skills",
+      "sourceType": "github",
+      "computedHash": "b255665f2d0eac6320b6f0e98219bd0aa89e73d3e275ff8d82134eb28ede25f1"
+    },
+    "writing-accessibility-tests": {
+      "source": "mattobee/skills",
+      "sourceType": "github",
+      "computedHash": "d27e9b09728bfb48c6479317ab59616f66bedb363c6a1e9a87f452ea86b12cd2"
+    }
+  }
+}
