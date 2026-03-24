@@ -130,3 +130,62 @@ Playwright tests run against Netlify deploy previews on PRs to `main`. Tests inc
 - axe-core automated accessibility scan (zero violations expected)
 
 Run locally: `npx playwright test`
+
+## Agent team
+
+### Overview
+
+Four-agent team for a solo-maintained personal website with WCAG 2.2 AA as a hard requirement. The core team (Lead, Coder, Tester) handles the plan-implement-verify loop. A dedicated Accessibility specialist provides dual-touchpoint coverage -- risk assessment before implementation and code review after.
+
+### Roster
+
+| Agent         | Model tier | Model         | Instruction file                                       | Rationale                                                                 |
+| ------------- | ---------- | ------------- | ------------------------------------------------------ | ------------------------------------------------------------------------- |
+| Lead          | Frontier   | Claude Opus   | [`.agents/lead.md`](.agents/lead.md)                   | Orchestration, task decomposition, quality review across the full project |
+| Coder         | Mid-tier   | Claude Sonnet | [`.agents/coder.md`](.agents/coder.md)                 | Implementation workhorse for templates, CSS, JS, and config               |
+| Tester        | Mid-tier   | Claude Sonnet | [`.agents/tester.md`](.agents/tester.md)               | Independent test writing to avoid confirmation bias                       |
+| Accessibility | Frontier   | Claude Opus   | [`.agents/accessibility.md`](.agents/accessibility.md) | WCAG 2.2 AA risk assessment and code review -- the site's core claim      |
+
+### Orchestration
+
+```
+User request
+  -> Lead (decomposes task, plans approach)
+     -> Accessibility (early: risk assessment, if UI/content change)
+     -> Coder (implements, following a11y guidance)
+     -> Tester (writes and runs independent tests)
+     -> Accessibility (late: reviews implementation, if UI/content change)
+     -> Lead (runs quality gates: npm run build + playwright test)
+  -> Result to user
+```
+
+The Lead narrates each delegation so the user sees what is happening. Quality gates are deterministic (lint, format, build, axe-core tests), not LLM self-evaluation.
+
+### Escalation map
+
+```
+Coder   -> Lead  (multi-file changes, architectural decisions, persistent failures)
+Tester  -> Lead  (source code bugs, infrastructure changes needed)
+A11y    -> Lead  (critical WCAG violations, need for manual AT testing)
+Lead    -> User  (out-of-scope requests, Sanity Studio schema changes, ambiguous requirements)
+```
+
+### Cost projection
+
+| Tier     | Agent(s)            | Estimated call share | Notes                                                                  |
+| -------- | ------------------- | -------------------- | ---------------------------------------------------------------------- |
+| Frontier | Lead, Accessibility | ~15%                 | Low-volume, high-leverage (orchestration + a11y review)                |
+| Mid-tier | Coder, Tester       | ~85%                 | Bulk of implementation and test writing                                |
+| Fast     | --                  | 0%                   | Codebase is small enough that mid-tier handles exploration efficiently |
+
+The project's small size (~110 files) means there isn't enough volume to justify fast-tier agents for exploration. Context window pressure is not a concern. The split skews heavier on mid-tier than the ideal 70/20/10 because the fast tier isn't needed.
+
+### Design decisions
+
+**Why no fast-tier agents?** The codebase is ~110 files with ~1100 lines of CSS and minimal JS. A mid-tier model explores it without context pressure. Adding a fast-tier explorer would add coordination overhead without meaningful cost savings at this scale.
+
+**Why a dedicated Accessibility agent?** The site owner is a design technologist specialising in accessibility. The site claims WCAG 2.2 AA conformance. There are 5 accessibility-focused skills installed. Accessibility failures here are reputational, not just technical. The dual-touchpoint pattern (plan + review) catches issues before they're implemented, which is cheaper than reworking.
+
+**Why not a Sanity/platform specialist?** The Sanity integration is straightforward (two GROQ queries, three schema types). The Netlify MCP is available to all agents. Neither platform is complex enough to justify a dedicated agent -- the Coder handles both with guidance from the Lead.
+
+**Why Frontier for Accessibility but not Tester?** Accessibility review requires nuanced judgment about assistive technology behaviour and user impact that goes beyond pattern matching. Test writing, while important, follows more structured patterns (axe-core scans + targeted assertions) that mid-tier handles well, especially with the `writing-accessibility-tests` skill providing detailed procedures.
