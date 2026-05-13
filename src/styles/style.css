@@ -120,11 +120,3 @@ dt {
   display: block;
   outline-offset: -0.2em;
 }
-
-.note__date {
-  display: inline-block; /* Ensure it is inline-block or block */
-}
-
-.note__date::first-letter {
-  text-transform: uppercase;
-}
