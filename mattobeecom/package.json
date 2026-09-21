@@ -17,19 +17,19 @@
   "dependencies": {
     "@sanity/cli": "^3.92.0",
     "@sanity/vision": "^3.58.0",
-    "easymde": "^2.18.0",
-    "esbuild": "^0.25.5",
+    "easymde": "^2.21.0",
+    "esbuild": "^0.28.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "sanity": "^3.92.0",
     "sanity-plugin-markdown": "^5.0.0",
-    "styled-components": "^6.1.8"
+    "styled-components": "^6.5.3"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.25.4",
     "@sanity/eslint-config-studio": "^4.0.0",
     "@types/react": "^18.0.25",
-    "prettier": "^3.0.2",
+    "prettier": "^3.9.8",
     "typescript": "^5.1.6"
   },
   "prettier": {
