@@ -28,27 +28,27 @@
   },
   "homepage": "https://github.com/mattobee/mocom11ty#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^3.1.1",
+    "@11ty/eleventy": "^3.1.6",
     "@11ty/eleventy-img": "^6.0.4",
     "@11ty/eleventy-navigation": "^1.0.5",
     "@11ty/eleventy-plugin-bundle": "^3.0.0",
     "@11ty/eleventy-plugin-rss": "^2.0.4",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.2",
     "@11tyrocks/eleventy-plugin-lightningcss": "^1.4.0",
-    "@axe-core/playwright": "^4.10.2",
+    "@axe-core/playwright": "^4.13.0",
     "@eslint/js": "^9.17.0",
-    "@playwright/test": "^1.53.0",
+    "@playwright/test": "^1.63.0",
     "@shoelace-style/shoelace": "^2.19.1",
     "dotenv": "^16.5.0",
     "eslint": "^9.29.0",
     "eslint-config-prettier": "^10.1.5",
-    "eslint-plugin-prettier": "^5.4.1",
+    "eslint-plugin-prettier": "^5.5.6",
     "globals": "^16.2.0",
     "markdown-it": "^14.1.0",
     "markdown-it-anchor": "^9.0.1",
     "netlify-cli": "^26.0.1",
     "playwright": "^1.53.0",
-    "prettier": "^3.5.3"
+    "prettier": "^3.9.8"
   },
   "dependencies": {
     "@sanity/client": "^7.6.0"
