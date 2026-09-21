@@ -16,7 +16,7 @@
   ],
   "dependencies": {
     "@sanity/cli": "^3.92.0",
-    "@sanity/vision": "^3.58.0",
+    "@sanity/vision": "^6.15.0",
     "easymde": "^2.21.0",
     "esbuild": "^0.28.2",
     "react": "^18.2.0",
