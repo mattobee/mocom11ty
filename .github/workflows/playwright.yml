@@ -30,7 +30,7 @@ jobs:
           echo "Initial wait for Netlify build to start (60 seconds)..."
           sleep 60
           until curl -s -o /dev/null -w "%{http_code}" "$NETLIFY_URL" | grep -q "200"; do
-            ((count++))
+            ((++count))
             if [ ${count} -ge ${retries} ]; then
               echo "Max retries reached (${retries} attempts). Failing the job."
               exit 1
