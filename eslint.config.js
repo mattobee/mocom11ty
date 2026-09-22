@@ -4,7 +4,7 @@ import pluginJs from '@eslint/js';
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
 
 export default defineConfig([
-  globalIgnores(['dist/', 'mattobeecom/dist/']),
+  globalIgnores(['dist/', 'mattobeecom/dist/', 'mattobeecom/.sanity/']),
   {
     languageOptions: {
       globals: {
