@@ -21,23 +21,18 @@ test.describe('Homepage', () => {
   });
 
   test('should load self-hosted fonts', async ({ page }) => {
-    const requests = [];
     const fontRequests = [];
     page.on('request', (request) => {
-      requests.push(request.url());
       if (request.resourceType() === 'font') fontRequests.push(request.url());
     });
 
     await page.goto('/');
     await page.evaluate(() => document.fonts.ready);
 
+    const pageOrigin = new URL(page.url()).origin;
     expect(
-      requests.some(
-        (url) =>
-          url.includes('fonts.googleapis.com') ||
-          url.includes('fonts.gstatic.com')
-      )
-    ).toBe(false);
+      fontRequests.every((url) => new URL(url).origin === pageOrigin)
+    ).toBe(true);
     expect(
       fontRequests.some((url) => url.includes('atkinson-hyperlegible'))
     ).toBe(true);
