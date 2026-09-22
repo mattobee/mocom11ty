@@ -31,12 +31,12 @@ test.describe('Homepage', () => {
     await page.goto('/');
     await page.evaluate(() => document.fonts.ready);
 
+    const googleFontHosts = new Set([
+      'fonts.googleapis.com',
+      'fonts.gstatic.com',
+    ]);
     expect(
-      requests.some(
-        (url) =>
-          url.includes('fonts.googleapis.com') ||
-          url.includes('fonts.gstatic.com')
-      )
+      requests.some((url) => googleFontHosts.has(new URL(url).hostname))
     ).toBe(false);
     expect(
       fontRequests.some((url) => url.includes('atkinson-hyperlegible'))
