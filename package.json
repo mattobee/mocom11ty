@@ -27,9 +27,11 @@
     "url": "https://github.com/mattobee/mocom11ty/issues"
   },
   "homepage": "https://github.com/mattobee/mocom11ty#readme",
+  "engines": {
+    "node": ">=22.13.0"
+  },
   "devDependencies": {
     "@11ty/eleventy": "^3.1.6",
-    "@11ty/eleventy-img": "^6.0.4",
     "@11ty/eleventy-navigation": "^1.0.5",
     "@11ty/eleventy-plugin-bundle": "^3.0.0",
     "@11ty/eleventy-plugin-rss": "^2.0.4",
@@ -48,7 +50,7 @@
     "globals": "^17.12.0",
     "markdown-it": "^15.0.2",
     "markdown-it-anchor": "^10.0.0",
-    "netlify-cli": "^26.0.1",
+    "netlify-cli": "^27.8.0",
     "playwright": "^1.53.0",
     "prettier": "^3.9.8"
   },
