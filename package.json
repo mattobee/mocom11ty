@@ -27,6 +27,9 @@
     "url": "https://github.com/mattobee/mocom11ty/issues"
   },
   "homepage": "https://github.com/mattobee/mocom11ty#readme",
+  "engines": {
+    "node": ">=22.13.0"
+  },
   "devDependencies": {
     "@11ty/eleventy": "^3.1.6",
     "@11ty/eleventy-navigation": "^1.0.5",
