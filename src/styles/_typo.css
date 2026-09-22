@@ -34,21 +34,21 @@ a {
 }
 
 h1 {
-  font-family: 'Overpass';
+  font-family: 'Overpass Variable';
   font-size: var(--step-7);
   letter-spacing: -0.03em;
   text-transform: lowercase;
 }
 
 h2 {
-  font-family: 'Overpass';
+  font-family: 'Overpass Variable';
   font-size: var(--step-3);
   letter-spacing: -0.02em;
   line-height: 1.2;
 }
 
 h3 {
-  font-family: 'Overpass';
+  font-family: 'Overpass Variable';
   font-size: var(--step-2);
   line-height: 1.2;
   letter-spacing: -0.02em;
@@ -98,7 +98,7 @@ td > code {
 
 .feature {
   font-size: var(--step-7);
-  font-family: 'Overpass';
+  font-family: 'Overpass Variable';
   font-weight: 800;
   letter-spacing: -0.05em;
   text-transform: lowercase;

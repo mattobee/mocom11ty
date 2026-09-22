@@ -19,4 +19,28 @@ test.describe('Homepage', () => {
     const header = page.locator('body > header');
     await expect(header).toBeVisible();
   });
+
+  test('should load self-hosted fonts', async ({ page }) => {
+    const requests = [];
+    const fontRequests = [];
+    page.on('request', (request) => {
+      requests.push(request.url());
+      if (request.resourceType() === 'font') fontRequests.push(request.url());
+    });
+
+    await page.goto('/');
+    await page.evaluate(() => document.fonts.ready);
+
+    expect(
+      requests.some(
+        (url) =>
+          url.includes('fonts.googleapis.com') ||
+          url.includes('fonts.gstatic.com')
+      )
+    ).toBe(false);
+    expect(
+      fontRequests.some((url) => url.includes('atkinson-hyperlegible'))
+    ).toBe(true);
+    expect(fontRequests.some((url) => url.includes('overpass'))).toBe(true);
+  });
 });
