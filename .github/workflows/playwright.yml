@@ -46,3 +46,19 @@ jobs:
         run: |
           echo "Running tests against: $BASE_URL"
           npx playwright test
+
+  sanity-studio:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: mattobeecom
+    steps:
+      - uses: actions/checkout@v7
+      - name: Use Node.js 20.x
+        uses: actions/setup-node@v7
+        with:
+          node-version: 20
+      - name: Install dependencies
+        run: npm ci
+      - name: Build Sanity Studio
+        run: npm run build
