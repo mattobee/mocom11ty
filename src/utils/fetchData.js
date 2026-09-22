@@ -8,6 +8,6 @@ export async function fetchData(query, type) {
     return data;
   } catch (error) {
     logError(`Error fetching ${type.toLowerCase()}s:`, error);
-    throw new Error(`Failed to fetch ${type.toLowerCase()}s`);
+    throw new Error(`Failed to fetch ${type.toLowerCase()}s`, { cause: error });
   }
 }
