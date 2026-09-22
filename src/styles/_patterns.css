@@ -36,7 +36,7 @@
     max-width: 29em;
   }
   .hero__headline {
-    font-family: 'Overpass';
+    font-family: 'Overpass Variable';
     font-size: var(--step-4);
     font-weight: 800;
     letter-spacing: -0.03em;
