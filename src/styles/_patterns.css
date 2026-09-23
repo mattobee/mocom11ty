@@ -30,7 +30,7 @@
   padding: var(--space-m);
   background: rgb(116, 253, 109);
   background: var(--color-gradient-brand);
-  border-radius: var(--border-radius);
+  border-radius: var(--border-radius-2xl);
   position: relative;
   p {
     max-width: 29em;
@@ -113,7 +113,7 @@
 
 .a11y-webring-club {
   background: var(--color-grey-800);
-  border-radius: var(--border-radius);
+  border-radius: var(--border-radius-l);
   margin-bottom: 1rem;
   padding: var(--space-m);
   width: fit-content;

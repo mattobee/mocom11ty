@@ -9,8 +9,8 @@
     justify-content: flex-start;
   }
   a {
-    border-radius: var(--border-radius-s);
-    padding: var(--space-2xs) var(--space-xs);
+    border-radius: var(--border-radius-full);
+    padding: var(--space-2xs) var(--space-s);
     transition: none;
   }
   a:hover,
@@ -32,7 +32,7 @@
       gap: var(--space-3xs);
     }
     a {
-      padding: var(--space-3xs) var(--space-2xs);
+      padding: var(--space-3xs) var(--space-xs);
     }
   }
 }
