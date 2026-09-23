@@ -22,7 +22,15 @@
 }
 
 .role__projects {
-  .fa-li {
+  list-style: none;
+  padding-left: 1em;
+  li {
+    position: relative;
+  }
+  li::before {
+    content: '-';
+    position: absolute;
+    left: -1em;
     color: var(--color-muted-fg);
   }
 }
