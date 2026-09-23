@@ -24,6 +24,18 @@ function loadSvg(dirs, name) {
   throw new Error(`Icon not found: ${name} (looked in ${dirs.join(', ')})`);
 }
 
+// A single non-greedy pass can leave a residual delimiter on nested or
+// malformed input (e.g. "<!--<!---->-->"), so strip comments to a fixed point.
+function stripComments(svg) {
+  let prev;
+  let next = svg;
+  do {
+    prev = next;
+    next = prev.replace(/<!--[\s\S]*?-->/g, '');
+  } while (next !== prev);
+  return next;
+}
+
 // Normalise a raw SVG: drop its own sizing/class, size in em so it follows
 // font-size, hide from assistive tech (icons here are always decorative).
 function render(svg, { fill = false } = {}) {
@@ -31,8 +43,7 @@ function render(svg, { fill = false } = {}) {
     fill ? ' fill="currentColor"' : ''
   }`;
   return (
-    svg
-      .replace(/<!--[\s\S]*?-->/g, '')
+    stripComments(svg)
       .replace(/<title>[\s\S]*?<\/title>/g, '')
       // Only rewrite the <svg> element's own attributes. Descendant shapes
       // (e.g. <rect width height>) must keep theirs or they collapse.
