@@ -1,5 +1,6 @@
 import markdownFilter from './src/_includes/markdownFilter.js';
 import randomPhrase from './src/_includes/randomPhrase.js';
+import icons from './src/_includes/icon.js';
 import lightningCSS from '@11tyrocks/eleventy-plugin-lightningcss';
 
 export default function (eleventyConfig) {
@@ -37,6 +38,7 @@ export default function (eleventyConfig) {
 
   // Add shortcodes
   randomPhrase(eleventyConfig);
+  icons(eleventyConfig);
 
   return {
     dir: { input: 'src', output: 'dist', data: '_data' },

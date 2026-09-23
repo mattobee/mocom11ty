@@ -28,6 +28,11 @@ body {
   margin: 0;
 }
 
+.icon {
+  display: inline-block;
+  vertical-align: -0.125em;
+}
+
 /* main {
   position: relative;
   background: url('../images/pattern6.svg') repeat-x bottom;

@@ -12,11 +12,11 @@ title: Projects
                 {% if project.data.type and project.data.typedesc %}
                 <span class="project__type">
                 {% if project.data.type === 'responsive' %}
-                    <i class="fa-regular fa-laptop-mobile"></i> 
+                    {% icon "monitor-smartphone" %}
                 {% elif project.data.type === 'native' %}
-                    <i class="fa-regular fa-mobile"></i> 
+                    {% icon "smartphone" %}
                 {% elif project.data.type === 'desktop' %}
-                    <i class="fa-regular fa-laptop"></i> 
+                    {% icon "laptop" %}
                 {% endif %}
                 {{ project.data.typedesc }}
                 </span>
@@ -24,7 +24,7 @@ title: Projects
                 <span class="project__client muted">for {{ project.data.client }}</span>
             </div>
             <p class="project__description">{{ project.data.description }}</p>
-            <a class="project__casestudy" href="/" aria-label="{{ project.data.title }}">Read the case study <i class="fa-solid fa-arrow-right"></i></a>
+            <a class="project__casestudy" href="/" aria-label="{{ project.data.title }}">Read the case study {% icon "arrow-right" %}</a>
         </li>
         {% else %}
         <li class="project flow">
@@ -33,11 +33,11 @@ title: Projects
                 {% if project.data.type and project.data.typedesc %}
                 <span class="project__type muted">
                     {% if project.data.type === 'responsive' %}
-                        <i class="fa-regular fa-laptop-mobile"></i> 
+                        {% icon "monitor-smartphone" %}
                     {% elif project.data.type === 'native' %}
-                        <i class="fa-regular fa-mobile"></i> 
+                        {% icon "smartphone" %}
                     {% elif project.data.type === 'desktop' %}
-                        <i class="fa-regular fa-laptop"></i> 
+                        {% icon "laptop" %}
                     {% else %}
                     {% endif %}
                     {{ project.data.typedesc }}
