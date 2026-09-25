@@ -16,12 +16,12 @@
   ],
   "dependencies": {
     "@sanity/cli": "^8.12.0",
-    "@sanity/vision": "^6.15.0",
+    "@sanity/vision": "^6.16.0",
     "easymde": "^2.21.0",
     "esbuild": "^0.28.2",
     "react": "^19.3.0",
     "react-dom": "^19.3.0",
-    "sanity": "^6.15.0",
+    "sanity": "^6.16.0",
     "sanity-plugin-markdown": "^9.0.13",
     "styled-components": "^6.1.15"
   },
