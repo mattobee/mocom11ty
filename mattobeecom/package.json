@@ -15,21 +15,21 @@
     "sanity"
   ],
   "dependencies": {
-    "@sanity/cli": "^8.12.0",
-    "@sanity/vision": "^6.15.0",
+    "@sanity/cli": "^8.16.0",
+    "@sanity/vision": "^6.19.0",
     "easymde": "^2.21.0",
     "esbuild": "^0.28.2",
     "react": "^19.3.0",
     "react-dom": "^19.3.0",
     "sanity": "^6.15.0",
-    "sanity-plugin-markdown": "^9.0.13",
-    "styled-components": "^6.1.15"
+    "sanity-plugin-markdown": "^9.0.17",
+    "styled-components": "^6.6.0"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.25.4",
     "@sanity/eslint-config-studio": "^4.0.0",
     "@types/react": "^19.3.0",
-    "prettier": "^3.9.8",
+    "prettier": "^3.9.10",
     "typescript": "^5.1.6"
   },
   "prettier": {
